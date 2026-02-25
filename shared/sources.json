@@ -700,5 +700,69 @@
     "color": "blue",
     "interval": 1800000,
     "title": "协会事务"
+  },
+  "chncycling-ss": {
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.chncycling.org.cn/ss/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "自行车赛事"
+  },
+  "wildto": {
+    "redirect": "wildto-news",
+    "name": "野途",
+    "type": "realtime",
+    "column": "sports",
+    "home": "https://www.wildto.com/cycling",
+    "color": "green",
+    "interval": 1800000,
+    "title": "赛事新闻"
+  },
+  "wildto-news": {
+    "name": "野途",
+    "type": "realtime",
+    "column": "sports",
+    "home": "https://www.wildto.com/cycling",
+    "color": "green",
+    "interval": 1800000,
+    "title": "赛事新闻"
+  },
+  "wildto-product": {
+    "name": "野途",
+    "type": "realtime",
+    "column": "sports",
+    "home": "https://www.wildto.com/product",
+    "color": "green",
+    "interval": 1800000,
+    "title": "产品资讯"
+  },
+  "wildto-industry-business": {
+    "name": "野途",
+    "type": "realtime",
+    "column": "sports",
+    "home": "https://www.wildto.com/industry",
+    "color": "green",
+    "interval": 1800000,
+    "title": "行业动态"
+  },
+  "wildto-industry-exhibition": {
+    "name": "野途",
+    "type": "realtime",
+    "column": "sports",
+    "home": "https://www.wildto.com/industry",
+    "color": "green",
+    "interval": 1800000,
+    "title": "展会聚焦"
+  },
+  "wildto-bike-hotnews": {
+    "name": "野途",
+    "type": "realtime",
+    "column": "sports",
+    "home": "https://www.wildto.com/bike",
+    "color": "green",
+    "interval": 1800000,
+    "title": "热点资讯"
   }
 }

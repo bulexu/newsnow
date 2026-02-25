@@ -583,6 +583,44 @@ export const originSources = {
       },
     },
   },
+  "wildto": {
+    name: "野途",
+    column: "sports",
+    color: "green",
+    home: "https://www.wildto.com/",
+    sub: {
+      "news": {
+        title: "赛事新闻",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.wildto.com/cycling",
+      },
+      "product": {
+        title: "产品资讯",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.wildto.com/product",
+      },
+      "industry-business": {
+        title: "行业动态",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.wildto.com/industry",
+      },
+      "industry-exhibition": {
+        title: "展会聚焦",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.wildto.com/industry",
+      },
+      "bike-hotnews": {
+        title: "热点资讯",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.wildto.com/bike",
+      },
+    },
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {

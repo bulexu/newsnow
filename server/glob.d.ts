@@ -44,6 +44,7 @@ declare module 'glob:./sources/{*.ts,**/index.ts}' {
   export const v2ex: typeof import('./sources/v2ex')
   export const wallstreetcn: typeof import('./sources/wallstreetcn')
   export const weibo: typeof import('./sources/weibo')
+  export const wildto: typeof import('./sources/wildto')
   export const xueqiu: typeof import('./sources/xueqiu')
   export const zaobao: typeof import('./sources/zaobao')
   export const zhihu: typeof import('./sources/zhihu')

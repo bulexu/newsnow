@@ -45,6 +45,7 @@ const news = makeChnCyclingSource("/news/")
 const bulletinJs = makeChnCyclingSource("/bulletin/js/")
 const bulletinChina = makeChnCyclingSource("/bulletin/china/")
 const bulletinXh = makeChnCyclingSource("/bulletin/xh/")
+const ss = makeChnCyclingSource("/ss/")
 
 export default defineSource({
   "chncycling": news,
@@ -52,4 +53,5 @@ export default defineSource({
   "chncycling-bulletin-js": bulletinJs,
   "chncycling-bulletin-china": bulletinChina,
   "chncycling-bulletin-xh": bulletinXh,
+  "chncycling-ss": ss,
 })

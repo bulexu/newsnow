@@ -483,6 +483,68 @@ export const originSources = {
       },
     },
   },
+  "biketo": {
+    name: "美骑网",
+    column: "sports",
+    color: "blue",
+    home: "https://www.biketo.com",
+    sub: {
+      "hotnews": {
+        title: "热点快报",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.biketo.com/hotnews/",
+      },
+      "activities": {
+        title: "骑行活动",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.biketo.com/activities/",
+      },
+      "cyclexpress": {
+        title: "美骑快讯",
+        type: "realtime",
+        interval: Time.Fast,
+        home: "http://www.biketo.com/cyclexpress/",
+      },
+      "road": {
+        title: "公路车",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.biketo.com/road/",
+      },
+      "e-bike": {
+        title: "电助力",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.biketo.com/e-bike/",
+      },
+      "racingnews": {
+        title: "赛事新闻",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.biketo.com/racingnews/",
+      },
+      "business": {
+        title: "行业动态",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.biketo.com/business/",
+      },
+      "enterprise": {
+        title: "企业探秘",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.biketo.com/enterprise/",
+      },
+      "shop": {
+        title: "精品车店",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.biketo.com/shop/",
+      },
+    },
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {

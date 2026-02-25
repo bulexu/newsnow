@@ -48,5 +48,14 @@
   "tencent-hot": "tengxunxinwen-zonghezaobao",
   "freebuf": "Freebuf-wangluoanquan",
   "qqvideo-tv-hotsearch": "tengxunshipin-resoubang",
-  "iqiyi-hot-ranklist": "aiqiyi-rebobang"
+  "iqiyi-hot-ranklist": "aiqiyi-rebobang",
+  "biketo-hotnews": "meiqiwang-rediankuaibao",
+  "biketo-activities": "meiqiwang-qixinghuodong",
+  "biketo-cyclexpress": "meiqiwang-meiqikuaixun",
+  "biketo-road": "meiqiwang-gongluche",
+  "biketo-e-bike": "meiqiwang-dianzhuli",
+  "biketo-racingnews": "meiqiwang-saishixinwen",
+  "biketo-business": "meiqiwang-xingyedongtai",
+  "biketo-enterprise": "meiqiwang-qiyetanmi",
+  "biketo-shop": "meiqiwang-jingpinchedian"
 }

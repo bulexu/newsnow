@@ -563,5 +563,96 @@
     "color": "green",
     "interval": 1800000,
     "title": "热播榜"
+  },
+  "biketo": {
+    "redirect": "biketo-hotnews",
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.biketo.com/hotnews/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "热点快报"
+  },
+  "biketo-hotnews": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.biketo.com/hotnews/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "热点快报"
+  },
+  "biketo-activities": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.biketo.com/activities/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "骑行活动"
+  },
+  "biketo-cyclexpress": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.biketo.com/cyclexpress/",
+    "color": "blue",
+    "interval": 300000,
+    "title": "美骑快讯"
+  },
+  "biketo-road": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.biketo.com/road/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "公路车"
+  },
+  "biketo-e-bike": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.biketo.com/e-bike/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "电助力"
+  },
+  "biketo-racingnews": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.biketo.com/racingnews/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "赛事新闻"
+  },
+  "biketo-business": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.biketo.com/business/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "行业动态"
+  },
+  "biketo-enterprise": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.biketo.com/enterprise/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "企业探秘"
+  },
+  "biketo-shop": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.biketo.com/shop/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "精品车店"
   }
 }

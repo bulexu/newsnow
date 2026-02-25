@@ -545,6 +545,44 @@ export const originSources = {
       },
     },
   },
+  "chncycling": {
+    name: "中国自行车运动协会",
+    column: "sports",
+    color: "blue",
+    home: "http://chncycling.org.cn/",
+    sub: {
+      "news": {
+        title: "新闻动态",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://chncycling.org.cn/news/",
+      },
+      "bulletin-js": {
+        title: "竞赛",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://chncycling.org.cn/bulletin/js/",
+      },
+      "bulletin-china": {
+        title: "国家队",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.chncycling.org.cn/bulletin/china/",
+      },
+      "bulletin-xh": {
+        title: "协会事务",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.chncycling.org.cn/bulletin/xh/",
+      },
+      "ss": {
+        title: "自行车赛事",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.chncycling.org.cn/ss/",
+      },
+    },
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {

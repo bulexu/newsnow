@@ -654,5 +654,51 @@
     "color": "blue",
     "interval": 1800000,
     "title": "精品车店"
+  },
+  "chncycling": {
+    "redirect": "chncycling-news",
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://chncycling.org.cn/news/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻动态"
+  },
+  "chncycling-news": {
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://chncycling.org.cn/news/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻动态"
+  },
+  "chncycling-bulletin-js": {
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://chncycling.org.cn/bulletin/js/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "竞赛"
+  },
+  "chncycling-bulletin-china": {
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.chncycling.org.cn/bulletin/china/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "国家队"
+  },
+  "chncycling-bulletin-xh": {
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "sports",
+    "home": "http://www.chncycling.org.cn/bulletin/xh/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "协会事务"
   }
 }

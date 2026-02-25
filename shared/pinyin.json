@@ -57,5 +57,9 @@
   "biketo-racingnews": "meiqiwang-saishixinwen",
   "biketo-business": "meiqiwang-xingyedongtai",
   "biketo-enterprise": "meiqiwang-qiyetanmi",
-  "biketo-shop": "meiqiwang-jingpinchedian"
+  "biketo-shop": "meiqiwang-jingpinchedian",
+  "chncycling-news": "zhongguozixingcheyundongxiehui-xinwendongtai",
+  "chncycling-bulletin-js": "zhongguozixingcheyundongxiehui-jingsai",
+  "chncycling-bulletin-china": "zhongguozixingcheyundongxiehui-guojiadui",
+  "chncycling-bulletin-xh": "zhongguozixingcheyundongxiehui-xiehuishiwu"
 }

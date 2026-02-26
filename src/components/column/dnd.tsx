@@ -140,9 +140,13 @@ function CardOverlay({ id }: { id: SourceID }) {
       <div className={$("flex justify-between mx-2 items-center")}>
         <div className="flex gap-2 items-center">
           <div
-            className={$("w-8 h-8 rounded-full bg-cover")}
+            className={$("source-icon rounded-full")}
             style={{
               backgroundImage: `url(/icons/${id.split("-")[0]}.png)`,
+              backgroundPosition: "center",
+              backgroundSize: "32px 32px",
+              width: "32px",
+              height: "32px",
             }}
           />
           <span className="flex flex-col">

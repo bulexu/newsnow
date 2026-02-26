@@ -122,9 +122,13 @@ function SourceItem({ item }: {
     >
       <span className="flex gap-2 items-center">
         <span
-          className={$("w-4 h-4 rounded-md bg-cover")}
+          className={$("source-icon rounded-full")}
           style={{
             backgroundImage: `url(/icons/${item.id.split("-")[0]}.png)`,
+            backgroundPosition: "center",
+            backgroundSize: "32px 32px",
+            width: "32px",
+            height: "32px",
           }}
         />
         <span>{item.name}</span>

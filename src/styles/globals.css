@@ -56,3 +56,12 @@ button:disabled {
 .grabbing * {
   cursor: grabbing;
 }
+
+.source-icon {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+}

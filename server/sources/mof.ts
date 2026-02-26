@@ -1,5 +1,6 @@
 import { load } from "cheerio"
 import type { NewsItem } from "@shared/types"
+import { html2md, toAbsoluteUrl } from "#/utils/html2md"
 
 const BASE_URL = "http://www.mof.gov.cn"
 
@@ -47,6 +48,39 @@ function makeMofCjsdSource(path: string) {
   })
 }
 
+function makeMofSourceDetail(_path: string) {
+  return async (item: NewsItem) => {
+    if (!item?.url) return undefined
+    const html: string = await myFetch(item.url)
+    const $ = load(html)
+
+    const container = $(".box_content").first()
+    if (!container.length) return undefined
+
+    const article = container.find(".my_conboxzw .TRS_Editor").first().length
+      ? container.find(".my_conboxzw .TRS_Editor").first()
+      : container.find(".my_conboxzw").first()
+
+    if (!article.length) return undefined
+
+    article.find("script,style,.gu-download").remove()
+    article.find("[href]").each((_, el) => {
+      const href = $(el).attr("href")
+      if (href) $(el).attr("href", toAbsoluteUrl(href, BASE_URL))
+    })
+    article.find("img[src]").each((_, el) => {
+      const src = $(el).attr("src")
+      if (src) $(el).attr("src", toAbsoluteUrl(src, BASE_URL))
+    })
+
+    const markdown = html2md(article.html() || "")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim()
+
+    return markdown || undefined
+  }
+}
+
 const czxw = makeMofNewsSource("/zhengwuxinxi/caizhengxinwen/")
 const zyzfmhwz = makeMofCjsdSource("/zhengwuxinxi/caijingshidian/zyzfmhwz/")
 const renminwang = makeMofCjsdSource("/zhengwuxinxi/caijingshidian/renminwang/")
@@ -55,6 +89,27 @@ const jjrb = makeMofCjsdSource("/zhengwuxinxi/caijingshidian/jjrb/")
 const jjckb = makeMofCjsdSource("/zhengwuxinxi/caijingshidian/jjckb/")
 const zgcjb = makeMofCjsdSource("/zhengwuxinxi/caijingshidian/zgcjb/")
 const cjzylm = makeMofCjsdSource("/zhengwuxinxi/caijingshidian/cjzylm/")
+
+const czxwDetail = makeMofSourceDetail("/zhengwuxinxi/caizhengxinwen/")
+const zyzfmhwzDetail = makeMofSourceDetail("/zhengwuxinxi/caijingshidian/zyzfmhwz/")
+const renminwangDetail = makeMofSourceDetail("/zhengwuxinxi/caijingshidian/renminwang/")
+const xinhuanetDetail = makeMofSourceDetail("/zhengwuxinxi/caijingshidian/xinhuanet/")
+const jjrbDetail = makeMofSourceDetail("/zhengwuxinxi/caijingshidian/jjrb/")
+const jjckbDetail = makeMofSourceDetail("/zhengwuxinxi/caijingshidian/jjckb/")
+const zgcjbDetail = makeMofSourceDetail("/zhengwuxinxi/caijingshidian/zgcjb/")
+const cjzylmDetail = makeMofSourceDetail("/zhengwuxinxi/caijingshidian/cjzylm/")
+
+export const details = defineSourceDetail({
+  "mof": czxwDetail,
+  "mof-czxw": czxwDetail,
+  "mof-zyzfmhwz": zyzfmhwzDetail,
+  "mof-renminwang": renminwangDetail,
+  "mof-xinhuanet": xinhuanetDetail,
+  "mof-jjrb": jjrbDetail,
+  "mof-jjckb": jjckbDetail,
+  "mof-zgcjb": zgcjbDetail,
+  "mof-cjzylm": cjzylmDetail,
+})
 
 export default defineSource({
   "mof": czxw,

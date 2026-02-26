@@ -1,5 +1,6 @@
 import { load } from "cheerio"
 import type { NewsItem } from "@shared/types"
+import { html2md, toAbsoluteUrl } from "#/utils/html2md"
 
 const BASE_URL = "http://www.chncycling.org.cn"
 
@@ -41,11 +42,57 @@ function makeChnCyclingSource(path: string) {
   })
 }
 
+function makeChnCyclingSourceDetail(_path: string) {
+  return async (item: NewsItem) => {
+    if (!item?.url) return undefined
+    const html: string = await myFetch(item.url)
+    const $ = load(html)
+
+    const article = $("section.article").first()
+    if (!article.length) return undefined
+
+    const headerTitle = article.find(".page-header h2").first().text().trim()
+    const main = article.find(".page-main").first()
+    if (!main.length) return undefined
+
+    main.find("script,style,.video").remove()
+    main.find("[href]").each((_, el) => {
+      const href = $(el).attr("href")
+      if (href) $(el).attr("href", toAbsoluteUrl(href, BASE_URL))
+    })
+    main.find("img[src]").each((_, el) => {
+      const src = $(el).attr("src")
+      if (src) $(el).attr("src", toAbsoluteUrl(src, BASE_URL))
+    })
+
+    const bodyMarkdown = html2md(main.html() || "")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim()
+
+    if (!bodyMarkdown) return undefined
+    return headerTitle ? `## ${headerTitle}\n\n${bodyMarkdown}` : bodyMarkdown
+  }
+}
+
 const news = makeChnCyclingSource("/news/")
 const bulletinJs = makeChnCyclingSource("/bulletin/js/")
 const bulletinChina = makeChnCyclingSource("/bulletin/china/")
 const bulletinXh = makeChnCyclingSource("/bulletin/xh/")
 const ss = makeChnCyclingSource("/ss/")
+
+const newsDetail = makeChnCyclingSourceDetail("/news/")
+const bulletinJsDetail = makeChnCyclingSourceDetail("/bulletin/js/")
+const bulletinChinaDetail = makeChnCyclingSourceDetail("/bulletin/china/")
+const bulletinXhDetail = makeChnCyclingSourceDetail("/bulletin/xh/")
+const ssDetail = makeChnCyclingSourceDetail("/ss/")
+
+export const details = defineSourceDetail({
+  "chncycling-news": newsDetail,
+  "chncycling-bulletin-js": bulletinJsDetail,
+  "chncycling-bulletin-china": bulletinChinaDetail,
+  "chncycling-bulletin-xh": bulletinXhDetail,
+  "chncycling-ss": ssDetail,
+})
 
 export default defineSource({
   "chncycling-news": news,

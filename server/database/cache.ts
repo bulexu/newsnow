@@ -28,6 +28,13 @@ export class Cache {
     logger.success(`set ${key} cache`)
   }
 
+  async setDetail(key: string, value: NewsItem[]) {
+    await this.db.prepare(
+      `UPDATE cache SET data = ? WHERE id = ?`,
+    ).run(JSON.stringify(value), key)
+    logger.success(`set ${key} cache detail`)
+  }
+
   async get(key: string): Promise<CacheInfo | undefined > {
     const row = (await this.db.prepare(`SELECT id, data, updated FROM cache WHERE id = ?`).get(key)) as CacheRow | undefined
     if (row) {

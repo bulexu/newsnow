@@ -3,7 +3,7 @@ import { Interval } from "./consts"
 import { typeSafeObjectFromEntries } from "./type.util"
 import type { OriginSource, Source, SourceID } from "./types"
 
-const Time = {
+export const Time = {
   Test: 1,
   Realtime: 2 * 60 * 1000,
   Fast: 5 * 60 * 1000,
@@ -486,6 +486,7 @@ export const originSources = {
     name: "美骑网",
     column: "cycle-track",
     color: "blue",
+    detail: true,
     home: "https://www.biketo.com",
     sub: {
       "hotnews": {
@@ -548,6 +549,7 @@ export const originSources = {
     name: "中国自行车运动协会",
     column: "cycle-track",
     color: "blue",
+    detail: true,
     home: "http://chncycling.org.cn/",
     sub: {
       "news": {
@@ -586,6 +588,7 @@ export const originSources = {
     name: "野途",
     column: "cycle-track",
     color: "green",
+    detail: true,
     home: "https://www.wildto.com/",
     sub: {
       "news": {
@@ -624,6 +627,7 @@ export const originSources = {
     name: "全球自行车产业链信息网",
     column: "bike-industry",
     color: "emerald",
+    detail: true,
     home: "https://www.globalbikeinfo.com/",
     sub: {
       news: {
@@ -638,6 +642,7 @@ export const originSources = {
     name: "迹驰",
     column: "competition",
     color: "blue",
+    detail: true,
     home: "https://www.igpsport.cn/",
     sub: {
       news: {
@@ -652,6 +657,7 @@ export const originSources = {
     name: "佳明",
     column: "competition",
     color: "blue",
+    detail: true,
     home: "https://www.garmin.com/",
     sub: {
       bulletin: {
@@ -686,6 +692,7 @@ export const originSources = {
     name: "环球网",
     column: "world",
     color: "red",
+    detail: true,
     home: "https://www.huanqiu.com/",
     sub: {
       news: {
@@ -712,6 +719,7 @@ export const originSources = {
     name: "国家市场监督管理局",
     column: "finance",
     color: "blue",
+    detail: true,
     home: "https://www.samr.gov.cn/",
     sub: {
       xwfbt: {
@@ -732,6 +740,7 @@ export const originSources = {
     name: "财经网",
     column: "finance",
     color: "red",
+    detail: true,
     home: "https://www.ceweekly.cn/",
     sub: {
       news_important: {
@@ -752,6 +761,7 @@ export const originSources = {
     name: "财政部",
     column: "finance",
     color: "blue",
+    detail: true,
     home: "http://www.mof.gov.cn/",
     sub: {
       czxw: {
@@ -808,6 +818,7 @@ export const originSources = {
     name: "国家统计局",
     column: "finance",
     color: "blue",
+    detail: true,
     home: "https://www.stats.gov.cn/",
     sub: {
       tjdt: {
@@ -833,6 +844,7 @@ export function genSources() {
     const parent = {
       name: source.name,
       type: source.type,
+      detail: source.detail,
       disable: source.disable,
       desc: source.desc,
       column: source.column,

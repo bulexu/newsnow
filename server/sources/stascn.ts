@@ -1,5 +1,6 @@
 import { load } from "cheerio"
 import type { NewsItem } from "@shared/types"
+import { html2md, toAbsoluteUrl } from "#/utils/html2md"
 
 const BASE_URL = "https://www.stats.gov.cn"
 
@@ -35,8 +36,44 @@ function makeStascnSource(path: string) {
   })
 }
 
-const tjdt = makeStascnSource("/xw/tjxw/tjdt/")
-const tzgg = makeStascnSource("/xw/tjxw/tzgg/")
+function makeStascnSourceDetail() {
+  return async (item: NewsItem) => {
+    if (!item?.url) return undefined
+    const html: string = await myFetch(item.url)
+    const $ = load(html)
+
+    const body = $(".trs_editor_view").first()
+    if (!body.length) return undefined
+
+    body.find("script,style").remove()
+    body.find("[href]").each((_, el) => {
+      const href = $(el).attr("href")
+      if (href) $(el).attr("href", toAbsoluteUrl(href, BASE_URL))
+    })
+    body.find("img[src]").each((_, el) => {
+      const src = $(el).attr("src")
+      if (src) $(el).attr("src", toAbsoluteUrl(src, BASE_URL))
+    })
+
+    const markdown = html2md(body.html() || "")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim()
+
+    if (!markdown) return undefined
+    return item.title ? `## ${item.title}\n\n${markdown}` : markdown
+  }
+}
+
+const tjdt = makeStascnSource("/xw/tjxw/tjdt")
+const tzgg = makeStascnSource("/xw/tjxw/tzgg")
+const tjdtDetail = makeStascnSourceDetail()
+const tzggDetail = makeStascnSourceDetail()
+
+export const details = defineSourceDetail({
+  "stascn": tjdtDetail,
+  "stascn-tjdt": tjdtDetail,
+  "stascn-tzgg": tzggDetail,
+})
 
 export default defineSource({
   "stascn": tjdt,

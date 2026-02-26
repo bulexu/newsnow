@@ -73,6 +73,10 @@ export interface Source {
   column?: HiddenColumnID
   home?: string
   /**
+   * Whether this source supports article detail/content fetching
+   */
+  detail?: boolean
+  /**
    * @default false
    */
   disable?: boolean | "cf"
@@ -88,6 +92,7 @@ export interface NewsItem {
   id: string | number // unique
   title: string
   url: string
+  content?: string
   mobileUrl?: string
   pubDate?: number | string
   extra?: {

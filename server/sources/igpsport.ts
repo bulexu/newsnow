@@ -1,5 +1,6 @@
 import { load } from "cheerio"
 import type { NewsItem } from "@shared/types"
+import { html2md, toAbsoluteUrl } from "#/utils/html2md"
 
 const BASE_URL = "https://www.igpsport.cn"
 
@@ -31,7 +32,43 @@ function makeIgpsportSource(path: string) {
   })
 }
 
+function makeIgpsportSourceDetail(_path: string) {
+  return async (item: NewsItem) => {
+    if (!item?.url) return undefined
+    const html: string = await myFetch(item.url)
+    const $ = load(html)
+
+    const body = $("div.prose.max-w-full.mt-8").first().length
+      ? $("div.prose.max-w-full.mt-8").first()
+      : $(".prose").first()
+
+    if (!body.length) return undefined
+
+    body.find("script,style").remove()
+    body.find("[href]").each((_, el) => {
+      const href = $(el).attr("href")
+      if (href) $(el).attr("href", toAbsoluteUrl(href, BASE_URL))
+    })
+    body.find("img[src]").each((_, el) => {
+      const src = $(el).attr("src")
+      if (src) $(el).attr("src", toAbsoluteUrl(src, BASE_URL))
+    })
+
+    const markdown = html2md(body.html() || "")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim()
+
+    if (!markdown) return undefined
+    return item.title ? `## ${item.title}\n\n${markdown}` : markdown
+  }
+}
+
 const news = makeIgpsportSource("/blog")
+const newsDetail = makeIgpsportSourceDetail("/blog")
+
+export const details = defineSourceDetail({
+  "igpsport-news": newsDetail,
+})
 
 export default defineSource({
   "igpsport-news": news,

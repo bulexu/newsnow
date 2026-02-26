@@ -1,6 +1,8 @@
 import type { SourceID, SourceResponse } from "@shared/types"
 import { getters } from "#/getters"
 import { getCacheTable } from "#/database/cache"
+import { detailGetters } from "#/getters-detail"
+import { fetchSourceDetails } from "#/services/detail"
 import type { CacheInfo } from "#/types"
 
 export default defineEventHandler(async (event): Promise<SourceResponse> => {
@@ -16,6 +18,14 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
       if (isValid(id)) throw new Error("Invalid source id")
     }
 
+    const triggerDetailFetch = () => {
+      if (!sources[id]?.detail) return
+      if (!detailGetters[id]) return
+      const task = fetchSourceDetails(id).catch(e => logger.error(`detail fetch task failed: ${id}`, e))
+      if (event.context.waitUntil) event.context.waitUntil(task)
+      else void task
+    }
+
     const cacheTable = await getCacheTable()
     // Date.now() in Cloudflare Worker will not update throughout the entire runtime.
     const now = Date.now()
@@ -27,6 +37,7 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
         // interval 刷新间隔，对于缓存失效也要执行的。本质上表示本来内容更新就很慢，这个间隔内可能内容压根不会更新。
         // 默认 10 分钟，是低于 TTL 的，但部分 Source 的更新间隔会超过 TTL，甚至有的一天更新一次。
         if (now - cache.updated < sources[id].interval) {
+          triggerDetailFetch()
           return {
             status: "success",
             id,
@@ -44,6 +55,7 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
           // 没有 latest
           // 有 latest，服务器可以登录但没有登录
           if (!latest || (!event.context.disabledLogin && !event.context.user)) {
+            triggerDetailFetch()
             return {
               status: "cache",
               id,
@@ -61,6 +73,7 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
         if (event.context.waitUntil) event.context.waitUntil(cacheTable.set(id, newData))
         else await cacheTable.set(id, newData)
       }
+      triggerDetailFetch()
       logger.success(`fetch ${id} latest`)
       return {
         status: "success",
@@ -70,6 +83,7 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
       }
     } catch (e) {
       if (cache!) {
+        triggerDetailFetch()
         return {
           status: "cache",
           id,

@@ -1,5 +1,6 @@
 import { load } from "cheerio"
 import type { NewsItem } from "@shared/types"
+import { html2md, toAbsoluteUrl } from "#/utils/html2md"
 
 const BASE_URL = "https://www.samr.gov.cn"
 const API_BASE = `${BASE_URL}/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=bulidstatic&webId=29e9522dc89d4e088a953d8cede72f4c&tplSetId=5c30fb89ae5e48b9aefe3cdf49853830&pageType=column&tagId=%E5%86%85%E5%AE%B9%E5%8C%BA%E5%9F%9F&editType=null&pageId=`
@@ -35,8 +36,51 @@ function makeSamrSource(pageId: string) {
   })
 }
 
+function makeSamrSourceDetail() {
+  return async (item: NewsItem) => {
+    if (!item?.url) return undefined
+    const html: string = await myFetch(item.url)
+    const $ = load(html)
+
+    const body = $("#zoom.Three_xilan_07.article-pagenation").first().length
+      ? $("#zoom.Three_xilan_07.article-pagenation").first()
+      : $("#zoom").first()
+    if (!body.length) return undefined
+
+    body.find("script,style").remove()
+    body.find("a").each((_, el) => {
+      const href = $(el).attr("href")
+      const hasText = $(el).text().trim().length > 0
+      const hasImage = $(el).find("img").length > 0
+      if (!href && !hasText && !hasImage) {
+        $(el).remove()
+        return
+      }
+      if (href) $(el).attr("href", toAbsoluteUrl(href, BASE_URL))
+    })
+    body.find("img[src]").each((_, el) => {
+      const src = $(el).attr("src")
+      if (src) $(el).attr("src", toAbsoluteUrl(src, BASE_URL))
+    })
+
+    const markdown = html2md(body.html() || "")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim()
+
+    if (!markdown) return undefined
+    return item.title ? `## ${item.title}\n\n${markdown}` : markdown
+  }
+}
+
 const xwfbt = makeSamrSource("5fb1ceb699444ed2a679754ec3cc020d")
 const szyw = makeSamrSource("04bc1e78c503470cb1b95e69752e009f")
+const xwfbtDetail = makeSamrSourceDetail()
+const szywDetail = makeSamrSourceDetail()
+
+export const details = defineSourceDetail({
+  "samr-xwfbt": xwfbtDetail,
+  "samr-szyw": szywDetail,
+})
 
 export default defineSource({
   "samr-xwfbt": xwfbt,

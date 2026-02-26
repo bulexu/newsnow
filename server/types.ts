@@ -64,3 +64,5 @@ export interface SourceOption {
 }
 
 export type SourceGetter = () => Promise<NewsItem[]>
+export type SourceDetailGetter = (item: NewsItem, sourceId: SourceID) => Promise<string | undefined>
+export type SourceDetailGetterMap = Partial<Record<SourceID, SourceDetailGetter>>

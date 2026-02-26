@@ -14,6 +14,8 @@ interface Res {
   list: Item[]
 }
 
+const BASE_URL = "https://finance.huanqiu.com/"
+
 function makeHuanqiuSource(apiUrl: string) {
   return defineSource(async () => {
     const res: Res = await myFetch(apiUrl, { parseResponse: JSON.parse })
@@ -46,11 +48,11 @@ function makeHuanqiuSourceDetail() {
       body.find("script,style,adv-loader").remove()
       body.find("[href]").each((_, el) => {
         const href = $detail(el).attr("href")
-        if (href) $detail(el).attr("href", toAbsoluteUrl(href, item.url))
+        if (href) $detail(el).attr("href", toAbsoluteUrl(href, BASE_URL, item.url))
       })
       body.find("img[src]").each((_, el) => {
         const src = $detail(el).attr("src")
-        if (src) $detail(el).attr("src", toAbsoluteUrl(src, item.url))
+        if (src) $detail(el).attr("src", toAbsoluteUrl(src, BASE_URL, item.url))
       })
       bodyHtml = body.html() || ""
     } else {

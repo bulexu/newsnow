@@ -48,11 +48,11 @@ function makeStascnSourceDetail() {
     body.find("script,style").remove()
     body.find("[href]").each((_, el) => {
       const href = $(el).attr("href")
-      if (href) $(el).attr("href", toAbsoluteUrl(href, BASE_URL))
+      if (href) $(el).attr("href", toAbsoluteUrl(href, BASE_URL, item.url))
     })
     body.find("img[src]").each((_, el) => {
       const src = $(el).attr("src")
-      if (src) $(el).attr("src", toAbsoluteUrl(src, BASE_URL))
+      if (src) $(el).attr("src", toAbsoluteUrl(src, BASE_URL, item.url))
     })
 
     const markdown = html2md(body.html() || "")

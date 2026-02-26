@@ -1,11 +1,11 @@
-FROM iluwnime0gnnlm.xuanyuan.run/node:20.12.2-alpine AS builder
+FROM crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/node:20.12.2-alpine AS builder
 WORKDIR /usr/src
 COPY . .
 RUN corepack enable
 RUN pnpm install
 RUN pnpm run build
 
-FROM iluwnime0gnnlm.xuanyuan.run/node:20.12.2-alpine
+FROM crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/node:20.12.2-alpine
 WORKDIR /usr/app
 COPY --from=builder /usr/src/dist/output ./output
 ENV HOST=0.0.0.0 PORT=4444 NODE_ENV=production

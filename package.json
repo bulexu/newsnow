@@ -106,6 +106,9 @@
     "wrangler": "4.14.1"
   },
   "pnpm": {
+    "overrides": {
+      "vite-plugin-with-nitro>h3": "1.15.3"
+    },
     "patchedDependencies": {
       "dayjs": "patches/dayjs.patch"
     },

@@ -888,7 +888,7 @@
     "title": "产业"
   },
   "samr": {
-    "redirect": "samr-news",
+    "redirect": "samr-xwfbt",
     "name": "国家市场监督管理局",
     "type": "realtime",
     "column": "finance",
@@ -897,7 +897,7 @@
     "interval": 1800000,
     "title": "新闻发布"
   },
-  "samr-news": {
+  "samr-xwfbt": {
     "name": "国家市场监督管理局",
     "type": "realtime",
     "column": "finance",
@@ -905,5 +905,14 @@
     "color": "blue",
     "interval": 1800000,
     "title": "新闻发布"
+  },
+  "samr-szyw": {
+    "name": "国家市场监督管理局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.samr.gov.cn/xw/szyw/index.html",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "时政要闻"
   }
 }

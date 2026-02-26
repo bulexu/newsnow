@@ -39,7 +39,6 @@ const industryExhibition = makeWildtoSource("industry/exhibition")
 const bikeHotnews = makeWildtoSource("bike/hotnews")
 
 export default defineSource({
-  "wildto": news,
   "wildto-news": news,
   "wildto-product": product,
   "wildto-industry-business": industryBusiness,

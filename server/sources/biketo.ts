@@ -46,7 +46,6 @@ const enterprise = makeBiketoSource("/enterprise/")
 const shop = makeBiketoSource("/shop/")
 
 export default defineSource({
-  "biketo": hotnews,
   "biketo-hotnews": hotnews,
   "biketo-activities": activities,
   "biketo-cyclexpress": cyclexpress,

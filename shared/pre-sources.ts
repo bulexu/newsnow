@@ -485,7 +485,7 @@ export const originSources = {
   },
   "biketo": {
     name: "美骑网",
-    column: "sports",
+    column: "cycle-track",
     color: "blue",
     home: "https://www.biketo.com",
     sub: {
@@ -547,7 +547,7 @@ export const originSources = {
   },
   "chncycling": {
     name: "中国自行车运动协会",
-    column: "sports",
+    column: "cycle-track",
     color: "blue",
     home: "http://chncycling.org.cn/",
     sub: {
@@ -585,7 +585,7 @@ export const originSources = {
   },
   "wildto": {
     name: "野途",
-    column: "sports",
+    column: "cycle-track",
     color: "green",
     home: "https://www.wildto.com/",
     sub: {
@@ -618,6 +618,114 @@ export const originSources = {
         type: "realtime",
         interval: Time.Common,
         home: "https://www.wildto.com/bike",
+      },
+    },
+  },
+  "globalbikeinfo": {
+    name: "全球自行车产业链信息网",
+    column: "bike-industry",
+    color: "emerald",
+    home: "https://www.globalbikeinfo.com/",
+    sub: {
+      news: {
+        title: "业界资讯",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.globalbikeinfo.com/news",
+      },
+    },
+  },
+  "igpsport": {
+    name: "迹驰",
+    column: "competition",
+    color: "blue",
+    home: "https://www.igpsport.cn/",
+    sub: {
+      news: {
+        title: "最新资讯",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.igpsport.cn/blog",
+      },
+    },
+  },
+  "garmin": {
+    name: "佳明",
+    column: "competition",
+    color: "blue",
+    home: "https://www.garmin.com/",
+    sub: {
+      bulletin: {
+        title: "最新公告",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.garmin.com.cn/news/bulletin/",
+      },
+      news: {
+        title: "最新资讯",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.garmin.com.cn/news/garmin/",
+      },
+    },
+  },
+  "imxingzhe": {
+    name: "行者",
+    column: "competition",
+    color: "green",
+    home: "https://www.imxingzhe.com/",
+    sub: {
+      news: {
+        title: "推荐",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.imxingzhe.com/newsv2/list",
+      },
+    },
+  },
+  "huanqiu": {
+    name: "环球网",
+    column: "world",
+    color: "red",
+    home: "https://www.huanqiu.com/",
+    sub: {
+      news: {
+        title: "财经",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://finance.huanqiu.com/",
+      },
+      tech: {
+        title: "科技",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://tech.huanqiu.com/",
+      },
+      capital: {
+        title: "产业",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://capital.huanqiu.com/",
+      },
+    },
+  },
+  "samr": {
+    name: "国家市场监督管理局",
+    column: "finance",
+    color: "blue",
+    home: "https://www.samr.gov.cn/",
+    sub: {
+      xwfbt: {
+        title: "新闻发布",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.samr.gov.cn/xw/xwfbt/index.html",
+      },
+      szyw: {
+        title: "时政要闻",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.samr.gov.cn/xw/szyw/index.html",
       },
     },
   },

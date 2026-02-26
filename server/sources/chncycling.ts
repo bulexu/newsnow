@@ -48,7 +48,6 @@ const bulletinXh = makeChnCyclingSource("/bulletin/xh/")
 const ss = makeChnCyclingSource("/ss/")
 
 export default defineSource({
-  "chncycling": news,
   "chncycling-news": news,
   "chncycling-bulletin-js": bulletinJs,
   "chncycling-bulletin-china": bulletinChina,

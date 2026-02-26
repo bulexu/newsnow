@@ -67,5 +67,14 @@
   "wildto-product": "yetu-chanpinzixun",
   "wildto-industry-business": "yetu-xingyedongtai",
   "wildto-industry-exhibition": "yetu-zhanhuijujiao",
-  "wildto-bike-hotnews": "yetu-redianzixun"
+  "wildto-bike-hotnews": "yetu-redianzixun",
+  "globalbikeinfo-news": "quanqiuzixingchechanyelianxinxiwang-yejiezixun",
+  "igpsport-news": "jichi-zuixinzixun",
+  "garmin-bulletin": "jiaming-zuixingonggao",
+  "garmin-news": "jiaming-zuixinzixun",
+  "imxingzhe-news": "xingzhe-tuijian",
+  "huanqiu-news": "huanqiuwang-caijing",
+  "huanqiu-tech": "huanqiuwang-keji",
+  "huanqiu-capital": "huanqiuwang-chanye",
+  "samr-news": "guojiashichangjianduguanliju-xinwenfabu"
 }

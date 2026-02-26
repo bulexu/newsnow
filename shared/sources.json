@@ -568,7 +568,7 @@
     "redirect": "biketo-hotnews",
     "name": "美骑网",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.biketo.com/hotnews/",
     "color": "blue",
     "interval": 1800000,
@@ -577,7 +577,7 @@
   "biketo-hotnews": {
     "name": "美骑网",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.biketo.com/hotnews/",
     "color": "blue",
     "interval": 1800000,
@@ -586,7 +586,7 @@
   "biketo-activities": {
     "name": "美骑网",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.biketo.com/activities/",
     "color": "blue",
     "interval": 1800000,
@@ -595,7 +595,7 @@
   "biketo-cyclexpress": {
     "name": "美骑网",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.biketo.com/cyclexpress/",
     "color": "blue",
     "interval": 300000,
@@ -604,7 +604,7 @@
   "biketo-road": {
     "name": "美骑网",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.biketo.com/road/",
     "color": "blue",
     "interval": 1800000,
@@ -613,7 +613,7 @@
   "biketo-e-bike": {
     "name": "美骑网",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.biketo.com/e-bike/",
     "color": "blue",
     "interval": 1800000,
@@ -622,7 +622,7 @@
   "biketo-racingnews": {
     "name": "美骑网",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.biketo.com/racingnews/",
     "color": "blue",
     "interval": 1800000,
@@ -631,7 +631,7 @@
   "biketo-business": {
     "name": "美骑网",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.biketo.com/business/",
     "color": "blue",
     "interval": 1800000,
@@ -640,7 +640,7 @@
   "biketo-enterprise": {
     "name": "美骑网",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.biketo.com/enterprise/",
     "color": "blue",
     "interval": 1800000,
@@ -649,7 +649,7 @@
   "biketo-shop": {
     "name": "美骑网",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.biketo.com/shop/",
     "color": "blue",
     "interval": 1800000,
@@ -659,7 +659,7 @@
     "redirect": "chncycling-news",
     "name": "中国自行车运动协会",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://chncycling.org.cn/news/",
     "color": "blue",
     "interval": 1800000,
@@ -668,7 +668,7 @@
   "chncycling-news": {
     "name": "中国自行车运动协会",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://chncycling.org.cn/news/",
     "color": "blue",
     "interval": 1800000,
@@ -677,7 +677,7 @@
   "chncycling-bulletin-js": {
     "name": "中国自行车运动协会",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://chncycling.org.cn/bulletin/js/",
     "color": "blue",
     "interval": 1800000,
@@ -686,7 +686,7 @@
   "chncycling-bulletin-china": {
     "name": "中国自行车运动协会",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.chncycling.org.cn/bulletin/china/",
     "color": "blue",
     "interval": 1800000,
@@ -695,7 +695,7 @@
   "chncycling-bulletin-xh": {
     "name": "中国自行车运动协会",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.chncycling.org.cn/bulletin/xh/",
     "color": "blue",
     "interval": 1800000,
@@ -704,7 +704,7 @@
   "chncycling-ss": {
     "name": "中国自行车运动协会",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "http://www.chncycling.org.cn/ss/",
     "color": "blue",
     "interval": 1800000,
@@ -714,7 +714,7 @@
     "redirect": "wildto-news",
     "name": "野途",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "https://www.wildto.com/cycling",
     "color": "green",
     "interval": 1800000,
@@ -723,7 +723,7 @@
   "wildto-news": {
     "name": "野途",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "https://www.wildto.com/cycling",
     "color": "green",
     "interval": 1800000,
@@ -732,7 +732,7 @@
   "wildto-product": {
     "name": "野途",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "https://www.wildto.com/product",
     "color": "green",
     "interval": 1800000,
@@ -741,7 +741,7 @@
   "wildto-industry-business": {
     "name": "野途",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "https://www.wildto.com/industry",
     "color": "green",
     "interval": 1800000,
@@ -750,7 +750,7 @@
   "wildto-industry-exhibition": {
     "name": "野途",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "https://www.wildto.com/industry",
     "color": "green",
     "interval": 1800000,
@@ -759,10 +759,151 @@
   "wildto-bike-hotnews": {
     "name": "野途",
     "type": "realtime",
-    "column": "sports",
+    "column": "cycle-track",
     "home": "https://www.wildto.com/bike",
     "color": "green",
     "interval": 1800000,
     "title": "热点资讯"
+  },
+  "globalbikeinfo": {
+    "redirect": "globalbikeinfo-news",
+    "name": "全球自行车产业链信息网",
+    "type": "realtime",
+    "column": "bike-industry",
+    "home": "https://www.globalbikeinfo.com/news",
+    "color": "emerald",
+    "interval": 1800000,
+    "title": "业界资讯"
+  },
+  "globalbikeinfo-news": {
+    "name": "全球自行车产业链信息网",
+    "type": "realtime",
+    "column": "bike-industry",
+    "home": "https://www.globalbikeinfo.com/news",
+    "color": "emerald",
+    "interval": 1800000,
+    "title": "业界资讯"
+  },
+  "igpsport": {
+    "redirect": "igpsport-news",
+    "name": "迹驰",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.igpsport.cn/blog",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新资讯"
+  },
+  "igpsport-news": {
+    "name": "迹驰",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.igpsport.cn/blog",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新资讯"
+  },
+  "garmin": {
+    "redirect": "garmin-bulletin",
+    "name": "佳明",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.garmin.com.cn/news/bulletin/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新公告"
+  },
+  "garmin-bulletin": {
+    "name": "佳明",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.garmin.com.cn/news/bulletin/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新公告"
+  },
+  "garmin-news": {
+    "name": "佳明",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.garmin.com.cn/news/garmin/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新资讯"
+  },
+  "imxingzhe": {
+    "redirect": "imxingzhe-news",
+    "name": "行者",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.imxingzhe.com/newsv2/list",
+    "color": "green",
+    "interval": 1800000,
+    "title": "推荐"
+  },
+  "imxingzhe-news": {
+    "name": "行者",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.imxingzhe.com/newsv2/list",
+    "color": "green",
+    "interval": 1800000,
+    "title": "推荐"
+  },
+  "huanqiu": {
+    "redirect": "huanqiu-news",
+    "name": "环球网",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://finance.huanqiu.com/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "财经"
+  },
+  "huanqiu-news": {
+    "name": "环球网",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://finance.huanqiu.com/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "财经"
+  },
+  "huanqiu-tech": {
+    "name": "环球网",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://tech.huanqiu.com/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "科技"
+  },
+  "huanqiu-capital": {
+    "name": "环球网",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://capital.huanqiu.com/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "产业"
+  },
+  "samr": {
+    "redirect": "samr-news",
+    "name": "国家市场监督管理局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.samr.gov.cn/xw/xwfbt/index.html",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻发布"
+  },
+  "samr-news": {
+    "name": "国家市场监督管理局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.samr.gov.cn/xw/xwfbt/index.html",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻发布"
   }
 }

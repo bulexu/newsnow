@@ -3,32 +3,35 @@ import { typeSafeObjectEntries, typeSafeObjectFromEntries } from "./type.util"
 import type { ColumnID, HiddenColumnID, Metadata, SourceID } from "./types"
 
 export const columns = {
-  china: {
+  "china": {
     zh: "国内",
   },
-  world: {
+  "world": {
     zh: "国际",
   },
-  tech: {
+  "tech": {
     zh: "科技",
   },
-  finance: {
+  "finance": {
     zh: "财经",
   },
-  focus: {
+  "focus": {
     zh: "关注",
   },
-  realtime: {
+  "realtime": {
     zh: "实时",
   },
-  hottest: {
+  "hottest": {
     zh: "最热",
   },
-  sports: {
-    zh: "体育",
+  "cycle-track": {
+    zh: "自行车赛道",
   },
-  bike: {
-    zh: "自行车",
+  "bike-industry": {
+    zh: "自行车产业",
+  },
+  "competition": {
+    zh: "竞对",
   },
 } as const
 

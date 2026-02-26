@@ -13,17 +13,17 @@ const Time = {
 }
 
 export const originSources = {
-  "v2ex": {
-    name: "V2EX",
-    color: "slate",
-    home: "https://v2ex.com/",
-    sub: {
-      share: {
-        title: "最新分享",
-        column: "tech",
-      },
-    },
-  },
+  // "v2ex": {
+  //   name: "V2EX",
+  //   color: "slate",
+  //   home: "https://v2ex.com/",
+  //   sub: {
+  //     share: {
+  //       title: "最新分享",
+  //       column: "tech",
+  //     },
+  //   },
+  // },
   "zhihu": {
     name: "知乎",
     type: "hottest",
@@ -40,35 +40,35 @@ export const originSources = {
     interval: Time.Realtime,
     home: "https://weibo.com",
   },
-  "zaobao": {
-    name: "联合早报",
-    interval: Time.Common,
-    type: "realtime",
-    column: "world",
-    color: "red",
-    desc: "来自第三方网站: 早晨报",
-    home: "https://www.zaobao.com",
-  },
-  "coolapk": {
-    name: "酷安",
-    type: "hottest",
-    column: "tech",
-    color: "green",
-    title: "今日最热",
-    home: "https://coolapk.com",
-  },
-  "mktnews": {
-    name: "MKTNews",
-    column: "finance",
-    home: "https://mktnews.net",
-    color: "indigo",
-    interval: Time.Realtime,
-    sub: {
-      flash: {
-        title: "快讯",
-      },
-    },
-  },
+  // "zaobao": {
+  //   name: "联合早报",
+  //   interval: Time.Common,
+  //   type: "realtime",
+  //   column: "world",
+  //   color: "red",
+  //   desc: "来自第三方网站: 早晨报",
+  //   home: "https://www.zaobao.com",
+  // },
+  // "coolapk": {
+  //   name: "酷安",
+  //   type: "hottest",
+  //   column: "tech",
+  //   color: "green",
+  //   title: "今日最热",
+  //   home: "https://coolapk.com",
+  // },
+  // "mktnews": {
+  //   name: "MKTNews",
+  //   column: "finance",
+  //   home: "https://mktnews.net",
+  //   color: "indigo",
+  //   interval: Time.Realtime,
+  //   sub: {
+  //     flash: {
+  //       title: "快讯",
+  //     },
+  //   },
+  // },
   "wallstreetcn": {
     name: "华尔街见闻",
     color: "blue",
@@ -101,10 +101,10 @@ export const originSources = {
       quick: {
         title: "快讯",
       },
-      renqi: {
-        type: "hottest",
-        title: "人气榜",
-      },
+      // renqi: {
+      //   type: "hottest",
+      //   title: "人气榜",
+      // },
     },
   },
   "douyin": {
@@ -137,13 +137,13 @@ export const originSources = {
     color: "red",
     home: "https://www.toutiao.com",
   },
-  "ithome": {
-    name: "IT之家",
-    color: "red",
-    column: "tech",
-    type: "realtime",
-    home: "https://www.ithome.com",
-  },
+  // "ithome": {
+  //   name: "IT之家",
+  //   color: "red",
+  //   column: "tech",
+  //   type: "realtime",
+  //   home: "https://www.ithome.com",
+  // },
   "thepaper": {
     name: "澎湃新闻",
     interval: Time.Common,
@@ -166,25 +166,25 @@ export const originSources = {
     interval: Time.Common,
     home: "https://china.cankaoxiaoxi.com",
   },
-  "pcbeta": {
-    name: "远景论坛",
-    color: "blue",
-    column: "tech",
-    home: "https://bbs.pcbeta.com",
-    sub: {
-      windows11: {
-        title: "Win11",
-        type: "realtime",
-        interval: Time.Fast,
-      },
-      windows: {
-        title: "Windows 资源",
-        type: "realtime",
-        interval: Time.Fast,
-        disable: true,
-      },
-    },
-  },
+  // "pcbeta": {
+  //   name: "远景论坛",
+  //   color: "blue",
+  //   column: "tech",
+  //   home: "https://bbs.pcbeta.com",
+  //   sub: {
+  //     windows11: {
+  //       title: "Win11",
+  //       type: "realtime",
+  //       interval: Time.Fast,
+  //     },
+  //     windows: {
+  //       title: "Windows 资源",
+  //       type: "realtime",
+  //       interval: Time.Fast,
+  //       disable: true,
+  //     },
+  //   },
+  // },
   "cls": {
     name: "财联社",
     color: "red",
@@ -205,19 +205,19 @@ export const originSources = {
       },
     },
   },
-  "xueqiu": {
-    name: "雪球",
-    color: "blue",
-    home: "https://xueqiu.com",
-    column: "finance",
-    sub: {
-      hotstock: {
-        title: "热门股票",
-        interval: Time.Realtime,
-        type: "hottest",
-      },
-    },
-  },
+  // "xueqiu": {
+  //   name: "雪球",
+  //   color: "blue",
+  //   home: "https://xueqiu.com",
+  //   column: "finance",
+  //   sub: {
+  //     hotstock: {
+  //       title: "热门股票",
+  //       interval: Time.Realtime,
+  //       type: "hottest",
+  //     },
+  //   },
+  // },
   "gelonghui": {
     name: "格隆汇",
     color: "blue",
@@ -227,44 +227,44 @@ export const originSources = {
     interval: Time.Realtime,
     home: "https://www.gelonghui.com",
   },
-  "fastbull": {
-    name: "法布财经",
-    color: "emerald",
-    home: "https://www.fastbull.cn",
-    column: "finance",
-    sub: {
-      express: {
-        title: "快讯",
-        type: "realtime",
-        interval: Time.Realtime,
-      },
-      news: {
-        title: "头条",
-        interval: Time.Common,
-      },
-    },
-  },
-  "solidot": {
-    name: "Solidot",
-    color: "teal",
-    column: "tech",
-    home: "https://solidot.org",
-    interval: Time.Slow,
-  },
-  "hackernews": {
-    name: "Hacker News",
-    color: "orange",
-    column: "tech",
-    type: "hottest",
-    home: "https://news.ycombinator.com/",
-  },
-  "producthunt": {
-    name: "Product Hunt",
-    color: "red",
-    column: "tech",
-    type: "hottest",
-    home: "https://www.producthunt.com/",
-  },
+  // "fastbull": {
+  //   name: "法布财经",
+  //   color: "emerald",
+  //   home: "https://www.fastbull.cn",
+  //   column: "finance",
+  //   sub: {
+  //     express: {
+  //       title: "快讯",
+  //       type: "realtime",
+  //       interval: Time.Realtime,
+  //     },
+  //     news: {
+  //       title: "头条",
+  //       interval: Time.Common,
+  //     },
+  //   },
+  // },
+  // "solidot": {
+  //   name: "Solidot",
+  //   color: "teal",
+  //   column: "tech",
+  //   home: "https://solidot.org",
+  //   interval: Time.Slow,
+  // },
+  // "hackernews": {
+  //   name: "Hacker News",
+  //   color: "orange",
+  //   column: "tech",
+  //   type: "hottest",
+  //   home: "https://news.ycombinator.com/",
+  // },
+  // "producthunt": {
+  //   name: "Product Hunt",
+  //   color: "red",
+  //   column: "tech",
+  //   type: "hottest",
+  //   home: "https://www.producthunt.com/",
+  // },
   "github": {
     name: "Github",
     color: "gray",
@@ -352,28 +352,28 @@ export const originSources = {
       },
     },
   },
-  "ghxi": {
-    name: "果核剥壳",
-    column: "china",
-    color: "yellow",
-    home: "https://www.ghxi.com/",
-    disable: true,
-  },
-  "smzdm": {
-    name: "什么值得买",
-    column: "china",
-    color: "red",
-    type: "hottest",
-    home: "https://www.smzdm.com",
-    disable: true,
-  },
-  "nowcoder": {
-    name: "牛客",
-    column: "china",
-    color: "blue",
-    type: "hottest",
-    home: "https://www.nowcoder.com",
-  },
+  // "ghxi": {
+  //   name: "果核剥壳",
+  //   column: "china",
+  //   color: "yellow",
+  //   home: "https://www.ghxi.com/",
+  //   disable: true,
+  // },
+  // "smzdm": {
+  //   name: "什么值得买",
+  //   column: "china",
+  //   color: "red",
+  //   type: "hottest",
+  //   home: "https://www.smzdm.com",
+  //   disable: true,
+  // },
+  // "nowcoder": {
+  //   name: "牛客",
+  //   column: "china",
+  //   color: "blue",
+  //   type: "hottest",
+  //   home: "https://www.nowcoder.com",
+  // },
   "sspai": {
     name: "少数派",
     column: "tech",
@@ -396,41 +396,41 @@ export const originSources = {
     title: "热点资讯",
     home: "https://www.ifeng.com",
   },
-  "chongbuluo": {
-    name: "虫部落",
-    column: "china",
-    color: "green",
-    home: "https://www.chongbuluo.com",
-    sub: {
-      latest: {
-        title: "最新",
-        interval: Time.Common,
-        home: "https://www.chongbuluo.com/forum.php?mod=guide&view=newthread",
-      },
-      hot: {
-        title: "最热",
-        type: "hottest",
-        interval: Time.Common,
-        home: "https://www.chongbuluo.com/forum.php?mod=guide&view=hot",
-      },
-    },
-  },
-  "douban": {
-    name: "豆瓣",
-    column: "china",
-    title: "热门电影",
-    color: "green",
-    type: "hottest",
-    home: "https://www.douban.com",
-  },
-  "steam": {
-    name: "Steam",
-    column: "world",
-    title: "在线人数",
-    color: "blue",
-    type: "hottest",
-    home: "https://store.steampowered.com",
-  },
+  // "chongbuluo": {
+  //   name: "虫部落",
+  //   column: "china",
+  //   color: "green",
+  //   home: "https://www.chongbuluo.com",
+  //   sub: {
+  //     latest: {
+  //       title: "最新",
+  //       interval: Time.Common,
+  //       home: "https://www.chongbuluo.com/forum.php?mod=guide&view=newthread",
+  //     },
+  //     hot: {
+  //       title: "最热",
+  //       type: "hottest",
+  //       interval: Time.Common,
+  //       home: "https://www.chongbuluo.com/forum.php?mod=guide&view=hot",
+  //     },
+  //   },
+  // },
+  // "douban": {
+  //   name: "豆瓣",
+  //   column: "china",
+  //   title: "热门电影",
+  //   color: "green",
+  //   type: "hottest",
+  //   home: "https://www.douban.com",
+  // },
+  // "steam": {
+  //   name: "Steam",
+  //   column: "world",
+  //   title: "在线人数",
+  //   color: "blue",
+  //   type: "hottest",
+  //   home: "https://store.steampowered.com",
+  // },
   "tencent": {
     name: "腾讯新闻",
     column: "china",
@@ -453,36 +453,35 @@ export const originSources = {
     type: "hottest",
     home: "https://www.freebuf.com/",
   },
+  // "qqvideo": {
+  //   name: "腾讯视频",
+  //   column: "china",
+  //   color: "blue",
+  //   home: "https://v.qq.com/",
+  //   sub: {
+  //     "tv-hotsearch": {
+  //       title: "热搜榜",
+  //       type: "hottest",
+  //       interval: Time.Common,
+  //       home: "https://v.qq.com/channel/tv",
 
-  "qqvideo": {
-    name: "腾讯视频",
-    column: "china",
-    color: "blue",
-    home: "https://v.qq.com/",
-    sub: {
-      "tv-hotsearch": {
-        title: "热搜榜",
-        type: "hottest",
-        interval: Time.Common,
-        home: "https://v.qq.com/channel/tv",
-
-      },
-    },
-  },
-  "iqiyi": {
-    name: "爱奇艺",
-    column: "china",
-    color: "green",
-    home: "https://www.iqiyi.com",
-    sub: {
-      "hot-ranklist": {
-        title: "热播榜",
-        type: "hottest",
-        interval: Time.Common,
-        home: "https://www.iqiyi.com",
-      },
-    },
-  },
+  //     },
+  //   },
+  // },
+  // "iqiyi": {
+  //   name: "爱奇艺",
+  //   column: "china",
+  //   color: "green",
+  //   home: "https://www.iqiyi.com",
+  //   sub: {
+  //     "hot-ranklist": {
+  //       title: "热播榜",
+  //       type: "hottest",
+  //       interval: Time.Common,
+  //       home: "https://www.iqiyi.com",
+  //     },
+  //   },
+  // },
   "biketo": {
     name: "美骑网",
     column: "cycle-track",

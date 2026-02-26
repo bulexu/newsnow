@@ -9,6 +9,7 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
   try {
     const query = getQuery(event)
     const latest = query.latest !== undefined && query.latest !== "false"
+    const withDetail = query.withDetail !== undefined && query.withDetail !== "false"
     let id = query.id as SourceID
     const isValid = (id: SourceID) => !id || !sources[id] || !getters[id]
 
@@ -26,10 +27,41 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
       else void task
     }
 
+    const maybeAttachDetail = async (items: CacheInfo["items"]) => {
+      if (!withDetail || !sources[id]?.detail || !items?.length) return items
+      if (!items.some(item => !item.content?.trim())) return items
+      try {
+        const result = await fetchSourceDetails(id)
+        if (result.success && result.items) return result.items
+      } catch (err) {
+        logger.error(`detail fetch immediate failed: ${id}`, err)
+      }
+      return items
+    }
+
+    let cache: CacheInfo | undefined
+
+    const reuseCachedContent = (items: CacheInfo["items"]) => {
+      if (!cache?.items?.length) return items
+      const cachedWithContent = cache.items.filter(item => item.content?.trim())
+      if (!cachedWithContent.length) return items
+      const cachedById = new Map<string, string>()
+      const cachedByUrl = new Map<string, string>()
+      for (const cachedItem of cachedWithContent) {
+        const content = cachedItem.content!
+        if (cachedItem.id !== undefined) cachedById.set(String(cachedItem.id), content)
+        if (cachedItem.url) cachedByUrl.set(cachedItem.url, content)
+      }
+      return items.map((item) => {
+        if (item.content?.trim()) return item
+        const content = (item.id !== undefined ? cachedById.get(String(item.id)) : undefined) || (item.url ? cachedByUrl.get(item.url) : undefined)
+        return content ? { ...item, content } : item
+      })
+    }
+
     const cacheTable = await getCacheTable()
     // Date.now() in Cloudflare Worker will not update throughout the entire runtime.
     const now = Date.now()
-    let cache: CacheInfo | undefined
     if (cacheTable) {
       cache = await cacheTable.get(id)
       if (cache) {
@@ -37,12 +69,12 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
         // interval 刷新间隔，对于缓存失效也要执行的。本质上表示本来内容更新就很慢，这个间隔内可能内容压根不会更新。
         // 默认 10 分钟，是低于 TTL 的，但部分 Source 的更新间隔会超过 TTL，甚至有的一天更新一次。
         if (now - cache.updated < sources[id].interval) {
-          triggerDetailFetch()
+          if (!withDetail) triggerDetailFetch()
           return {
             status: "success",
             id,
             updatedTime: now,
-            items: cache.items,
+            items: await maybeAttachDetail(cache.items),
           }
         }
 
@@ -55,12 +87,12 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
           // 没有 latest
           // 有 latest，服务器可以登录但没有登录
           if (!latest || (!event.context.disabledLogin && !event.context.user)) {
-            triggerDetailFetch()
+            if (!withDetail) triggerDetailFetch()
             return {
               status: "cache",
               id,
               updatedTime: cache.updated,
-              items: cache.items,
+              items: await maybeAttachDetail(cache.items),
             }
           }
         }
@@ -68,27 +100,27 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
     }
 
     try {
-      const newData = (await getters[id]()).slice(0, 30)
+      const newData = reuseCachedContent((await getters[id]()).slice(0, 30))
       if (cacheTable && newData.length) {
-        if (event.context.waitUntil) event.context.waitUntil(cacheTable.set(id, newData))
-        else await cacheTable.set(id, newData)
+        if (withDetail || !event.context.waitUntil) await cacheTable.set(id, newData)
+        else event.context.waitUntil(cacheTable.set(id, newData))
       }
-      triggerDetailFetch()
+      if (!withDetail) triggerDetailFetch()
       logger.success(`fetch ${id} latest`)
       return {
         status: "success",
         id,
         updatedTime: now,
-        items: newData,
+        items: await maybeAttachDetail(newData),
       }
     } catch (e) {
-      if (cache!) {
-        triggerDetailFetch()
+      if (cache) {
+        if (!withDetail) triggerDetailFetch()
         return {
           status: "cache",
           id,
           updatedTime: cache.updated,
-          items: cache.items,
+          items: await maybeAttachDetail(cache.items),
         }
       } else {
         throw e

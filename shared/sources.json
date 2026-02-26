@@ -914,5 +914,143 @@
     "color": "blue",
     "interval": 1800000,
     "title": "时政要闻"
+  },
+  "ceweekly": {
+    "redirect": "ceweekly-news_important",
+    "name": "财经网",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.ceweekly.cn/news/important/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "热点观察"
+  },
+  "ceweekly-news_important": {
+    "name": "财经网",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.ceweekly.cn/news/important/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "热点观察"
+  },
+  "ceweekly-macro": {
+    "name": "财经网",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.ceweekly.cn/finance/macro/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "宏观经济"
+  },
+  "mof": {
+    "redirect": "mof-czxw",
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "财政新闻"
+  },
+  "mof-czxw": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "财政新闻"
+  },
+  "mof-zyzfmhwz": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/zyzfmhwz/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "中央政府门户网站"
+  },
+  "mof-renminwang": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/renminwang/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "人民日报"
+  },
+  "mof-xinhuanet": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/xinhuanet/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新华社"
+  },
+  "mof-jjrb": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/jjrb/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "经济日报"
+  },
+  "mof-jjckb": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/jjckb/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "经济参考报"
+  },
+  "mof-zgcjb": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/zgcjb/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "中国财经报"
+  },
+  "mof-cjzylm": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/cjzylm/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "财经专用栏目"
+  },
+  "stascn": {
+    "redirect": "stascn-tjdt",
+    "name": "国家统计局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.stats.gov.cn/xw/tjxw/tjdt/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "统计动态"
+  },
+  "stascn-tjdt": {
+    "name": "国家统计局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.stats.gov.cn/xw/tjxw/tjdt/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "统计动态"
+  },
+  "stascn-tzgg": {
+    "name": "国家统计局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.stats.gov.cn/xw/tjxw/tzgg/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "通知公告"
   }
 }

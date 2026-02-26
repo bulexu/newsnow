@@ -729,6 +729,102 @@ export const originSources = {
       },
     },
   },
+  "ceweekly": {
+    name: "财经网",
+    column: "finance",
+    color: "red",
+    home: "https://www.ceweekly.cn/",
+    sub: {
+      news_important: {
+        title: "热点观察",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.ceweekly.cn/news/important/",
+      },
+      macro: {
+        title: "宏观经济",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.ceweekly.cn/finance/macro/",
+      },
+    },
+  },
+  "mof": {
+    name: "财政部",
+    column: "finance",
+    color: "blue",
+    home: "http://www.mof.gov.cn/",
+    sub: {
+      czxw: {
+        title: "财政新闻",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/",
+      },
+      zyzfmhwz: {
+        title: "中央政府门户网站",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/zyzfmhwz/",
+      },
+      renminwang: {
+        title: "人民日报",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/renminwang/",
+      },
+      xinhuanet: {
+        title: "新华社",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/xinhuanet/",
+      },
+      jjrb: {
+        title: "经济日报",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/jjrb/",
+      },
+      jjckb: {
+        title: "经济参考报",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/jjckb/",
+      },
+      zgcjb: {
+        title: "中国财经报",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/zgcjb/",
+      },
+      cjzylm: {
+        title: "财经专用栏目",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/cjzylm/",
+      },
+    },
+  },
+  "stascn": {
+    name: "国家统计局",
+    column: "finance",
+    color: "blue",
+    home: "https://www.stats.gov.cn/",
+    sub: {
+      tjdt: {
+        title: "统计动态",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.stats.gov.cn/xw/tjxw/tjdt/",
+      },
+      tzgg: {
+        title: "通知公告",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.stats.gov.cn/xw/tjxw/tzgg/",
+      },
+    },
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {

@@ -5,6 +5,7 @@ dist/
 .vinxi
 .cache
 .data
+.vite
 .wrangler
 .env
 .env.*

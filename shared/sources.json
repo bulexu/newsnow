@@ -1,21 +1,4 @@
 {
-  "v2ex": {
-    "redirect": "v2ex-share",
-    "name": "V2EX",
-    "column": "tech",
-    "home": "https://v2ex.com/",
-    "color": "slate",
-    "interval": 600000,
-    "title": "最新分享"
-  },
-  "v2ex-share": {
-    "name": "V2EX",
-    "column": "tech",
-    "home": "https://v2ex.com/",
-    "color": "slate",
-    "interval": 600000,
-    "title": "最新分享"
-  },
   "zhihu": {
     "name": "知乎",
     "type": "hottest",
@@ -32,41 +15,6 @@
     "home": "https://weibo.com",
     "color": "red",
     "interval": 120000
-  },
-  "zaobao": {
-    "name": "联合早报",
-    "type": "realtime",
-    "desc": "来自第三方网站: 早晨报",
-    "column": "world",
-    "home": "https://www.zaobao.com",
-    "color": "red",
-    "interval": 1800000
-  },
-  "coolapk": {
-    "title": "今日最热",
-    "name": "酷安",
-    "type": "hottest",
-    "column": "tech",
-    "home": "https://coolapk.com",
-    "color": "green",
-    "interval": 600000
-  },
-  "mktnews": {
-    "redirect": "mktnews-flash",
-    "name": "MKTNews",
-    "column": "finance",
-    "home": "https://mktnews.net",
-    "color": "indigo",
-    "interval": 120000,
-    "title": "快讯"
-  },
-  "mktnews-flash": {
-    "name": "MKTNews",
-    "column": "finance",
-    "home": "https://mktnews.net",
-    "color": "indigo",
-    "interval": 120000,
-    "title": "快讯"
   },
   "wallstreetcn": {
     "redirect": "wallstreetcn-quick",
@@ -123,15 +71,6 @@
     "interval": 600000,
     "title": "快讯"
   },
-  "36kr-renqi": {
-    "name": "36氪",
-    "type": "hottest",
-    "column": "tech",
-    "home": "https://36kr.com",
-    "color": "blue",
-    "interval": 600000,
-    "title": "人气榜"
-  },
   "douyin": {
     "name": "抖音",
     "type": "hottest",
@@ -166,14 +105,6 @@
     "color": "red",
     "interval": 600000
   },
-  "ithome": {
-    "name": "IT之家",
-    "type": "realtime",
-    "column": "tech",
-    "home": "https://www.ithome.com",
-    "color": "red",
-    "interval": 600000
-  },
   "thepaper": {
     "title": "热榜",
     "name": "澎湃新闻",
@@ -196,25 +127,6 @@
     "home": "https://china.cankaoxiaoxi.com",
     "color": "red",
     "interval": 1800000
-  },
-  "pcbeta": {
-    "redirect": "pcbeta-windows11",
-    "name": "远景论坛",
-    "type": "realtime",
-    "column": "tech",
-    "home": "https://bbs.pcbeta.com",
-    "color": "blue",
-    "interval": 300000,
-    "title": "Win11"
-  },
-  "pcbeta-windows11": {
-    "name": "远景论坛",
-    "type": "realtime",
-    "column": "tech",
-    "home": "https://bbs.pcbeta.com",
-    "color": "blue",
-    "interval": 300000,
-    "title": "Win11"
   },
   "cls": {
     "redirect": "cls-telegraph",
@@ -252,25 +164,6 @@
     "interval": 600000,
     "title": "热门"
   },
-  "xueqiu": {
-    "redirect": "xueqiu-hotstock",
-    "name": "雪球",
-    "type": "hottest",
-    "column": "finance",
-    "home": "https://xueqiu.com",
-    "color": "blue",
-    "interval": 120000,
-    "title": "热门股票"
-  },
-  "xueqiu-hotstock": {
-    "name": "雪球",
-    "type": "hottest",
-    "column": "finance",
-    "home": "https://xueqiu.com",
-    "color": "blue",
-    "interval": 120000,
-    "title": "热门股票"
-  },
   "gelonghui": {
     "title": "事件",
     "name": "格隆汇",
@@ -279,56 +172,6 @@
     "home": "https://www.gelonghui.com",
     "color": "blue",
     "interval": 120000
-  },
-  "fastbull": {
-    "redirect": "fastbull-express",
-    "name": "法布财经",
-    "type": "realtime",
-    "column": "finance",
-    "home": "https://www.fastbull.cn",
-    "color": "emerald",
-    "interval": 120000,
-    "title": "快讯"
-  },
-  "fastbull-express": {
-    "name": "法布财经",
-    "type": "realtime",
-    "column": "finance",
-    "home": "https://www.fastbull.cn",
-    "color": "emerald",
-    "interval": 120000,
-    "title": "快讯"
-  },
-  "fastbull-news": {
-    "name": "法布财经",
-    "column": "finance",
-    "home": "https://www.fastbull.cn",
-    "color": "emerald",
-    "interval": 1800000,
-    "title": "头条"
-  },
-  "solidot": {
-    "name": "Solidot",
-    "column": "tech",
-    "home": "https://solidot.org",
-    "color": "teal",
-    "interval": 3600000
-  },
-  "hackernews": {
-    "name": "Hacker News",
-    "type": "hottest",
-    "column": "tech",
-    "home": "https://news.ycombinator.com/",
-    "color": "orange",
-    "interval": 600000
-  },
-  "producthunt": {
-    "name": "Product Hunt",
-    "type": "hottest",
-    "column": "tech",
-    "home": "https://www.producthunt.com/",
-    "color": "red",
-    "interval": 600000
   },
   "github": {
     "redirect": "github-trending-today",
@@ -421,14 +264,6 @@
     "color": "blue",
     "interval": 600000
   },
-  "nowcoder": {
-    "name": "牛客",
-    "type": "hottest",
-    "column": "china",
-    "home": "https://www.nowcoder.com",
-    "color": "blue",
-    "interval": 600000
-  },
   "sspai": {
     "name": "少数派",
     "type": "hottest",
@@ -452,50 +287,6 @@
     "column": "china",
     "home": "https://www.ifeng.com",
     "color": "red",
-    "interval": 600000
-  },
-  "chongbuluo": {
-    "redirect": "chongbuluo-latest",
-    "name": "虫部落",
-    "column": "china",
-    "home": "https://www.chongbuluo.com/forum.php?mod=guide&view=newthread",
-    "color": "green",
-    "interval": 1800000,
-    "title": "最新"
-  },
-  "chongbuluo-latest": {
-    "name": "虫部落",
-    "column": "china",
-    "home": "https://www.chongbuluo.com/forum.php?mod=guide&view=newthread",
-    "color": "green",
-    "interval": 1800000,
-    "title": "最新"
-  },
-  "chongbuluo-hot": {
-    "name": "虫部落",
-    "type": "hottest",
-    "column": "china",
-    "home": "https://www.chongbuluo.com/forum.php?mod=guide&view=hot",
-    "color": "green",
-    "interval": 1800000,
-    "title": "最热"
-  },
-  "douban": {
-    "title": "热门电影",
-    "name": "豆瓣",
-    "type": "hottest",
-    "column": "china",
-    "home": "https://www.douban.com",
-    "color": "green",
-    "interval": 600000
-  },
-  "steam": {
-    "title": "在线人数",
-    "name": "Steam",
-    "type": "hottest",
-    "column": "world",
-    "home": "https://store.steampowered.com",
-    "color": "blue",
     "interval": 600000
   },
   "tencent": {
@@ -526,42 +317,493 @@
     "color": "green",
     "interval": 600000
   },
-  "qqvideo": {
-    "redirect": "qqvideo-tv-hotsearch",
-    "name": "腾讯视频",
-    "type": "hottest",
-    "column": "china",
-    "home": "https://v.qq.com/channel/tv",
+  "biketo": {
+    "redirect": "biketo-hotnews",
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.biketo.com/hotnews/",
     "color": "blue",
     "interval": 1800000,
-    "title": "热搜榜"
+    "title": "热点快报"
   },
-  "qqvideo-tv-hotsearch": {
-    "name": "腾讯视频",
-    "type": "hottest",
-    "column": "china",
-    "home": "https://v.qq.com/channel/tv",
+  "biketo-hotnews": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.biketo.com/hotnews/",
     "color": "blue",
     "interval": 1800000,
-    "title": "热搜榜"
+    "title": "热点快报"
   },
-  "iqiyi": {
-    "redirect": "iqiyi-hot-ranklist",
-    "name": "爱奇艺",
-    "type": "hottest",
-    "column": "china",
-    "home": "https://www.iqiyi.com",
+  "biketo-activities": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.biketo.com/activities/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "骑行活动"
+  },
+  "biketo-cyclexpress": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.biketo.com/cyclexpress/",
+    "color": "blue",
+    "interval": 300000,
+    "title": "美骑快讯"
+  },
+  "biketo-road": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.biketo.com/road/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "公路车"
+  },
+  "biketo-e-bike": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.biketo.com/e-bike/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "电助力"
+  },
+  "biketo-racingnews": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.biketo.com/racingnews/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "赛事新闻"
+  },
+  "biketo-business": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.biketo.com/business/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "行业动态"
+  },
+  "biketo-enterprise": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.biketo.com/enterprise/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "企业探秘"
+  },
+  "biketo-shop": {
+    "name": "美骑网",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.biketo.com/shop/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "精品车店"
+  },
+  "chncycling": {
+    "redirect": "chncycling-news",
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://chncycling.org.cn/news/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻动态"
+  },
+  "chncycling-news": {
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://chncycling.org.cn/news/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻动态"
+  },
+  "chncycling-bulletin-js": {
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://chncycling.org.cn/bulletin/js/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "竞赛"
+  },
+  "chncycling-bulletin-china": {
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.chncycling.org.cn/bulletin/china/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "国家队"
+  },
+  "chncycling-bulletin-xh": {
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.chncycling.org.cn/bulletin/xh/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "协会事务"
+  },
+  "chncycling-ss": {
+    "name": "中国自行车运动协会",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "http://www.chncycling.org.cn/ss/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "自行车赛事"
+  },
+  "wildto": {
+    "redirect": "wildto-news",
+    "name": "野途",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "https://www.wildto.com/cycling",
     "color": "green",
     "interval": 1800000,
-    "title": "热播榜"
+    "title": "赛事新闻"
   },
-  "iqiyi-hot-ranklist": {
-    "name": "爱奇艺",
-    "type": "hottest",
-    "column": "china",
-    "home": "https://www.iqiyi.com",
+  "wildto-news": {
+    "name": "野途",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "https://www.wildto.com/cycling",
     "color": "green",
     "interval": 1800000,
-    "title": "热播榜"
+    "title": "赛事新闻"
+  },
+  "wildto-product": {
+    "name": "野途",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "https://www.wildto.com/product",
+    "color": "green",
+    "interval": 1800000,
+    "title": "产品资讯"
+  },
+  "wildto-industry-business": {
+    "name": "野途",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "https://www.wildto.com/industry",
+    "color": "green",
+    "interval": 1800000,
+    "title": "行业动态"
+  },
+  "wildto-industry-exhibition": {
+    "name": "野途",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "https://www.wildto.com/industry",
+    "color": "green",
+    "interval": 1800000,
+    "title": "展会聚焦"
+  },
+  "wildto-bike-hotnews": {
+    "name": "野途",
+    "type": "realtime",
+    "column": "cycle-track",
+    "home": "https://www.wildto.com/bike",
+    "color": "green",
+    "interval": 1800000,
+    "title": "热点资讯"
+  },
+  "globalbikeinfo": {
+    "redirect": "globalbikeinfo-news",
+    "name": "全球自行车产业链信息网",
+    "type": "realtime",
+    "column": "bike-industry",
+    "home": "https://www.globalbikeinfo.com/news",
+    "color": "emerald",
+    "interval": 1800000,
+    "title": "业界资讯"
+  },
+  "globalbikeinfo-news": {
+    "name": "全球自行车产业链信息网",
+    "type": "realtime",
+    "column": "bike-industry",
+    "home": "https://www.globalbikeinfo.com/news",
+    "color": "emerald",
+    "interval": 1800000,
+    "title": "业界资讯"
+  },
+  "igpsport": {
+    "redirect": "igpsport-news",
+    "name": "迹驰",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.igpsport.cn/blog",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新资讯"
+  },
+  "igpsport-news": {
+    "name": "迹驰",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.igpsport.cn/blog",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新资讯"
+  },
+  "garmin": {
+    "redirect": "garmin-bulletin",
+    "name": "佳明",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.garmin.com.cn/news/bulletin/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新公告"
+  },
+  "garmin-bulletin": {
+    "name": "佳明",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.garmin.com.cn/news/bulletin/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新公告"
+  },
+  "garmin-news": {
+    "name": "佳明",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.garmin.com.cn/news/garmin/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新资讯"
+  },
+  "imxingzhe": {
+    "redirect": "imxingzhe-news",
+    "name": "行者",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.imxingzhe.com/newsv2/list",
+    "color": "green",
+    "interval": 1800000,
+    "title": "推荐"
+  },
+  "imxingzhe-news": {
+    "name": "行者",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.imxingzhe.com/newsv2/list",
+    "color": "green",
+    "interval": 1800000,
+    "title": "推荐"
+  },
+  "huanqiu": {
+    "redirect": "huanqiu-news",
+    "name": "环球网",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://finance.huanqiu.com/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "财经"
+  },
+  "huanqiu-news": {
+    "name": "环球网",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://finance.huanqiu.com/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "财经"
+  },
+  "huanqiu-tech": {
+    "name": "环球网",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://tech.huanqiu.com/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "科技"
+  },
+  "huanqiu-capital": {
+    "name": "环球网",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://capital.huanqiu.com/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "产业"
+  },
+  "samr": {
+    "redirect": "samr-xwfbt",
+    "name": "国家市场监督管理局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.samr.gov.cn/xw/xwfbt/index.html",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻发布"
+  },
+  "samr-xwfbt": {
+    "name": "国家市场监督管理局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.samr.gov.cn/xw/xwfbt/index.html",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻发布"
+  },
+  "samr-szyw": {
+    "name": "国家市场监督管理局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.samr.gov.cn/xw/szyw/index.html",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "时政要闻"
+  },
+  "ceweekly": {
+    "redirect": "ceweekly-news_important",
+    "name": "财经网",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.ceweekly.cn/news/important/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "热点观察"
+  },
+  "ceweekly-news_important": {
+    "name": "财经网",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.ceweekly.cn/news/important/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "热点观察"
+  },
+  "ceweekly-macro": {
+    "name": "财经网",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.ceweekly.cn/finance/macro/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "宏观经济"
+  },
+  "mof": {
+    "redirect": "mof-czxw",
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "财政新闻"
+  },
+  "mof-czxw": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "财政新闻"
+  },
+  "mof-zyzfmhwz": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/zyzfmhwz/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "中央政府门户网站"
+  },
+  "mof-renminwang": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/renminwang/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "人民日报"
+  },
+  "mof-xinhuanet": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/xinhuanet/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新华社"
+  },
+  "mof-jjrb": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/jjrb/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "经济日报"
+  },
+  "mof-jjckb": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/jjckb/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "经济参考报"
+  },
+  "mof-zgcjb": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/zgcjb/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "中国财经报"
+  },
+  "mof-cjzylm": {
+    "name": "财政部",
+    "type": "realtime",
+    "column": "finance",
+    "home": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/cjzylm/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "财经专用栏目"
+  },
+  "stascn": {
+    "redirect": "stascn-tjdt",
+    "name": "国家统计局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.stats.gov.cn/xw/tjxw/tjdt/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "统计动态"
+  },
+  "stascn-tjdt": {
+    "name": "国家统计局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.stats.gov.cn/xw/tjxw/tjdt/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "统计动态"
+  },
+  "stascn-tzgg": {
+    "name": "国家统计局",
+    "type": "realtime",
+    "column": "finance",
+    "home": "https://www.stats.gov.cn/xw/tjxw/tzgg/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "通知公告"
   }
 }

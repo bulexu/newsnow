@@ -8,6 +8,7 @@ dist/
 .vite
 .wrangler
 .env
+.vite
 .env.*
 dev-dist
 *.tsbuildinfo

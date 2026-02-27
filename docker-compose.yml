@@ -6,7 +6,11 @@ services:
       - '4444:4444'
     volumes:
       - newsnow_data:/usr/app/.data
+      # 挂载时区配置
+      - /etc/localtime:/etc/localtime:ro
+      - /usr/share/zoneinfo:/usr/share/zoneinfo:ro
     environment:
+      - TZ=Asia/Shanghai
       - HOST=0.0.0.0
       - PORT=4444
       - NODE_ENV=production

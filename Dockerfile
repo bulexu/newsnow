@@ -2,6 +2,7 @@ FROM crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/node:20.1
 WORKDIR /usr/src
 COPY . .
 RUN corepack enable
+RUN apk add --no-cache python3 make g++
 RUN pnpm install
 RUN pnpm run build
 

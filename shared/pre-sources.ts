@@ -737,7 +737,7 @@ export const originSources = {
     },
   },
   "ceweekly": {
-    name: "财经网",
+    name: "经济网",
     column: "finance",
     color: "red",
     detail: true,

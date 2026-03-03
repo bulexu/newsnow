@@ -706,7 +706,7 @@
   },
   "ceweekly": {
     "redirect": "ceweekly-news_important",
-    "name": "财经网",
+    "name": "经济网",
     "type": "realtime",
     "detail": true,
     "column": "finance",
@@ -716,7 +716,7 @@
     "title": "热点观察"
   },
   "ceweekly-news_important": {
-    "name": "财经网",
+    "name": "经济网",
     "type": "realtime",
     "detail": true,
     "column": "finance",
@@ -726,7 +726,7 @@
     "title": "热点观察"
   },
   "ceweekly-macro": {
-    "name": "财经网",
+    "name": "经济网",
     "type": "realtime",
     "detail": true,
     "column": "finance",

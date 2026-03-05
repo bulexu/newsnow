@@ -368,6 +368,36 @@
     "interval": 1800000,
     "title": "公路车"
   },
+  "biketo-mtb": {
+    "name": "美骑网",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.biketo.com/mtb/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "山地车"
+  },
+  "biketo-city": {
+    "name": "美骑网",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.biketo.com/city/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "城市车"
+  },
+  "biketo-touringbike": {
+    "name": "美骑网",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.biketo.com/touringbike/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "旅行车"
+  },
   "biketo-e-bike": {
     "name": "美骑网",
     "type": "realtime",
@@ -388,22 +418,42 @@
     "interval": 1800000,
     "title": "赛事新闻"
   },
+  "biketo-knowledge": {
+    "name": "美骑网",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.biketo.com/knowledge/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "知识"
+  },
   "biketo-business": {
     "name": "美骑网",
     "type": "realtime",
     "detail": true,
     "column": "cycle-track",
-    "home": "http://www.biketo.com/business/",
+    "home": "https://www.biketo.com/racing/",
     "color": "blue",
     "interval": 1800000,
     "title": "行业动态"
+  },
+  "biketo-insight": {
+    "name": "美骑网",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.biketo.com/insight/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "美骑观察"
   },
   "biketo-enterprise": {
     "name": "美骑网",
     "type": "realtime",
     "detail": true,
     "column": "cycle-track",
-    "home": "http://www.biketo.com/enterprise/",
+    "home": "https://www.biketo.com/enterprise/",
     "color": "blue",
     "interval": 1800000,
     "title": "企业探秘"
@@ -417,6 +467,16 @@
     "color": "blue",
     "interval": 1800000,
     "title": "精品车店"
+  },
+  "biketo-interview": {
+    "name": "美骑网",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.biketo.com/interview/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "人物访谈"
   },
   "chncycling": {
     "redirect": "chncycling-news",

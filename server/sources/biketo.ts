@@ -68,32 +68,50 @@ const hotnews = makeBiketoSource("/hotnews/")
 const activities = makeBiketoSource("/activities/")
 const cyclexpress = makeBiketoSource("/cyclexpress/")
 const road = makeBiketoSource("/road/")
+const mtb = makeBiketoSource("/mtb/")
+const city = makeBiketoSource("/city/")
+const touringbike = makeBiketoSource("/touringbike/")
 const ebike = makeBiketoSource("/e-bike/")
 const racingnews = makeBiketoSource("/racingnews/")
-const business = makeBiketoSource("/business/")
+const knowledge = makeBiketoSource("/knowledge/")
+const business = makeBiketoSource("/racing/")
+const insight = makeBiketoSource("/insight/")
 const enterprise = makeBiketoSource("/enterprise/")
 const shop = makeBiketoSource("/shop/")
+const interview = makeBiketoSource("/interview/")
 
 const hotnewsDetail = makeBiketoSourceDetail("/hotnews/")
 const activitiesDetail = makeBiketoSourceDetail("/activities/")
 const cyclexpressDetail = makeBiketoSourceDetail("/cyclexpress/")
 const roadDetail = makeBiketoSourceDetail("/road/")
+const mtbDetail = makeBiketoSourceDetail("/mtb/")
+const cityDetail = makeBiketoSourceDetail("/city/")
+const touringbikeDetail = makeBiketoSourceDetail("/touringbike/")
 const ebikeDetail = makeBiketoSourceDetail("/e-bike/")
 const racingnewsDetail = makeBiketoSourceDetail("/racingnews/")
-const businessDetail = makeBiketoSourceDetail("/business/")
+const knowledgeDetail = makeBiketoSourceDetail("/knowledge/")
+const businessDetail = makeBiketoSourceDetail("/racing/")
+const insightDetail = makeBiketoSourceDetail("/insight/")
 const enterpriseDetail = makeBiketoSourceDetail("/enterprise/")
 const shopDetail = makeBiketoSourceDetail("/shop/")
+const interviewDetail = makeBiketoSourceDetail("/interview/")
 
 export const details = defineSourceDetail({
   "biketo-hotnews": hotnewsDetail,
   "biketo-activities": activitiesDetail,
   "biketo-cyclexpress": cyclexpressDetail,
   "biketo-road": roadDetail,
+  "biketo-mtb": mtbDetail,
+  "biketo-city": cityDetail,
+  "biketo-touringbike": touringbikeDetail,
   "biketo-e-bike": ebikeDetail,
   "biketo-racingnews": racingnewsDetail,
+  "biketo-knowledge": knowledgeDetail,
   "biketo-business": businessDetail,
+  "biketo-insight": insightDetail,
   "biketo-enterprise": enterpriseDetail,
   "biketo-shop": shopDetail,
+  "biketo-interview": interviewDetail,
 })
 
 export default defineSource({
@@ -101,9 +119,15 @@ export default defineSource({
   "biketo-activities": activities,
   "biketo-cyclexpress": cyclexpress,
   "biketo-road": road,
+  "biketo-mtb": mtb,
+  "biketo-city": city,
+  "biketo-touringbike": touringbike,
   "biketo-e-bike": ebike,
   "biketo-racingnews": racingnews,
+  "biketo-knowledge": knowledge,
   "biketo-business": business,
+  "biketo-insight": insight,
   "biketo-enterprise": enterprise,
   "biketo-shop": shop,
+  "biketo-interview": interview,
 })

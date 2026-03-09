@@ -14,9 +14,13 @@ function makeBiketoSource(path: string) {
     const $ = load(iconv.decode(Buffer.from(response), "gb2312"))
     const news: NewsItem[] = []
 
-    $("li.col-article-item").each((_, el) => {
+    $("li.col-article-item, li.ch-artical-item").each((_, el) => {
       const $el = $(el)
-      const href = $el.find("a").first().attr("href") ?? ""
+      const href
+        = $el.find("a.title").first().attr("href")
+          ?? $el.find("a.pic-area").first().attr("href")
+          ?? $el.find("a[href$='.html']").first().attr("href")
+          ?? ""
       const title = $el.find(".title").text().trim()
       const dateText = $el.find(".time").text().trim()
       const desc = $el.find(".desc").text().trim()

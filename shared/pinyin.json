@@ -15,6 +15,7 @@
   "cls-telegraph": "cailianshe-dianbao",
   "cls-depth": "cailianshe-shendu",
   "cls-hot": "cailianshe-remen",
+  "xueqiu-hotstock": "xueqiu-remengupiao",
   "gelonghui": "gelonghui-shijian",
   "github-trending-today": "Github-Today",
   "bilibili-hot-search": "bilibili-resou",
@@ -75,5 +76,8 @@
   "mof-zgcjb": "caizhengbu-zhongguocaijingbao",
   "mof-cjzylm": "caizhengbu-caijingzhuanyonglanmu",
   "stascn-tjdt": "guojiatongjiju-tongjidongtai",
-  "stascn-tzgg": "guojiatongjiju-tongzhigonggao"
+  "stascn-tzgg": "guojiatongjiju-tongzhigonggao",
+  "wahooprice": "WAHOO-zuixinjiage",
+  "garminprice": "Garmin-zuixinjiage",
+  "decathlonprice": "Decathlon-zuixinjiage"
 }

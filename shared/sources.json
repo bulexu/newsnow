@@ -164,6 +164,25 @@
     "interval": 600000,
     "title": "热门"
   },
+  "xueqiu": {
+    "redirect": "xueqiu-hotstock",
+    "name": "雪球",
+    "type": "hottest",
+    "column": "finance",
+    "home": "https://xueqiu.com",
+    "color": "blue",
+    "interval": 120000,
+    "title": "热门股票"
+  },
+  "xueqiu-hotstock": {
+    "name": "雪球",
+    "type": "hottest",
+    "column": "finance",
+    "home": "https://xueqiu.com",
+    "color": "blue",
+    "interval": 120000,
+    "title": "热门股票"
+  },
   "gelonghui": {
     "title": "事件",
     "name": "格隆汇",
@@ -916,5 +935,32 @@
     "color": "blue",
     "interval": 1800000,
     "title": "通知公告"
+  },
+  "wahooprice": {
+    "title": "最新价格",
+    "name": "WAHOO",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.wahoofitness.com/",
+    "color": "blue",
+    "interval": 600000
+  },
+  "garminprice": {
+    "title": "最新价格",
+    "name": "Garmin",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.garmin.com/",
+    "color": "blue",
+    "interval": 600000
+  },
+  "decathlonprice": {
+    "title": "最新价格",
+    "name": "Decathlon",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.decathlon.fr/",
+    "color": "blue",
+    "interval": 600000
   }
 }

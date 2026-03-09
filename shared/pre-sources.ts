@@ -205,19 +205,19 @@ export const originSources = {
       },
     },
   },
-  // "xueqiu": {
-  //   name: "雪球",
-  //   color: "blue",
-  //   home: "https://xueqiu.com",
-  //   column: "finance",
-  //   sub: {
-  //     hotstock: {
-  //       title: "热门股票",
-  //       interval: Time.Realtime,
-  //       type: "hottest",
-  //     },
-  //   },
-  // },
+  "xueqiu": {
+    name: "雪球",
+    color: "blue",
+    home: "https://xueqiu.com",
+    column: "finance",
+    sub: {
+      hotstock: {
+        title: "热门股票",
+        interval: Time.Realtime,
+        type: "hottest",
+      },
+    },
+  },
   "gelonghui": {
     name: "格隆汇",
     color: "blue",
@@ -870,6 +870,22 @@ export const originSources = {
         home: "https://www.stats.gov.cn/xw/tjxw/tzgg/",
       },
     },
+  },
+  "wahooprice": {
+    name: "WAHOO",
+    title: "最新价格",
+    column: "competition",
+    color: "blue",
+    type: "realtime",
+    home: "https://www.wahoofitness.com/",
+  },
+  "garminprice": {
+    name: "Garmin",
+    title: "最新价格",
+    column: "competition",
+    color: "blue",
+    type: "realtime",
+    home: "https://www.garmin.com/",
   },
 } as const satisfies Record<string, OriginSource>
 

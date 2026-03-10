@@ -72,6 +72,7 @@ function getPriceFromJsonLd(raw: string): number {
 
 async function fetchProductPrice(product: DecathlonProduct): Promise<DecathlonPriceItem> {
   const html: string = await flareFetch(product.url)
+  console.log(`Fetched HTML for ${product.name}, length=${html.length}`)
   const $ = load(html)
 
   let sale_price = Number.NaN
@@ -88,11 +89,14 @@ async function fetchProductPrice(product: DecathlonProduct): Promise<DecathlonPr
     })
   } catch {}
 
+  console.log(`Parsed price from JSON-LD for ${product.name}: ${sale_price}`)
+
   if (Number.isNaN(sale_price)) {
     throw new TypeError(`Cannot parse sale price for ${product.name}`)
   }
 
   const fx_rate_eur_usd = await getRealtimeFxRate("EUR", "USD")
+  console.log(`Fetched FX rate EUR->USD: ${fx_rate_eur_usd}`)
   const usd_price = sale_price * fx_rate_eur_usd
 
   return { ...product, sale_price, usd_price, fx_rate_eur_usd }

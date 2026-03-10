@@ -943,7 +943,7 @@
     "column": "competition",
     "home": "https://www.wahoofitness.com/",
     "color": "blue",
-    "interval": 600000
+    "interval": 1800000
   },
   "garminprice": {
     "title": "最新价格",
@@ -952,7 +952,7 @@
     "column": "competition",
     "home": "https://www.garmin.com/",
     "color": "blue",
-    "interval": 600000
+    "interval": 1800000
   },
   "decathlonprice": {
     "title": "最新价格",
@@ -961,7 +961,7 @@
     "column": "competition",
     "home": "https://www.decathlon.fr/",
     "color": "blue",
-    "interval": 600000
+    "interval": 1800000
   },
   "jetblackcycling": {
     "title": "最新价格",
@@ -970,6 +970,6 @@
     "column": "competition",
     "home": "https://www.jetblackcycling.com/",
     "color": "blue",
-    "interval": 600000
+    "interval": 1800000
   }
 }

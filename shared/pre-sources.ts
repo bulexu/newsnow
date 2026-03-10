@@ -877,6 +877,7 @@ export const originSources = {
     column: "competition",
     color: "blue",
     type: "realtime",
+    interval: Time.Common,
     home: "https://www.wahoofitness.com/",
   },
   "garminprice": {
@@ -885,6 +886,7 @@ export const originSources = {
     column: "competition",
     color: "blue",
     type: "realtime",
+    interval: Time.Common,
     home: "https://www.garmin.com/",
   },
   "decathlonprice": {
@@ -893,6 +895,7 @@ export const originSources = {
     column: "competition",
     color: "blue",
     type: "realtime",
+    interval: Time.Common,
     home: "https://www.decathlon.fr/",
   },
   "jetblackcycling": {
@@ -901,6 +904,7 @@ export const originSources = {
     column: "competition",
     color: "blue",
     type: "realtime",
+    interval: Time.Common,
     home: "https://www.jetblackcycling.com/",
   },
 } as const satisfies Record<string, OriginSource>

@@ -27,6 +27,7 @@ function toPrice(value?: string) {
 
 async function fetchProductPrice(product: JetBlackProduct): Promise<JetBlackPriceItem> {
   const html: string = await flareFetch(product.url)
+  console.log(`Fetched HTML for ${product.name}, length=${html.length}`)
   const $ = load(html)
 
   // 目标结构:
@@ -54,7 +55,7 @@ export default defineSource(async () => {
     url: item.url,
     content: JSON.stringify(item),
     extra: {
-      info: `${item.coin_type}${item.sale_price.toFixed(2)}`,
+      info: `${item.coin_type}${item.sale_price.toFixed(2)} EX TAX`,
       hover: `brand=${item.brand}\nname=${item.name}\nsale_price=${item.sale_price}\ncoin_type=${item.coin_type}`,
     },
   }))

@@ -887,6 +887,22 @@ export const originSources = {
     type: "realtime",
     home: "https://www.garmin.com/",
   },
+  "decathlonprice": {
+    name: "Decathlon",
+    title: "最新价格",
+    column: "competition",
+    color: "blue",
+    type: "realtime",
+    home: "https://www.decathlon.fr/",
+  },
+  "jetblackcycling": {
+    name: "JetBlack",
+    title: "最新价格",
+    column: "competition",
+    color: "blue",
+    type: "realtime",
+    home: "https://www.jetblackcycling.com/",
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {

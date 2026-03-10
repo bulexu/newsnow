@@ -1,6 +1,17 @@
 services:
+  flaresolverr:
+    image: crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/flaresolverr:latest
+    container_name: flaresolverr
+    environment:
+      - LOG_LEVEL=info
+    ports:
+      - '8191:8191'
+    restart: unless-stopped
+
   newsnow:
     build: .
+    depends_on:
+      - flaresolverr
     ports:
       - '4444:4444'
     volumes:
@@ -11,6 +22,7 @@ services:
       - JWT_SECRET=
       - INIT_TABLE=true
       - ENABLE_CACHE=true
+      - FLARESOLVERR_URL=http://flaresolverr:8191
 
 volumes:
   newsnow_data:

@@ -962,5 +962,14 @@
     "home": "https://www.decathlon.fr/",
     "color": "blue",
     "interval": 600000
+  },
+  "jetblackcycling": {
+    "title": "最新价格",
+    "name": "JetBlack",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.jetblackcycling.com/",
+    "color": "blue",
+    "interval": 600000
   }
 }

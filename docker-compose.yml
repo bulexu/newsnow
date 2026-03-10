@@ -1,7 +1,19 @@
 services:
+  flaresolverr:
+    image: crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/flaresolverr:latest
+    container_name: flaresolverr
+    environment:
+      - LOG_LEVEL=info
+      - TZ=Asia/Shanghai
+    ports:
+      - '8191:8191'
+    restart: unless-stopped
+
   newsnow:
     image: crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/newsnow:latest
     container_name: newsnow
+    depends_on:
+      - flaresolverr
     ports:
       - '4444:4444'
     volumes:
@@ -20,6 +32,7 @@ services:
       - INIT_TABLE=true
       - ENABLE_CACHE=true
       - PRODUCTHUNT_API_TOKEN=
+      - FLARESOLVERR_URL=http://flaresolverr:8191
 
 volumes:
   newsnow_data:

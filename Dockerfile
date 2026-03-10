@@ -2,8 +2,10 @@ FROM crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/node:20.1
 WORKDIR /usr/src
 COPY . .
 RUN corepack enable
-RUN apk add --no-cache python3 make g++
-RUN pnpm install
+RUN sed -i 's#https\?://dl-cdn.alpinelinux.org/alpine#https://mirrors.aliyun.com/alpine#g' /etc/apk/repositories \
+	&& apk add --no-cache python3 make g++
+RUN pnpm config set registry https://registry.npmmirror.com \
+	&& pnpm install --frozen-lockfile
 RUN pnpm run build
 
 FROM crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/node:20.12.2-alpine

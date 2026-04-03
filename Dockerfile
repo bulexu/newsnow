@@ -1,11 +1,18 @@
-FROM crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/node:20.12.2-alpine AS builder
+FROM crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/node:20.12.2-alpine AS base
 WORKDIR /usr/src
-COPY . .
 RUN corepack enable
 RUN sed -i 's#https\?://dl-cdn.alpinelinux.org/alpine#https://mirrors.aliyun.com/alpine#g' /etc/apk/repositories \
 	&& apk add --no-cache python3 make g++
-RUN pnpm config set registry https://registry.npmmirror.com \
-	&& pnpm install --frozen-lockfile
+RUN pnpm config set registry https://registry.npmmirror.com
+
+FROM base AS deps
+COPY package.json pnpm-lock.yaml ./
+COPY patches ./patches
+RUN pnpm install --frozen-lockfile
+
+FROM base AS builder
+COPY --from=deps /usr/src/node_modules ./node_modules
+COPY . .
 RUN pnpm run build
 
 FROM crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/node:20.12.2-alpine

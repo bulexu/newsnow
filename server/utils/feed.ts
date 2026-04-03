@@ -16,8 +16,9 @@ export function jsonToRSS(response: SourceResponse): string {
     <item>
       <title>${escapeXml(item.title)}</title>
       <link>${escapeXml(item.url)}</link>
-      <description>${escapeXml(item.extra?.info || "")}</description>
-      ${item.content ? `<content:encoded><![CDATA[${item.content}]]></content:encoded>` : ""}
+      ${buildRSSDescription(item.extra?.info || "", item.content)}
+      ${item.content ? `<content:encoded><![CDATA[${toCdata(item.content)}]]></content:encoded>` : ""}
+      ${buildRSSEnclosure(item.content)}
       <pubDate>${new Date(item.pubDate || updatedTime).toUTCString()}</pubDate>
       <guid isPermaLink="false">${escapeXml(item.id.toString())}</guid>
     </item>
@@ -42,7 +43,7 @@ export function jsonToAtom(response: SourceResponse): string {
     <title>${escapeXml(item.title)}</title>
     <link href="${escapeXml(item.url)}"/>
     <summary>${escapeXml(item.extra?.info || "")}</summary>
-    ${item.content ? `<content type="html"><![CDATA[${item.content}]]></content>` : ""}
+    ${item.content ? `<content type="html"><![CDATA[${toCdata(item.content)}]]></content>` : ""}
     <updated>${new Date(item.pubDate || updatedTime).toISOString()}</updated>
     <id>${escapeXml(item.url || `urn:newsnow:${id}:${item.id}`)}</id>
   </entry>
@@ -50,13 +51,54 @@ export function jsonToAtom(response: SourceResponse): string {
 </feed>`
 }
 
+function toCdata(value: string): string {
+  return value.replace(/\]\]>/g, "]]]]><![CDATA[>")
+}
+
+function extractFirstImageUrl(content?: string): string | undefined {
+  if (!content) return undefined
+  const matched = content.match(/<img[^>]*src=["']([^"']+)["']/i)
+  return matched?.[1]
+}
+
+function buildRSSDescription(summary: string, content?: string): string {
+  const imageUrl = extractFirstImageUrl(content)
+  if (!imageUrl) {
+    return `<description>${escapeXml(summary)}</description>`
+  }
+  const html = `${escapeXml(summary)}<br/><img src="${escapeXml(imageUrl)}" alt="" />`
+  return `<description><![CDATA[${toCdata(html)}]]></description>`
+}
+
+function buildRSSEnclosure(content?: string): string {
+  const imageUrl = extractFirstImageUrl(content)
+  if (!imageUrl) return ""
+  return `<enclosure url="${escapeXml(imageUrl)}" type="${guessImageMimeType(imageUrl)}" />`
+}
+
+function guessImageMimeType(imageUrl: string): string {
+  try {
+    const path = new URL(imageUrl).pathname.toLowerCase()
+    if (path.endsWith(".jpg") || path.endsWith(".jpeg")) return "image/jpeg"
+    if (path.endsWith(".png")) return "image/png"
+    if (path.endsWith(".webp")) return "image/webp"
+    if (path.endsWith(".gif")) return "image/gif"
+    if (path.endsWith(".avif")) return "image/avif"
+    if (path.endsWith(".svg")) return "image/svg+xml"
+  } catch {
+    // Fallback for invalid URLs or unexpected formats.
+  }
+  return "image/jpeg"
+}
+
 function escapeXml(unsafe: string): string {
   return unsafe.replace(/[<>&'"]/g, (c) => {
     switch (c) {
-      case "<": return "<"
-      case ">": return ">"
-      case "&": return "&"
-      case "'": return `'`
+      case "<": return "&lt;"
+      case ">": return "&gt;"
+      case "&": return "&amp;"
+      case "'": return "&apos;"
+      case "\"": return "&quot;"
       default: return c
     }
   })

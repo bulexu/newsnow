@@ -880,6 +880,15 @@ export const originSources = {
     interval: Time.Common,
     home: "https://www.wahoofitness.com/",
   },
+  "wahoobanner": {
+    name: "WAHOO",
+    title: "首页 Banner",
+    column: "competition",
+    color: "blue",
+    type: "realtime",
+    interval: Time.Common,
+    home: "https://www.wahoofitness.com/",
+  },
   "garminprice": {
     name: "Garmin",
     title: "最新价格",

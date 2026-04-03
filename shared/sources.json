@@ -945,6 +945,15 @@
     "color": "blue",
     "interval": 1800000
   },
+  "wahoobanner": {
+    "title": "首页 Banner",
+    "name": "WAHOO",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.wahoofitness.com/",
+    "color": "blue",
+    "interval": 1800000
+  },
   "garminprice": {
     "title": "最新价格",
     "name": "Garmin",

@@ -1,3 +1,9 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "chat.tools.terminal.autoApprove": {
+    "/^node -e 'fetch\\(\"https://www\\.wahoofitness\\.com/\"\\)\\.then\\(r=>r\\.text\\(\\)\\)\\.then\\(t=>\\{console\\.log\\(\"len\",t\\.length\\); console\\.log\\(\"has splide02\",t\\.includes\\(\"splide02\"\\)\\); console\\.log\\(\"has splide__slide\",t\\.includes\\(\"splide__slide\"\\)\\); console\\.log\\(\"has promotional slides\",t\\.includes\\(\"promotional slides\"\\)\\);\\}\\)\\.catch\\(e=>\\{console\\.error\\(e\\); process\\.exit\\(1\\);\\}\\)'$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
 }

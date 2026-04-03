@@ -54,6 +54,7 @@ declare module 'glob:./sources/{*.ts,**/index.ts}' {
   export const tieba: typeof import('./sources/tieba')
   export const toutiao: typeof import('./sources/toutiao')
   export const v2ex: typeof import('./sources/v2ex')
+  export const wahoobanner: typeof import('./sources/wahoobanner')
   export const wahooprice: typeof import('./sources/wahooprice')
   export const wallstreetcn: typeof import('./sources/wallstreetcn')
   export const weibo: typeof import('./sources/weibo')

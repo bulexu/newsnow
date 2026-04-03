@@ -82,7 +82,7 @@ export default defineEventHandler(async (event) => {
             return jsonToRSS({
               status: "success",
               id,
-              updatedTime: now,
+              updatedTime: cache.updated,
               items: cache.items,
             })
           } else if (format === "atom") {
@@ -90,14 +90,14 @@ export default defineEventHandler(async (event) => {
             return jsonToAtom({
               status: "success",
               id,
-              updatedTime: now,
+              updatedTime: cache.updated,
               items: cache.items,
             })
           }
           return {
             status: "success",
             id,
-            updatedTime: now,
+            updatedTime: cache.updated,
             items: await maybeAttachDetail(cache.items),
           }
         }

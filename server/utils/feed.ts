@@ -5,7 +5,7 @@ export function jsonToRSS(response: SourceResponse): string {
   const date = new Date(updatedTime).toUTCString()
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>${id} News</title>
     <link>https://newsnow.com/${id}</link>
@@ -17,8 +17,9 @@ export function jsonToRSS(response: SourceResponse): string {
       <title>${escapeXml(item.title)}</title>
       <link>${escapeXml(item.url)}</link>
       <description>${escapeXml(item.extra?.info || "")}</description>
-      <pubDate>${new Date(item.extra?.date || updatedTime).toUTCString()}</pubDate>
-      <guid>${escapeXml(item.id.toString())}</guid>
+      ${item.content ? `<content:encoded>${escapeXml(item.content)}</content:encoded>` : ""}
+      <pubDate>${new Date(item.pubDate || updatedTime).toUTCString()}</pubDate>
+      <guid isPermaLink="false">${escapeXml(item.id.toString())}</guid>
     </item>
     `).join("")}
   </channel>
@@ -34,14 +35,16 @@ export function jsonToAtom(response: SourceResponse): string {
   <title>${id} News</title>
   <link href="https://newsnow.com/${id}"/>
   <updated>${date}</updated>
-  <id>urn:uuid:${id}</id>
+  <id>https://newsnow.com/feed/${id}</id>
+  <author><name>${id}</name></author>
   ${items.map(item => `
   <entry>
     <title>${escapeXml(item.title)}</title>
     <link href="${escapeXml(item.url)}"/>
     <summary>${escapeXml(item.extra?.info || "")}</summary>
-    <updated>${new Date(item.extra?.date || updatedTime).toISOString()}</updated>
-    <id>${escapeXml(item.id.toString())}</id>
+    ${item.content ? `<content type="html">${escapeXml(item.content)}</content>` : ""}
+    <updated>${new Date(item.pubDate || updatedTime).toISOString()}</updated>
+    <id>${escapeXml(item.url || `urn:newsnow:${id}:${item.id}`)}</id>
   </entry>
   `).join("")}
 </feed>`
@@ -54,7 +57,7 @@ function escapeXml(unsafe: string): string {
       case ">": return ">"
       case "&": return "&"
       case "'": return `'`
-      case "\"": return "\""
+      case "\"": return "&quot;"
       default: return c
     }
   })

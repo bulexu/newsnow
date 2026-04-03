@@ -17,7 +17,7 @@ export function jsonToRSS(response: SourceResponse): string {
       <title>${escapeXml(item.title)}</title>
       <link>${escapeXml(item.url)}</link>
       <description>${escapeXml(item.extra?.info || "")}</description>
-      ${item.content ? `<content:encoded>${escapeXml(item.content)}</content:encoded>` : ""}
+      ${item.content ? `<content:encoded><![CDATA[${item.content}]]></content:encoded>` : ""}
       <pubDate>${new Date(item.pubDate || updatedTime).toUTCString()}</pubDate>
       <guid isPermaLink="false">${escapeXml(item.id.toString())}</guid>
     </item>
@@ -42,7 +42,7 @@ export function jsonToAtom(response: SourceResponse): string {
     <title>${escapeXml(item.title)}</title>
     <link href="${escapeXml(item.url)}"/>
     <summary>${escapeXml(item.extra?.info || "")}</summary>
-    ${item.content ? `<content type="html">${escapeXml(item.content)}</content>` : ""}
+    ${item.content ? `<content type="html"><![CDATA[${item.content}]]></content>` : ""}
     <updated>${new Date(item.pubDate || updatedTime).toISOString()}</updated>
     <id>${escapeXml(item.url || `urn:newsnow:${id}:${item.id}`)}</id>
   </entry>

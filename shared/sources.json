@@ -1175,5 +1175,68 @@
     "color": "blue",
     "interval": 1800000,
     "title": "首页 Banner"
+  },
+  "lezyne": {
+    "redirect": "lezyne-banner",
+    "name": "Lezyne",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://ride.lezyne.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "lezyne-banner": {
+    "name": "Lezyne",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://ride.lezyne.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "thinkrider": {
+    "redirect": "thinkrider-banner",
+    "name": "ThinkRider",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.thinkrider.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "thinkrider-banner": {
+    "name": "ThinkRider",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.thinkrider.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "power2max": {
+    "redirect": "power2max-banner",
+    "name": "Power2Max",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.power2max.com/en/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "power2max-banner": {
+    "name": "Power2Max",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.power2max.com/en/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
   }
 }

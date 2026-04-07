@@ -1054,6 +1054,51 @@ export const originSources = {
       },
     },
   },
+  "lezyne": {
+    name: "Lezyne",
+    column: "competition",
+    color: "blue",
+    detail: true,
+    home: "https://www.lezyne.com/",
+    sub: {
+      banner: {
+        title: "首页 Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://ride.lezyne.com/",
+      },
+    },
+  },
+  "thinkrider": {
+    name: "ThinkRider",
+    column: "competition",
+    color: "blue",
+    detail: true,
+    home: "https://www.thinkrider.com/",
+    sub: {
+      banner: {
+        title: "首页 Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.thinkrider.com/",
+      },
+    },
+  },
+  "power2max": {
+    name: "Power2Max",
+    column: "competition",
+    color: "blue",
+    detail: true,
+    home: "https://www.power2max.com/en/",
+    sub: {
+      banner: {
+        title: "首页 Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.power2max.com/en/",
+      },
+    },
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {

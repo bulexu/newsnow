@@ -35,7 +35,7 @@ function buildBannerContent(item: ShimanoBanner) {
 }
 
 const banner = defineSource(async () => {
-  const html: string = await myFetch(HOME_URL)
+  const html: string = await flareFetch(HOME_URL)
   const $ = load(html)
 
   const indicators = new Map<number, string>()

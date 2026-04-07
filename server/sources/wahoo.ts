@@ -1,4 +1,5 @@
 import { load } from "cheerio"
+import { escapeHtml, formatActions, normalizeText, toAbsoluteUrl } from "#/utils/banner"
 
 const HOME_URL = "https://www.wahoofitness.com/"
 
@@ -15,33 +16,12 @@ interface HomeBanner {
   actions: BannerAction[]
 }
 
-function normalizeText(value?: string) {
-  return (value || "").replace(/\s+/g, " ").trim()
-}
-
-function toAbsoluteUrl(url?: string) {
-  if (!url) return ""
-  try {
-    return new URL(url, HOME_URL).toString()
-  } catch {
-    return ""
-  }
-}
-
-function escapeHtml(value?: string) {
-  return (value || "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-}
-
 function buildBannerContent(item: HomeBanner) {
   const textParts = [
     item.title,
     item.description,
     item.actions.length
-      ? `Actions: ${item.actions.map(action => `${action.text} (${action.url})`).join(" | ")}`
+      ? `Actions: ${formatActions(item.actions)}`
       : "",
   ].filter(Boolean)
   const imageTag = item.image
@@ -50,7 +30,7 @@ function buildBannerContent(item: HomeBanner) {
   return [textParts.join("\n"), imageTag].filter(Boolean).join("\n")
 }
 
-export default defineSource(async () => {
+const banner = defineSource(async () => {
   const html: string = await myFetch(HOME_URL)
   const $ = load(html)
   const banners: HomeBanner[] = []
@@ -73,7 +53,7 @@ export default defineSource(async () => {
     const $slide = $(element)
     const title = normalizeText($slide.find("h2").first().text())
     const description = normalizeText($slide.find("p").first().text())
-    const image = toAbsoluteUrl($slide.find("img").first().attr("src"))
+    const image = toAbsoluteUrl($slide.find("img").first().attr("src"), HOME_URL)
     const image_alt = normalizeText($slide.find("img").first().attr("alt"))
     const actions: BannerAction[] = []
     const actionSeen = new Set<string>()
@@ -81,7 +61,7 @@ export default defineSource(async () => {
     $slide.find("nav a[href]").each((_, actionElement) => {
       const $a = $(actionElement)
       const text = normalizeText($a.text())
-      const url = toAbsoluteUrl($a.attr("href"))
+      const url = toAbsoluteUrl($a.attr("href"), HOME_URL)
       const actionKey = `${text}|${url}`
       if (!text || !url) return
       if (actionSeen.has(actionKey)) return
@@ -122,4 +102,9 @@ export default defineSource(async () => {
       },
     }
   })
+})
+
+export default defineSource({
+  "wahoo": banner,
+  "wahoo-banner": banner,
 })

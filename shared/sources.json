@@ -945,15 +945,6 @@
     "color": "blue",
     "interval": 1800000
   },
-  "wahoobanner": {
-    "title": "首页 Banner",
-    "name": "WAHOO",
-    "type": "realtime",
-    "column": "competition",
-    "home": "https://www.wahoofitness.com/",
-    "color": "blue",
-    "interval": 1800000
-  },
   "garminprice": {
     "title": "最新价格",
     "name": "Garmin",
@@ -980,5 +971,209 @@
     "home": "https://www.jetblackcycling.com/",
     "color": "blue",
     "interval": 1800000
+  },
+  "wahoo": {
+    "redirect": "wahoo-banner",
+    "name": "WAHOO",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.wahoofitness.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "wahoo-banner": {
+    "name": "WAHOO",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://www.wahoofitness.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "shimano": {
+    "redirect": "shimano-banner",
+    "name": "shimano-EN",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://bike.shimano.com/en-NA/home.html",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "shimano-banner": {
+    "name": "shimano-EN",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://bike.shimano.com/en-NA/home.html",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "sram": {
+    "redirect": "sram-shop",
+    "name": "SRAM-EN",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://shop.sram.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Shop Banner"
+  },
+  "sram-shop": {
+    "name": "SRAM-EN",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://shop.sram.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Shop Banner"
+  },
+  "favero": {
+    "redirect": "favero-shop",
+    "name": "Favero-EN",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://cycling.favero.com/shop/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Shop Goods"
+  },
+  "favero-shop": {
+    "name": "Favero-EN",
+    "type": "realtime",
+    "column": "competition",
+    "home": "https://cycling.favero.com/shop/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Shop Goods"
+  },
+  "igpsport-USA": {
+    "redirect": "igpsport-USA-banner",
+    "name": "迹驰",
+    "type": "realtime",
+    "detail": true,
+    "icon": "public/icons/igpsport.png",
+    "column": "competition",
+    "home": "https://www.igpsport.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "igpsport-USA-banner": {
+    "name": "迹驰",
+    "type": "realtime",
+    "detail": true,
+    "icon": "public/icons/igpsport.png",
+    "column": "competition",
+    "home": "https://www.igpsport.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "cycplus": {
+    "redirect": "cycplus-banner",
+    "name": "CYCPLUS",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.cycplus.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "cycplus-banner": {
+    "name": "CYCPLUS",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.cycplus.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "elite": {
+    "redirect": "elite-banner",
+    "name": "Elite",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.elite-it.com/en",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "elite-banner": {
+    "name": "Elite",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.elite-it.com/en",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "cybrei": {
+    "redirect": "cybrei-banner",
+    "name": "CYBREI",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.cybrei.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "cybrei-banner": {
+    "name": "CYBREI",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.cybrei.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "xcadey": {
+    "redirect": "xcadey-banner",
+    "name": "XCADEY",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.xcadey.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "xcadey-banner": {
+    "name": "XCADEY",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://www.xcadey.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "bryton": {
+    "redirect": "bryton-banner",
+    "name": "Bryton",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://global.brytonsport.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
+  },
+  "bryton-banner": {
+    "name": "Bryton",
+    "type": "realtime",
+    "detail": true,
+    "column": "competition",
+    "home": "https://global.brytonsport.com/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "首页 Banner"
   }
 }

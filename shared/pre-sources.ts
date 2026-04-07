@@ -880,15 +880,6 @@ export const originSources = {
     interval: Time.Common,
     home: "https://www.wahoofitness.com/",
   },
-  "wahoobanner": {
-    name: "WAHOO",
-    title: "首页 Banner",
-    column: "competition",
-    color: "blue",
-    type: "realtime",
-    interval: Time.Common,
-    home: "https://www.wahoofitness.com/",
-  },
   "garminprice": {
     name: "Garmin",
     title: "最新价格",
@@ -916,6 +907,153 @@ export const originSources = {
     interval: Time.Common,
     home: "https://www.jetblackcycling.com/",
   },
+  "wahoo": {
+    name: "WAHOO",
+    column: "competition",
+    color: "blue",
+    home: "https://www.wahoofitness.com/",
+    sub: {
+      banner: {
+        title: "首页 Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.wahoofitness.com/",
+      },
+    },
+  },
+  "shimano": {
+    name: "shimano-EN",
+    column: "competition",
+    color: "blue",
+    home: "https://www.shimano.com/en/",
+    sub: {
+      banner: {
+        title: "首页 Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://bike.shimano.com/en-NA/home.html",
+      },
+    },
+  },
+  "sram": {
+    name: "SRAM-EN",
+    column: "competition",
+    color: "blue",
+    home: "https://www.sram.com/en/sram",
+    sub: {
+      shop: {
+        title: "Shop Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://shop.sram.com/",
+      },
+    },
+  },
+  "favero": {
+    name: "Favero-EN",
+    column: "competition",
+    color: "blue",
+    home: "https://cycling.favero.com/",
+    sub: {
+      shop: {
+        title: "Shop Goods",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://cycling.favero.com/shop/",
+      },
+    },
+  },
+  "igpsport-USA": {
+    name: "迹驰",
+    column: "competition",
+    color: "blue",
+    detail: true,
+    icon: "public/icons/igpsport.png",
+    home: "https://www.igpsport.com/",
+    sub: {
+      banner: {
+        title: "首页 Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.igpsport.com/",
+      },
+    },
+  },
+  "cycplus": {
+    name: "CYCPLUS",
+    column: "competition",
+    color: "blue",
+    detail: true,
+    home: "https://www.cycplus.com/",
+    sub: {
+      banner: {
+        title: "首页 Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.cycplus.com/",
+      },
+    },
+  },
+  "elite": {
+    name: "Elite",
+    column: "competition",
+    color: "blue",
+    detail: true,
+    home: "https://www.elite-it.com/en",
+    sub: {
+      banner: {
+        title: "首页 Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.elite-it.com/en",
+      },
+    },
+  },
+  "cybrei": {
+    name: "CYBREI",
+    column: "competition",
+    color: "blue",
+    detail: true,
+    home: "https://www.cybrei.com/",
+    sub: {
+      banner: {
+        title: "首页 Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.cybrei.com/",
+      },
+    },
+  },
+  "xcadey": {
+    name: "XCADEY",
+    column: "competition",
+    color: "blue",
+    detail: true,
+    home: "https://www.xcadey.com/",
+    sub: {
+      banner: {
+        title: "首页 Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.xcadey.com/",
+      },
+    },
+  },
+  "bryton": {
+    name: "Bryton",
+    column: "competition",
+    color: "blue",
+    detail: true,
+    home: "https://www.brytonsport.com/",
+    sub: {
+      banner: {
+        title: "首页 Banner",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://global.brytonsport.com/",
+      },
+    },
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {
@@ -928,6 +1066,7 @@ export function genSources() {
       detail: source.detail,
       disable: source.disable,
       desc: source.desc,
+      icon: source.icon,
       column: source.column,
       home: source.home,
       color: source.color ?? "primary",

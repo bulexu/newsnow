@@ -16,7 +16,7 @@ export function jsonToRSS(response: SourceResponse): string {
     <item>
       <title>${escapeXml(item.title)}</title>
       <link>${escapeXml(item.url)}</link>
-      ${buildRSSDescription(item.extra?.info || "")}
+      ${buildRSSDescription(item.extra?.info || "", item.content)}
       ${item.content ? `<content:encoded><![CDATA[${toCdata(item.content)}]]></content:encoded>` : ""}
       ${buildRSSEnclosure(item.content)}
       <pubDate>${new Date(item.pubDate || updatedTime).toUTCString()}</pubDate>
@@ -61,7 +61,10 @@ function extractFirstImageUrl(content?: string): string | undefined {
   return matched?.[1]
 }
 
-function buildRSSDescription(summary: string): string {
+function buildRSSDescription(summary: string, content?: string): string {
+  if (content) {
+    return `<description><![CDATA[${toCdata(content)}]]></description>`
+  }
   return `<description>${escapeXml(summary)}</description>`
 }
 

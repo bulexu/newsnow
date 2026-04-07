@@ -67,6 +67,11 @@ export interface Source {
   title?: string
   desc?: string
   /**
+   * Optional icon source for favicon generation.
+   * Supports absolute URL or local file path.
+   */
+  icon?: string
+  /**
    * Default normal timeline
    */
   type?: "hottest" | "realtime"

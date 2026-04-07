@@ -78,8 +78,17 @@
   "stascn-tjdt": "guojiatongjiju-tongjidongtai",
   "stascn-tzgg": "guojiatongjiju-tongzhigonggao",
   "wahooprice": "WAHOO-zuixinjiage",
-  "wahoobanner": "WAHOO-shouye Banner",
   "garminprice": "Garmin-zuixinjiage",
   "decathlonprice": "Decathlon-zuixinjiage",
-  "jetblackcycling": "JetBlack-zuixinjiage"
+  "jetblackcycling": "JetBlack-zuixinjiage",
+  "wahoo-banner": "WAHOO-shouye Banner",
+  "shimano-banner": "shimano-EN-shouye Banner",
+  "sram-shop": "SRAM-EN-Shop Banner",
+  "favero-shop": "Favero-EN-Shop Goods",
+  "igpsport-USA-banner": "jichi-shouye Banner",
+  "cycplus-banner": "CYCPLUS-shouye Banner",
+  "elite-banner": "Elite-shouye Banner",
+  "cybrei-banner": "CYBREI-shouye Banner",
+  "xcadey-banner": "XCADEY-shouye Banner",
+  "bryton-banner": "Bryton-shouye Banner"
 }

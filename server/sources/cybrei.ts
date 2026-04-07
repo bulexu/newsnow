@@ -1,5 +1,4 @@
 import { load } from "cheerio"
-
 import { escapeHtml, formatActions, normalizeText, toAbsoluteUrl } from "#/utils/banner"
 
 const HOME_URL = "https://www.cybrei.com/"
@@ -104,6 +103,6 @@ const banner = defineSource(async () => {
 })
 
 export default defineSource({
-  cybrei: banner,
-  cybreiBanner: banner,
+  "cybrei": banner,
+  "cybrei-banner": banner,
 })

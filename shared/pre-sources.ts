@@ -967,7 +967,6 @@ export const originSources = {
     name: "迹驰",
     column: "competition",
     color: "blue",
-    detail: true,
     icon: "public/icons/igpsport.png",
     home: "https://www.igpsport.com/",
     sub: {
@@ -983,7 +982,6 @@ export const originSources = {
     name: "CYCPLUS",
     column: "competition",
     color: "blue",
-    detail: true,
     home: "https://www.cycplus.com/",
     sub: {
       banner: {
@@ -998,7 +996,6 @@ export const originSources = {
     name: "Elite",
     column: "competition",
     color: "blue",
-    detail: true,
     home: "https://www.elite-it.com/en",
     sub: {
       banner: {
@@ -1013,7 +1010,6 @@ export const originSources = {
     name: "CYBREI",
     column: "competition",
     color: "blue",
-    detail: true,
     home: "https://www.cybrei.com/",
     sub: {
       banner: {
@@ -1028,7 +1024,6 @@ export const originSources = {
     name: "XCADEY",
     column: "competition",
     color: "blue",
-    detail: true,
     home: "https://www.xcadey.com/",
     sub: {
       banner: {
@@ -1043,7 +1038,6 @@ export const originSources = {
     name: "Bryton",
     column: "competition",
     color: "blue",
-    detail: true,
     home: "https://www.brytonsport.com/",
     sub: {
       banner: {
@@ -1058,7 +1052,6 @@ export const originSources = {
     name: "Lezyne",
     column: "competition",
     color: "blue",
-    detail: true,
     home: "https://www.lezyne.com/",
     sub: {
       banner: {
@@ -1073,7 +1066,6 @@ export const originSources = {
     name: "ThinkRider",
     column: "competition",
     color: "blue",
-    detail: true,
     home: "https://www.thinkrider.com/",
     sub: {
       banner: {
@@ -1088,7 +1080,6 @@ export const originSources = {
     name: "Power2Max",
     column: "competition",
     color: "blue",
-    detail: true,
     home: "https://www.power2max.com/en/",
     sub: {
       banner: {
@@ -1096,6 +1087,21 @@ export const originSources = {
         type: "realtime",
         interval: Time.Common,
         home: "https://www.power2max.com/en/",
+      },
+    },
+  },
+  "dcrainmaker": {
+    name: "DC Rainmaker",
+    column: "cycle-track",
+    color: "blue",
+    detail: true,
+    home: "https://www.dcrainmaker.com/",
+    sub: {
+      blog: {
+        title: "最新资讯",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.dcrainmaker.com/blog/",
       },
     },
   },

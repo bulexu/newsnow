@@ -1052,7 +1052,6 @@
     "redirect": "igpsport-USA-banner",
     "name": "迹驰",
     "type": "realtime",
-    "detail": true,
     "icon": "public/icons/igpsport.png",
     "column": "competition",
     "home": "https://www.igpsport.com/",
@@ -1063,7 +1062,6 @@
   "igpsport-USA-banner": {
     "name": "迹驰",
     "type": "realtime",
-    "detail": true,
     "icon": "public/icons/igpsport.png",
     "column": "competition",
     "home": "https://www.igpsport.com/",
@@ -1075,7 +1073,6 @@
     "redirect": "cycplus-banner",
     "name": "CYCPLUS",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.cycplus.com/",
     "color": "blue",
@@ -1085,7 +1082,6 @@
   "cycplus-banner": {
     "name": "CYCPLUS",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.cycplus.com/",
     "color": "blue",
@@ -1096,7 +1092,6 @@
     "redirect": "elite-banner",
     "name": "Elite",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.elite-it.com/en",
     "color": "blue",
@@ -1106,7 +1101,6 @@
   "elite-banner": {
     "name": "Elite",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.elite-it.com/en",
     "color": "blue",
@@ -1117,7 +1111,6 @@
     "redirect": "cybrei-banner",
     "name": "CYBREI",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.cybrei.com/",
     "color": "blue",
@@ -1127,7 +1120,6 @@
   "cybrei-banner": {
     "name": "CYBREI",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.cybrei.com/",
     "color": "blue",
@@ -1138,7 +1130,6 @@
     "redirect": "xcadey-banner",
     "name": "XCADEY",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.xcadey.com/",
     "color": "blue",
@@ -1148,7 +1139,6 @@
   "xcadey-banner": {
     "name": "XCADEY",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.xcadey.com/",
     "color": "blue",
@@ -1159,7 +1149,6 @@
     "redirect": "bryton-banner",
     "name": "Bryton",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://global.brytonsport.com/",
     "color": "blue",
@@ -1169,7 +1158,6 @@
   "bryton-banner": {
     "name": "Bryton",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://global.brytonsport.com/",
     "color": "blue",
@@ -1180,7 +1168,6 @@
     "redirect": "lezyne-banner",
     "name": "Lezyne",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://ride.lezyne.com/",
     "color": "blue",
@@ -1190,7 +1177,6 @@
   "lezyne-banner": {
     "name": "Lezyne",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://ride.lezyne.com/",
     "color": "blue",
@@ -1201,7 +1187,6 @@
     "redirect": "thinkrider-banner",
     "name": "ThinkRider",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.thinkrider.com/",
     "color": "blue",
@@ -1211,7 +1196,6 @@
   "thinkrider-banner": {
     "name": "ThinkRider",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.thinkrider.com/",
     "color": "blue",
@@ -1222,7 +1206,6 @@
     "redirect": "power2max-banner",
     "name": "Power2Max",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.power2max.com/en/",
     "color": "blue",
@@ -1232,11 +1215,31 @@
   "power2max-banner": {
     "name": "Power2Max",
     "type": "realtime",
-    "detail": true,
     "column": "competition",
     "home": "https://www.power2max.com/en/",
     "color": "blue",
     "interval": 1800000,
     "title": "首页 Banner"
+  },
+  "dcrainmaker": {
+    "redirect": "dcrainmaker-blog",
+    "name": "DC Rainmaker",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.dcrainmaker.com/blog/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新资讯"
+  },
+  "dcrainmaker-blog": {
+    "name": "DC Rainmaker",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.dcrainmaker.com/blog/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新资讯"
   }
 }

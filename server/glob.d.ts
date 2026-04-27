@@ -14,6 +14,7 @@ declare module 'glob:./sources/{*.ts,**/index.ts}' {
   export const coolapk: typeof import('./sources/coolapk/index')
   export const cybrei: typeof import('./sources/cybrei')
   export const cycplus: typeof import('./sources/cycplus')
+  export const dcrainmaker: typeof import('./sources/dcrainmaker')
   export const decathlonprice: typeof import('./sources/decathlonprice')
   export const douban: typeof import('./sources/douban')
   export const douyin: typeof import('./sources/douyin')

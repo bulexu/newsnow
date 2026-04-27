@@ -47,7 +47,7 @@ function makeBiketoSourceDetail(_path: string) {
       responseType: "arrayBuffer",
     })
     const $ = load(iconv.decode(Buffer.from(response), "gb2312"))
-    const articleMain = $(".co-content .article-main").first()
+    const articleMain = $(".co-content .article-main, .cmp-co-contentbig .article-main, .article-main").first()
     if (!articleMain.length) return undefined
 
     articleMain.find("script,style,.co-article-nav,.pagination").remove()

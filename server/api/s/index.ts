@@ -147,12 +147,13 @@ export default defineEventHandler(async (event) => {
         else event.context.waitUntil(cacheTable.set(id, newData))
       }
       if (!withDetail) triggerDetailFetch()
+      const items = withDetail ? await maybeAttachDetail(newData) : newData
       logger.success(`fetch ${id} latest`)
       const response: SourceResponse = {
         status: "success",
         id,
         updatedTime: now,
-        items: newData,
+        items,
       }
       if (format === "rss") {
         setResponseHeader(event, "Content-Type", "application/rss+xml; charset=utf-8")

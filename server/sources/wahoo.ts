@@ -35,54 +35,50 @@ const banner = defineSource(async () => {
   const $ = load(html)
   const banners: HomeBanner[] = []
   const seen = new Set<string>()
-  const slideSelectors = [
+  const bannerSelectors = [
     "#splide02 .splide__slide:not(.splide__slide--clone)",
+    "section.splide_hp .splide__slide:not(.splide__slide--clone)",
     "div.splide[aria-label*='Homepage promotional slides' i] .splide__slide:not(.splide__slide--clone)",
+    "section[aria-label*='Homepage promotional slides' i] .splide__slide:not(.splide__slide--clone)",
     "div.splide[aria-label*='Homepage' i] .splide__slide:not(.splide__slide--clone)",
+    "section[aria-label*='Ecosystem' i]",
   ]
-  let slides = $(slideSelectors[0])
-  for (const selector of slideSelectors) {
-    const found = $(selector)
-    if (found.length) {
-      slides = found
-      break
-    }
+  for (const selector of bannerSelectors) {
+    $(selector).each((_, element) => {
+      const $slide = $(element)
+      const title = normalizeText($slide.find("h2").first().text())
+      const description = normalizeText($slide.find("p").first().text())
+      const image = toAbsoluteUrl($slide.find("img").first().attr("src"), HOME_URL)
+      const image_alt = normalizeText($slide.find("img").first().attr("alt"))
+      const actions: BannerAction[] = []
+      const actionSeen = new Set<string>()
+
+      $slide.find("nav a[href]").each((_, actionElement) => {
+        const $a = $(actionElement)
+        const text = normalizeText($a.text())
+        const url = toAbsoluteUrl($a.attr("href"), HOME_URL)
+        const actionKey = `${text}|${url}`
+        if (!text || !url) return
+        if (actionSeen.has(actionKey)) return
+        actionSeen.add(actionKey)
+        actions.push({ text, url })
+      })
+
+      const primaryUrl = actions[0]?.url || image || HOME_URL
+      const dedupeKey = `${title}|${primaryUrl}`
+
+      if (!title || seen.has(dedupeKey)) return
+
+      seen.add(dedupeKey)
+      banners.push({
+        title,
+        description,
+        image,
+        image_alt,
+        actions,
+      })
+    })
   }
-
-  slides.each((_, element) => {
-    const $slide = $(element)
-    const title = normalizeText($slide.find("h2").first().text())
-    const description = normalizeText($slide.find("p").first().text())
-    const image = toAbsoluteUrl($slide.find("img").first().attr("src"), HOME_URL)
-    const image_alt = normalizeText($slide.find("img").first().attr("alt"))
-    const actions: BannerAction[] = []
-    const actionSeen = new Set<string>()
-
-    $slide.find("nav a[href]").each((_, actionElement) => {
-      const $a = $(actionElement)
-      const text = normalizeText($a.text())
-      const url = toAbsoluteUrl($a.attr("href"), HOME_URL)
-      const actionKey = `${text}|${url}`
-      if (!text || !url) return
-      if (actionSeen.has(actionKey)) return
-      actionSeen.add(actionKey)
-      actions.push({ text, url })
-    })
-
-    const primaryUrl = actions[0]?.url || image || HOME_URL
-    const dedupeKey = `${title}|${primaryUrl}`
-
-    if (!title || seen.has(dedupeKey)) return
-
-    seen.add(dedupeKey)
-    banners.push({
-      title,
-      description,
-      image,
-      image_alt,
-      actions,
-    })
-  })
 
   if (!banners.length) {
     throw new TypeError("Cannot parse Wahoo homepage banners")

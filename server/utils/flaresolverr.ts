@@ -1,84 +1,67 @@
 import process from "node:process"
-import { $fetch } from "ofetch"
+import { chromium } from "playwright-core"
 
-interface FlareSolverrResponse {
-  status: "ok" | "warning" | "error"
-  message: string
-  session?: string
-  solution: {
-    url: string
-    status: number
-    headers: Record<string, string>
-    response: string
-    cookies: Array<{ name: string, value: string, [key: string]: unknown }>
-    userAgent: string
+const DEFAULT_CDP_URL = "http://localhost:9222"
+
+function getCloakBrowserCdpUrl() {
+  return process.env.CLOAKBROWSER_CDP_URL || process.env.FLARESOLVERR_URL || DEFAULT_CDP_URL
+}
+
+function getConnectionUrl(baseUrl: string, seed: number) {
+  const url = new URL(baseUrl)
+  url.searchParams.set("fingerprint", String(seed))
+  return url.toString()
+}
+
+async function fetchViaCloakBrowser(url: string, cdpUrl: string, attempt: number): Promise<string> {
+  const seed = Math.floor(Math.random() * 90000) + 10000 + attempt
+  const browser = await chromium.connectOverCDP(getConnectionUrl(cdpUrl, seed), {
+    timeout: 20000,
+  })
+
+  try {
+    const context = browser.contexts()[0] ?? await browser.newContext()
+    const page = await context.newPage()
+    try {
+      await page.goto(url, {
+        waitUntil: "domcontentloaded",
+        timeout: 60000,
+      })
+      await page.waitForLoadState("networkidle", { timeout: 10000 }).catch(() => undefined)
+      return await page.content()
+    } finally {
+      await page.close().catch(() => undefined)
+    }
+  } finally {
+    await browser.close().catch(() => undefined)
   }
 }
 
-interface FlareSolverrRequestBody {
-  cmd: "request.get" | "sessions.create" | "sessions.destroy"
-  url?: string
-  maxTimeout?: number
-  session?: string
-}
-
-async function callFlareSolverr(baseUrl: string, body: FlareSolverrRequestBody, timeout = 70000) {
-  return $fetch<FlareSolverrResponse>(`${baseUrl}/v1`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body,
-    timeout,
-  })
-}
-
 /**
- * 通过 FlareSolverr 代理抓取受 Cloudflare 保护的页面 HTML。
- * 需在环境变量中配置 FLARESOLVERR_URL（默认 http://localhost:8191）。
+ * 通过 CloakBrowser (cloakserve/CDP) 抓取受 Cloudflare 保护的页面 HTML。
+ * 需在环境变量中配置 CLOAKBROWSER_CDP_URL（默认 http://localhost:9222）。
  */
 export async function flareFetch(url: string): Promise<string> {
-  const baseUrl = process.env.FLARESOLVERR_URL ?? "https://flaresolverr.what-if.top"
+  const cdpUrl = getCloakBrowserCdpUrl()
   const maxAttempts = 3
-  let lastError = "Unknown FlareSolverr error"
+  let lastError = "Unknown CloakBrowser error"
 
   for (let i = 1; i <= maxAttempts; i++) {
-    let sessionId: string | undefined
     try {
-      const sessionRes = await callFlareSolverr(baseUrl, { cmd: "sessions.create" }, 15000)
-      if (sessionRes.status === "ok" && sessionRes.session) {
-        sessionId = sessionRes.session
-      }
-
-      const res = await callFlareSolverr(baseUrl, {
-        cmd: "request.get",
-        url,
-        maxTimeout: 60000,
-        session: sessionId,
-      })
-
-      if (res.status === "ok" && res.solution?.response) {
-        return res.solution.response
-      }
-
-      lastError = res.message || "FlareSolverr returned non-ok status"
+      const html = await fetchViaCloakBrowser(url, cdpUrl, i)
+      if (html.trim()) return html
+      lastError = "Empty HTML content from CloakBrowser"
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error)
       lastError = message
-    } finally {
-      if (sessionId) {
-        try {
-          await callFlareSolverr(baseUrl, { cmd: "sessions.destroy", session: sessionId }, 10000)
-        } catch {
-          // Ignore session cleanup errors.
-        }
-      }
     }
 
-    // tab crashed 常见于 Chrome 子进程异常，重试往往可恢复。
+    // 浏览器连接偶发失败时，短暂退避后重试。
     await new Promise(resolve => setTimeout(resolve, 500 * i))
   }
 
   throw new Error(
-    `FlareSolverr failed after ${maxAttempts} attempts: ${lastError}. `
-    + `Please check FLARESOLVERR_URL and container memory limits.`,
+    `CloakBrowser failed after ${maxAttempts} attempts: ${lastError}. `
+    + `Please check CLOAKBROWSER_CDP_URL and container memory limits.`,
   )
 }

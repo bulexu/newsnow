@@ -1,17 +1,19 @@
 services:
-  flaresolverr:
-    image: crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/flaresolverr:latest
-    container_name: flaresolverr
+  cloakbrowser:
+    image: cloakhq/cloakbrowser:latest
+    container_name: cloakbrowser
+    command: cloakserve
     environment:
-      - LOG_LEVEL=info
+      - TZ=Asia/Shanghai
+      - CLOAKBROWSER_AUTO_UPDATE=false
     ports:
-      - '8191:8191'
+      - '9222:9222'
     restart: unless-stopped
 
   newsnow:
     build: .
     depends_on:
-      - flaresolverr
+      - cloakbrowser
     ports:
       - '4444:4444'
     volumes:
@@ -22,7 +24,7 @@ services:
       - JWT_SECRET=
       - INIT_TABLE=true
       - ENABLE_CACHE=true
-      - FLARESOLVERR_URL=http://flaresolverr:8191
+      - CLOAKBROWSER_CDP_URL=http://cloakbrowser:9222
 
 volumes:
   newsnow_data:

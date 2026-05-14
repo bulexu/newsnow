@@ -78,6 +78,10 @@ export interface Source {
   column?: HiddenColumnID
   home?: string
   /**
+   * Override default robots.txt behavior for this source.
+   */
+  robots?: "ignore" | "enforce"
+  /**
    * Whether this source supports article detail/content fetching
    */
   detail?: boolean

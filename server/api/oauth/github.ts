@@ -24,6 +24,7 @@ export default defineEventHandler(async (event) => {
       headers: {
         accept: "application/json",
       },
+      robots: "ignore",
     },
   )
 
@@ -40,6 +41,7 @@ export default defineEventHandler(async (event) => {
       // 必须有 user-agent，在 cloudflare worker 会报错
       "User-Agent": "NewsNow App",
     },
+    robots: "ignore",
   })
 
   const userID = String(userInfo.id)

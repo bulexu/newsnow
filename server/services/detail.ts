@@ -1,6 +1,7 @@
 import type { SourceID } from "@shared/types"
 import { getCacheTable } from "#/database/cache"
 import { detailGetters } from "#/getters-detail"
+import { runWithSourceRequestContext } from "#/utils/source-context"
 
 export async function fetchSourceDetails(id: SourceID, _force = false) {
   if (!sources[id]?.detail) return { success: false, reason: "detail disabled" }
@@ -22,7 +23,10 @@ export async function fetchSourceDetails(id: SourceID, _force = false) {
   for (const item of items) {
     if (item.content?.trim()) continue
     try {
-      const content = (await getter(item, id))?.trim()
+      const content = (await runWithSourceRequestContext({
+        id,
+        robots: sources[id]?.robots,
+      }, () => getter(item, id)))?.trim()
       if (content) {
         item.content = content
         hasUpdate = true

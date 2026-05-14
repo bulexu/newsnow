@@ -9,6 +9,7 @@ import { fetchSourceDetails } from "#/services/detail"
 import type { CacheInfo } from "#/types"
 import { jsonToAtom, jsonToRSS } from "#/utils/feed"
 import { logger } from "#/utils/logger"
+import { runWithSourceRequestContext } from "#/utils/source-context"
 
 export default defineEventHandler(async (event) => {
   try {
@@ -141,7 +142,10 @@ export default defineEventHandler(async (event) => {
     }
 
     try {
-      const newData = reuseCachedContent((await getters[id]()).slice(0, 30))
+      const newData = reuseCachedContent((await runWithSourceRequestContext({
+        id,
+        robots: sources[id]?.robots,
+      }, () => getters[id]())).slice(0, 30))
       if (cacheTable && newData.length) {
         if (withDetail || !event.context.waitUntil) await cacheTable.set(id, newData)
         else event.context.waitUntil(cacheTable.set(id, newData))

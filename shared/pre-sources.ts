@@ -1115,6 +1115,7 @@ export function genSources() {
       name: source.name,
       type: source.type,
       detail: source.detail,
+      robots: source.robots,
       disable: source.disable,
       desc: source.desc,
       icon: source.icon,

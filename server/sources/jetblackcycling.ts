@@ -26,7 +26,10 @@ function toPrice(value?: string) {
 }
 
 async function fetchProductPrice(product: JetBlackProduct): Promise<JetBlackPriceItem> {
-  const html: string = await flareFetch(product.url)
+  const html: string = await flareFetch(product.url, {
+    waitForSelector: "div.e-con-inner p.price .woocommerce-Price-amount.amount bdi",
+    waitForSelectorTimeout: 15000,
+  })
   console.log(`Fetched HTML for ${product.name}, length=${html.length}`)
   const $ = load(html)
 

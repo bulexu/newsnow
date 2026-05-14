@@ -17,6 +17,7 @@ function titleFromFilename(url: string): string {
 
 const banner = defineSource(async () => {
   const html: string = await flareFetch(HOME_URL)
+  console.log(`Fetched HTML for XCADEY homepage, length=${html.length}`)
   const $ = load(html)
 
   // Build map: public-id → slide title from .n2-ss-slide[data-slide-public-id]

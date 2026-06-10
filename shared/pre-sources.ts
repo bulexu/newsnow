@@ -1090,6 +1090,36 @@ export const originSources = {
       },
     },
   },
+  "cyclingnews": {
+    name: "CyclingNews",
+    column: "cycle-track",
+    color: "blue",
+    detail: true,
+    home: "https://www.cyclingnews.com",
+    sub: {
+      news: {
+        title: "新闻资讯",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.cyclingnews.com/news/",
+      },
+    },
+  },
+  "roadcc": {
+    name: "road.cc",
+    column: "cycle-track",
+    color: "blue",
+    detail: true,
+    home: "https://road.cc",
+    sub: {
+      news: {
+        title: "新闻资讯",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://road.cc/news",
+      },
+    },
+  },
   "dcrainmaker": {
     name: "DC Rainmaker",
     column: "cycle-track",

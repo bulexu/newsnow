@@ -1221,6 +1221,48 @@
     "interval": 1800000,
     "title": "首页 Banner"
   },
+  "cyclingnews": {
+    "redirect": "cyclingnews-news",
+    "name": "CyclingNews",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.cyclingnews.com/news/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻资讯"
+  },
+  "cyclingnews-news": {
+    "name": "CyclingNews",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.cyclingnews.com/news/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻资讯"
+  },
+  "roadcc": {
+    "redirect": "roadcc-news",
+    "name": "road.cc",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://road.cc/news",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻资讯"
+  },
+  "roadcc-news": {
+    "name": "road.cc",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://road.cc/news",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻资讯"
+  },
   "dcrainmaker": {
     "redirect": "dcrainmaker-blog",
     "name": "DC Rainmaker",

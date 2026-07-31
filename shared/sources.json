@@ -1263,6 +1263,78 @@
     "interval": 1800000,
     "title": "新闻资讯"
   },
+  "bikeradar": {
+    "redirect": "bikeradar-news",
+    "name": "BikeRadar",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.bikeradar.com/news",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻资讯"
+  },
+  "bikeradar-news": {
+    "name": "BikeRadar",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "https://www.bikeradar.com/news",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新闻资讯"
+  },
+  "cyclingchina": {
+    "redirect": "cyclingchina-news",
+    "name": "骑行家",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "http://www.cyclingchina.net/site/html/news/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "行业新闻"
+  },
+  "cyclingchina-news": {
+    "name": "骑行家",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "http://www.cyclingchina.net/site/html/news/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "行业新闻"
+  },
+  "cyclingchina-events": {
+    "name": "骑行家",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "http://www.cyclingchina.net/site/html/events/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "赛事活动"
+  },
+  "cyclingchina-new-product": {
+    "name": "骑行家",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "http://www.cyclingchina.net/site/html/new_product/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新产品"
+  },
+  "cyclingchina-must-know": {
+    "name": "骑行家",
+    "type": "realtime",
+    "detail": true,
+    "column": "cycle-track",
+    "home": "http://www.cyclingchina.net/site/html/must_know/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "骑行必知"
+  },
   "dcrainmaker": {
     "redirect": "dcrainmaker-blog",
     "name": "DC Rainmaker",

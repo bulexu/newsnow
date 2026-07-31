@@ -50,19 +50,29 @@ export default defineEventHandler(async (event) => {
 
     const reuseCachedContent = (items: CacheInfo["items"]) => {
       if (!cache?.items?.length) return items
-      const cachedWithContent = cache.items.filter(item => item.content?.trim())
+      // 同时复用 content 与 pubDate (detail getter 可能只写入其中一个)
+      const cachedWithContent = cache.items.filter(item => item.content?.trim() || item.pubDate)
       if (!cachedWithContent.length) return items
-      const cachedById = new Map<string, string>()
-      const cachedByUrl = new Map<string, string>()
+      const cachedById = new Map<string, { content?: string, pubDate?: number | string }>()
+      const cachedByUrl = new Map<string, { content?: string, pubDate?: number | string }>()
       for (const cachedItem of cachedWithContent) {
-        const content = cachedItem.content!
-        if (cachedItem.id !== undefined) cachedById.set(String(cachedItem.id), content)
-        if (cachedItem.url) cachedByUrl.set(cachedItem.url, content)
+        const fields: { content?: string, pubDate?: number | string } = {}
+        if (cachedItem.content?.trim()) fields.content = cachedItem.content
+        if (cachedItem.pubDate) fields.pubDate = cachedItem.pubDate
+        if (!fields.content && !fields.pubDate) continue
+        if (cachedItem.id !== undefined) cachedById.set(String(cachedItem.id), fields)
+        if (cachedItem.url) cachedByUrl.set(cachedItem.url, fields)
       }
       return items.map((item) => {
-        if (item.content?.trim()) return item
-        const content = (item.id !== undefined ? cachedById.get(String(item.id)) : undefined) || (item.url ? cachedByUrl.get(item.url) : undefined)
-        return content ? { ...item, content } : item
+        if (item.content?.trim() && item.pubDate) return item
+        const cached = (item.id !== undefined ? cachedById.get(String(item.id)) : undefined)
+          || (item.url ? cachedByUrl.get(item.url) : undefined)
+        if (!cached) return item
+        return {
+          ...item,
+          ...(cached.content && !item.content?.trim() ? { content: cached.content } : {}),
+          ...(cached.pubDate && !item.pubDate ? { pubDate: cached.pubDate } : {}),
+        }
       })
     }
 
@@ -76,30 +86,33 @@ export default defineEventHandler(async (event) => {
         // interval 刷新间隔，对于缓存失效也要执行的。本质上表示本来内容更新就很慢，这个间隔内可能内容压根不会更新。
         // 默认 10 分钟，是低于 TTL 的，但部分 Source 的更新间隔会超过 TTL，甚至有的一天更新一次。
         if (now - cache.updated < sources[id].interval) {
-          if (!withDetail) triggerDetailFetch()
+          // latest=true (前端手动刷新) 时强制重新抓取, 不复用缓存
+          if (!latest) {
+            if (!withDetail) triggerDetailFetch()
 
-          if (format === "rss") {
-            setResponseHeader(event, "Content-Type", "application/rss+xml; charset=utf-8")
-            return jsonToRSS({
+            if (format === "rss") {
+              setResponseHeader(event, "Content-Type", "application/rss+xml; charset=utf-8")
+              return jsonToRSS({
+                status: "success",
+                id,
+                updatedTime: cache.updated,
+                items: cache.items,
+              })
+            } else if (format === "atom") {
+              setResponseHeader(event, "Content-Type", "application/atom+xml; charset=utf-8")
+              return jsonToAtom({
+                status: "success",
+                id,
+                updatedTime: cache.updated,
+                items: cache.items,
+              })
+            }
+            return {
               status: "success",
               id,
               updatedTime: cache.updated,
-              items: cache.items,
-            })
-          } else if (format === "atom") {
-            setResponseHeader(event, "Content-Type", "application/atom+xml; charset=utf-8")
-            return jsonToAtom({
-              status: "success",
-              id,
-              updatedTime: cache.updated,
-              items: cache.items,
-            })
-          }
-          return {
-            status: "success",
-            id,
-            updatedTime: cache.updated,
-            items: await maybeAttachDetail(cache.items),
+              items: await maybeAttachDetail(cache.items),
+            }
           }
         }
 

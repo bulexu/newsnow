@@ -1120,6 +1120,54 @@ export const originSources = {
       },
     },
   },
+  "bikeradar": {
+    name: "BikeRadar",
+    column: "cycle-track",
+    color: "blue",
+    detail: true,
+    home: "https://www.bikeradar.com",
+    sub: {
+      news: {
+        title: "新闻资讯",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.bikeradar.com/news",
+      },
+    },
+  },
+  "cyclingchina": {
+    name: "骑行家",
+    column: "cycle-track",
+    color: "blue",
+    detail: true,
+    home: "http://www.cyclingchina.net",
+    sub: {
+      "news": {
+        title: "行业新闻",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.cyclingchina.net/site/html/news/",
+      },
+      "events": {
+        title: "赛事活动",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.cyclingchina.net/site/html/events/",
+      },
+      "new-product": {
+        title: "新产品",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.cyclingchina.net/site/html/new_product/",
+      },
+      "must-know": {
+        title: "骑行必知",
+        type: "realtime",
+        interval: Time.Common,
+        home: "http://www.cyclingchina.net/site/html/must_know/",
+      },
+    },
+  },
   "dcrainmaker": {
     name: "DC Rainmaker",
     column: "cycle-track",

@@ -58,8 +58,9 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
       const id = queryKey[1] as SourceID
       let url = `/s?id=${id}`
       const headers: Record<string, any> = {}
+      // 手动点击刷新按钮触发: refetchSources 由 useRefetch().refresh 在 click 时加入, 这里强制走 latest=true 绕过缓存
       if (refetchSources.has(id)) {
-        url = `/s?id=${id}&latest`
+        url = `/s?id=${id}&latest=true`
         const jwt = safeParseString(localStorage.getItem("jwt"))
         if (jwt) headers.Authorization = `Bearer ${jwt}`
         refetchSources.delete(id)

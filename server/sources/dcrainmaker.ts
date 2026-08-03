@@ -32,14 +32,12 @@ const blog = defineSource(async () => {
     )
     const excerpt = normalizeText($item.find(".section-excerpt p").clone().find("a.read_more").remove().end().text())
     const id = $item.children("[id^='post-']").attr("id")?.replace(/^post-/, "") || url
-    const pubMatch = url.match(/\/(\d{4})\/(\d{2})\//)
-    const pubDate = pubMatch ? new Date(`${pubMatch[1]}-${pubMatch[2]}-01`).getTime() : undefined
 
     items.push({
       id,
       title,
       url,
-      pubDate,
+      // 列表页 URL 只有年月; 精确发布时间由 detail getter 从详情页 entry-meta 写入
       extra: {
         info: excerpt || "DC Rainmaker blog",
         hover: `title=${title}\nimage=${image || "N/A"}`,
@@ -61,6 +59,17 @@ async function detail(item: NewsItem) {
   const $ = load(html)
   const body = $(".entry-content").first()
   if (!body.length) return undefined
+
+  // 对应 XPath: //div[@id='content']//div[@class='entry-meta']
+  // <a rel="bookmark" title="7:34 am"><span class="entry-date">July 1, 2025</span></a>
+  // title 为时间, span.entry-date 为日期, 组合后写入 item.pubDate
+  const $bookmark = $("#content .entry-meta a[rel='bookmark']").first()
+  const dateText = normalizeText($bookmark.find("span.entry-date").text() || $bookmark.text())
+  const timeText = normalizeText($bookmark.attr("title") || "")
+  const ts = new Date([dateText, timeText].filter(Boolean).join(" ")).getTime()
+  if (Number.isFinite(ts)) {
+    item.pubDate = ts
+  }
 
   body.find("script,style,.sharedaddy,.jp-relatedposts,#comments,.postmetadata,.yarpp-related").remove()
   body.find("[href]").each((_, el) => {

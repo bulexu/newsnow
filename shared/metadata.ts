@@ -33,10 +33,19 @@ export const columns = {
   "competition": {
     zh: "竞对",
   },
+  "affair": {
+    zh: "政务",
+  },
 } as const
 
-export const fixedColumnIds = ["focus", "hottest", "realtime"] as const satisfies Partial<ColumnID>[]
+export const fixedColumnIds = ["focus", "hottest", "realtime", "affair"] as const satisfies Partial<ColumnID>[]
 export const hiddenColumns = Object.keys(columns).filter(id => !fixedColumnIds.includes(id as any)) as HiddenColumnID[]
+
+// 归属于可见栏目(fixedColumnIds, 如 "政务")的源已有专属 Tab,
+// 不再重复计入 "最热/实时" 聚合, 避免同一源在两个 Tab 重复出现
+function inFixedColumn(column?: ColumnID) {
+  return !!column && (fixedColumnIds as readonly ColumnID[]).includes(column)
+}
 
 export const metadata: Metadata = typeSafeObjectFromEntries(typeSafeObjectEntries(columns).map(([k, v]) => {
   switch (k) {
@@ -48,12 +57,12 @@ export const metadata: Metadata = typeSafeObjectFromEntries(typeSafeObjectEntrie
     case "hottest":
       return [k, {
         name: v.zh,
-        sources: typeSafeObjectEntries(sources).filter(([, v]) => v.type === "hottest" && !v.redirect).map(([k]) => k),
+        sources: typeSafeObjectEntries(sources).filter(([, v]) => v.type === "hottest" && !v.redirect && !inFixedColumn(v.column)).map(([k]) => k),
       }]
     case "realtime":
       return [k, {
         name: v.zh,
-        sources: typeSafeObjectEntries(sources).filter(([, v]) => v.type === "realtime" && !v.redirect).map(([k]) => k),
+        sources: typeSafeObjectEntries(sources).filter(([, v]) => v.type === "realtime" && !v.redirect && !inFixedColumn(v.column)).map(([k]) => k),
       }]
     default:
       return [k, {

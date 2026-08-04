@@ -74,8 +74,8 @@ export interface Source {
   /**
    * Default normal timeline
    */
-  type?: "hottest" | "realtime"
-  column?: HiddenColumnID
+  type?: "hottest" | "realtime" | "affair"
+  column?: ColumnID
   home?: string
   /**
    * Override default robots.txt behavior for this source.

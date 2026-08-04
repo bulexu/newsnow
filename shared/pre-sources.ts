@@ -1210,6 +1210,21 @@ export const originSources = {
       },
     },
   },
+  "qdzct": {
+    name: "青岛政策通",
+    column: "affair",
+    color: "blue",
+    detail: true,
+    home: "https://zccx.qingdao.gov.cn/",
+    sub: {
+      zcsx: {
+        title: "政策事项",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://zccx.qingdao.gov.cn/policy/itemList.html",
+      },
+    },
+  },
   "gxj": {
     name: "青岛市工业和信息化局",
     column: "affair",

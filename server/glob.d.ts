@@ -68,6 +68,7 @@ declare module 'glob:./sources/{*.ts,**/index.ts}' {
   export const producthunt: typeof import('./sources/producthunt')
   export const qdstc: typeof import('./sources/qdstc')
   export const qdtyj: typeof import('./sources/qdtyj')
+  export const qdzct: typeof import('./sources/qdzct')
   export const qqvideo: typeof import('./sources/qqvideo')
   export const roadcc: typeof import('./sources/roadcc')
   export const samr: typeof import('./sources/samr')

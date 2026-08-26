@@ -6,6 +6,7 @@ type Res = {
   publisher: string
   title: string
 }[]
+
 export default defineSource(async () => {
   const res: Res = await myFetch("https://kaopustorage.blob.core.windows.net/news-prod/news_list_hans_0.json")
   return res.filter(k => ["财新", "公视"].every(h => k.publisher !== h)).map((k) => {
@@ -20,5 +21,4 @@ export default defineSource(async () => {
       url: k.link,
     }
   })
-},
-)
+})

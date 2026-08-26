@@ -11,6 +11,12 @@ import { jsonToAtom, jsonToRSS } from "#/utils/feed"
 import { logger } from "#/utils/logger"
 import { runWithSourceRequestContext } from "#/utils/source-context"
 
+const info = {
+  LICENCE: "MIT",
+  Github: "https://github.com/ourongxing/newsnow",
+  Sponsorship: "If you rely on this service, sponsorship is welcome to help it run for the long term. Scan the QR code https://raw.githubusercontent.com/ourongxing/newsnow/main/screenshots/reward.gif",
+}
+
 export default defineEventHandler(async (event) => {
   try {
     const query = getQuery(event)
@@ -112,6 +118,7 @@ export default defineEventHandler(async (event) => {
               id,
               updatedTime: cache.updated,
               items: await maybeAttachDetail(cache.items),
+              info,
             }
           }
         }
@@ -148,6 +155,7 @@ export default defineEventHandler(async (event) => {
               id,
               updatedTime: cache.updated,
               items: await maybeAttachDetail(cache.items),
+              info,
             }
           }
         }
@@ -171,6 +179,7 @@ export default defineEventHandler(async (event) => {
         id,
         updatedTime: now,
         items,
+        info,
       }
       if (format === "rss") {
         setResponseHeader(event, "Content-Type", "application/rss+xml; charset=utf-8")
@@ -205,6 +214,7 @@ export default defineEventHandler(async (event) => {
           id,
           updatedTime: cache.updated,
           items: await maybeAttachDetail(cache.items),
+          info,
         }
       } else {
         throw e

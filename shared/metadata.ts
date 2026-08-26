@@ -1,5 +1,6 @@
 import { sources } from "./sources"
 import { typeSafeObjectEntries, typeSafeObjectFromEntries } from "./type.util"
+import { updatedSourceIds as _updatedSourceIds } from "./updated-sources"
 import type { ColumnID, HiddenColumnID, Metadata, SourceID } from "./types"
 
 export const columns = {
@@ -14,6 +15,9 @@ export const columns = {
   },
   "finance": {
     zh: "财经",
+  },
+  "sports": {
+    zh: "体育",
   },
   "focus": {
     zh: "关注",
@@ -36,9 +40,14 @@ export const columns = {
   "affair": {
     zh: "政务",
   },
+  "updated": {
+    zh: "更新",
+  },
 } as const
 
-export const fixedColumnIds = ["focus", "hottest", "realtime", "affair"] as const satisfies Partial<ColumnID>[]
+const updatedSourceIds = [..._updatedSourceIds] as SourceID[]
+
+export const fixedColumnIds = ["focus", "hottest", "realtime", "affair", "updated"] as const satisfies Partial<ColumnID>[]
 export const hiddenColumns = Object.keys(columns).filter(id => !fixedColumnIds.includes(id as any)) as HiddenColumnID[]
 
 // 归属于可见栏目(fixedColumnIds, 如 "政务")的源已有专属 Tab,
@@ -63,6 +72,11 @@ export const metadata: Metadata = typeSafeObjectFromEntries(typeSafeObjectEntrie
       return [k, {
         name: v.zh,
         sources: typeSafeObjectEntries(sources).filter(([, v]) => v.type === "realtime" && !v.redirect && !inFixedColumn(v.column)).map(([k]) => k),
+      }]
+    case "updated":
+      return [k, {
+        name: v.zh,
+        sources: updatedSourceIds.filter(id => sources[id] && !sources[id].redirect),
       }]
     default:
       return [k, {

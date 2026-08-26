@@ -79,7 +79,7 @@ const renqi = defineSource(async () => {
       })
     }
   })
-  return articles
+  return articles.length ? articles : quick()
 })
 
 export default defineSource({

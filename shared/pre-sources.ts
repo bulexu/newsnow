@@ -1417,7 +1417,23 @@ export const originSources = {
         interval: Time.Common,
         home: "https://www.miit.gov.cn/search/zcwjk.html?category=183",
       },
+      zxzc: {
+        title: "最新政策",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.miit.gov.cn/xwfb/zxzc/index.html",
+      },
     },
+  },
+  "govpolicy": {
+    name: "国务院政策文件库",
+    title: "最新政策",
+    type: "realtime",
+    column: "affair",
+    color: "red",
+    robots: "ignore",
+    interval: Time.Common,
+    home: "https://sousuo.www.gov.cn/zcwjk/policyDocumentLibrary?q=&t=zhengcelibrary&orpro=",
   },
   "ndrc": {
     name: "国家发改委",

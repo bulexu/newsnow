@@ -98,6 +98,62 @@ const wjfb = defineSource(async () => {
   return news
 })
 
+const zxzc = defineSource(async () => {
+  const html: string = await myFetch(`${BASE_URL}/xwfb/zxzc/index.html`)
+  const $page = load(html)
+  const loader = $page(".clist_con script[url][querydata]").first()
+  const requestPath = loader.attr("url") || ""
+  const queryText = loader.attr("querydata") || ""
+  if (!requestPath || !queryText) {
+    throw new TypeError("Cannot locate miit latest policy loader")
+  }
+
+  let queryData: Record<string, string>
+  try {
+    queryData = JSON.parse(queryText.replace(/'/g, "\""))
+  } catch {
+    throw new TypeError("Cannot parse miit latest policy loader parameters")
+  }
+
+  const requestUrl = toAbsoluteUrl(requestPath, BASE_URL)
+  const response = await myFetch<{ data?: { html?: string } }>(`${requestUrl}?${new URLSearchParams(queryData).toString()}`)
+  const listHtml = response.data?.html || ""
+  const $ = load(listHtml)
+  const news: NewsItem[] = []
+  const seen = new Set<string>()
+
+  $("li").each((_, el) => {
+    const item = $(el)
+    const link = item.find("a[href]").first()
+    const href = link.attr("href") || ""
+    const title = normalizeText(link.attr("title") || link.text())
+    if (!href || !title) return
+
+    const url = toAbsoluteUrl(href, BASE_URL)
+    if (seen.has(url)) return
+    seen.add(url)
+
+    const dateText = normalizeText(item.find("span.fr").first().text())
+    const timestamp = dateText
+      ? new Date(`${dateText}T00:00:00+08:00`).getTime()
+      : Number.NaN
+    const id = href.match(/art_([0-9a-f]+)\.html$/i)?.[1] || url
+
+    news.push({
+      id,
+      title,
+      url,
+      pubDate: Number.isFinite(timestamp) ? timestamp : undefined,
+    })
+  })
+
+  if (!news.length) {
+    throw new TypeError("Cannot parse miit latest policy list")
+  }
+
+  return news
+})
+
 async function detail(item: NewsItem) {
   if (!item?.url) return undefined
 
@@ -153,8 +209,10 @@ async function detail(item: NewsItem) {
 
 export const details = defineSourceDetail({
   "miit-wjfb": detail,
+  "miit-zxzc": detail,
 })
 
 export default defineSource({
   "miit-wjfb": wjfb,
+  "miit-zxzc": zxzc,
 })

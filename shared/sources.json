@@ -1688,6 +1688,26 @@
     "interval": 1800000,
     "title": "政策文件库-文件发布"
   },
+  "miit-zxzc": {
+    "name": "工业和信息化部",
+    "type": "realtime",
+    "detail": true,
+    "column": "affair",
+    "home": "https://www.miit.gov.cn/xwfb/zxzc/index.html",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "最新政策"
+  },
+  "govpolicy": {
+    "title": "最新政策",
+    "name": "国务院政策文件库",
+    "type": "realtime",
+    "robots": "ignore",
+    "column": "affair",
+    "home": "https://sousuo.www.gov.cn/zcwjk/policyDocumentLibrary?q=&t=zhengcelibrary&orpro=",
+    "color": "red",
+    "interval": 1800000
+  },
   "ndrc": {
     "redirect": "ndrc-tzgg",
     "name": "国家发改委",

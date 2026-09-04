@@ -1,4 +1,7 @@
 export const updatedSourceIds = [
+  "govpolicy",
+  "miit-wjfb",
+  "miit-zxzc",
   "36kr-quick",
   "aihot",
   "cankaoxiaoxi",
@@ -23,7 +26,6 @@ export const updatedSourceIds = [
   "gxj-tzgg",
   "hrss-tzgg",
   "kjt-tzgg",
-  "miit-wjfb",
   "myj-tzgg",
   "ndrc-tzgg",
   "qdstc-tzgg",

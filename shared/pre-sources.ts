@@ -139,6 +139,21 @@ export const originSources = {
     interval: Time.Fast,
     home: "https://aihot.virxact.com/all",
   },
+  "qbitai": {
+    name: "量子位",
+    column: "tech",
+    color: "blue",
+    detail: true,
+    home: "https://www.qbitai.com/",
+    sub: {
+      zx: {
+        title: "资讯",
+        type: "realtime",
+        interval: Time.Common,
+        home: "https://www.qbitai.com/category/%e8%b5%84%e8%ae%af",
+      },
+    },
+  },
   "tieba": {
     name: "百度贴吧",
     title: "热议",

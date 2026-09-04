@@ -107,6 +107,27 @@
     "color": "blue",
     "interval": 300000
   },
+  "qbitai": {
+    "redirect": "qbitai-zx",
+    "name": "量子位",
+    "type": "realtime",
+    "detail": true,
+    "column": "tech",
+    "home": "https://www.qbitai.com/category/%e8%b5%84%e8%ae%af",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "资讯"
+  },
+  "qbitai-zx": {
+    "name": "量子位",
+    "type": "realtime",
+    "detail": true,
+    "column": "tech",
+    "home": "https://www.qbitai.com/category/%e8%b5%84%e8%ae%af",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "资讯"
+  },
   "tieba": {
     "title": "热议",
     "name": "百度贴吧",

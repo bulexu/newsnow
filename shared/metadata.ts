@@ -40,6 +40,9 @@ export const columns = {
   "affair": {
     zh: "政务",
   },
+  "industry": {
+    zh: "行业",
+  },
   "updated": {
     zh: "更新",
   },
@@ -47,7 +50,7 @@ export const columns = {
 
 const updatedSourceIds = [..._updatedSourceIds] as SourceID[]
 
-export const fixedColumnIds = ["focus", "hottest", "realtime", "affair", "updated"] as const satisfies Partial<ColumnID>[]
+export const fixedColumnIds = ["focus", "hottest", "realtime", "affair", "industry", "updated"] as const satisfies Partial<ColumnID>[]
 export const hiddenColumns = Object.keys(columns).filter(id => !fixedColumnIds.includes(id as any)) as HiddenColumnID[]
 
 // 归属于可见栏目(fixedColumnIds, 如 "政务")的源已有专属 Tab,

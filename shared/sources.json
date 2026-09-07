@@ -1896,6 +1896,703 @@
     "interval": 1800000,
     "title": "标准"
   },
+  "chinabicycle-zcfg": {
+    "name": "中国自行车协会",
+    "type": "realtime",
+    "detail": true,
+    "column": "industry",
+    "home": "https://www.china-bicycle.com/news/index/41?cid=51",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "政策法规"
+  },
+  "chinabicycle-xgb": {
+    "name": "中国自行车协会",
+    "type": "realtime",
+    "detail": true,
+    "column": "industry",
+    "home": "https://www.china-bicycle.com/news/index/47/?cid=58",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "新国标实施"
+  },
+  "chinabicycle-wh": {
+    "name": "中国自行车协会",
+    "type": "realtime",
+    "detail": true,
+    "column": "industry",
+    "home": "https://www.china-bicycle.com/news/index/33?cid=3",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "自行车文化"
+  },
+  "chinabicycle-tz": {
+    "name": "中国自行车协会",
+    "type": "realtime",
+    "detail": true,
+    "column": "industry",
+    "home": "https://www.china-bicycle.com/news/index/1?cid=12",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "重要通知"
+  },
+  "chinabicycle-imp": {
+    "name": "中国自行车协会",
+    "type": "realtime",
+    "detail": true,
+    "column": "industry",
+    "home": "https://www.china-bicycle.com/news/important?cid=2",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "重要新闻"
+  },
+  "chinabicycle-zg": {
+    "name": "中国自行车协会",
+    "type": "realtime",
+    "detail": true,
+    "column": "industry",
+    "home": "https://www.china-bicycle.com/news/index/24?cid=18",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "中国展"
+  },
+  "chinabicycle-dfz": {
+    "name": "中国自行车协会",
+    "type": "realtime",
+    "detail": true,
+    "column": "industry",
+    "home": "https://www.china-bicycle.com/news/index/25?cid=19",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "地方展"
+  },
+  "peopleforbikes": {
+    "redirect": "peopleforbikes-news",
+    "name": "PeopleForBikes",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.peopleforbikes.org/news",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "peopleforbikes-news": {
+    "name": "PeopleForBikes",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.peopleforbikes.org/news",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "peopleforbikes-business": {
+    "name": "PeopleForBikes",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.peopleforbikes.org/topics/bike-business",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Bike Business"
+  },
+  "peopleforbikes-research": {
+    "name": "PeopleForBikes",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.peopleforbikes.org/research",
+    "color": "blue",
+    "interval": 3600000,
+    "title": "Research"
+  },
+  "federciclismo": {
+    "name": "Federciclismo",
+    "type": "realtime",
+    "desc": "意大利自行车联合会 FCI",
+    "column": "industry",
+    "home": "https://www.federciclismo.it/",
+    "color": "green",
+    "interval": 1800000
+  },
+  "colombiaciclismo": {
+    "name": "FECOCI",
+    "type": "realtime",
+    "desc": "哥伦比亚自行车联合会",
+    "column": "industry",
+    "home": "https://federacioncolombianadeciclismo.com/",
+    "color": "yellow",
+    "interval": 1800000
+  },
+  "ziv": {
+    "name": "ZIV",
+    "type": "realtime",
+    "desc": "德国两轮车工业协会",
+    "column": "industry",
+    "home": "https://www.ziv-zweirad.de/",
+    "color": "amber",
+    "interval": 1800000
+  },
+  "cyclingorgtw": {
+    "name": "中华台北自由车协会",
+    "type": "realtime",
+    "desc": "Chinese Taipei Cycling Association",
+    "column": "industry",
+    "home": "https://cycling.org.tw/",
+    "color": "teal",
+    "interval": 1800000
+  },
+  "conade": {
+    "name": "CONADE",
+    "type": "realtime",
+    "desc": "墨西哥国家体育委员会",
+    "column": "industry",
+    "home": "https://www.gob.mx/conade",
+    "color": "red",
+    "interval": 3600000
+  },
+  "britishcycling": {
+    "name": "British Cycling",
+    "type": "realtime",
+    "desc": "英国自行车协会",
+    "column": "industry",
+    "home": "https://www.britishcycling.org.uk",
+    "color": "blue",
+    "interval": 1800000
+  },
+  "pzkol": {
+    "name": "PZKol",
+    "type": "realtime",
+    "desc": "波兰自行车协会",
+    "column": "industry",
+    "home": "https://www.pzkol.pl/",
+    "color": "red",
+    "interval": 1800000
+  },
+  "mncf": {
+    "name": "MNCF",
+    "type": "realtime",
+    "desc": "马来西亚自行车联合会",
+    "column": "industry",
+    "home": "https://www.mncf.my/",
+    "color": "orange",
+    "interval": 3600000
+  },
+  "cbc": {
+    "name": "CBC",
+    "type": "realtime",
+    "desc": "巴西自行车联合会",
+    "column": "industry",
+    "home": "https://www.cbc.esp.br/",
+    "color": "green",
+    "interval": 1800000
+  },
+  "bikeretailer": {
+    "redirect": "bikeretailer-industry",
+    "name": "Bicycle Retailer",
+    "type": "realtime",
+    "desc": "BRAIN 北美自行车行业媒体",
+    "column": "industry",
+    "home": "https://www.bicycleretailer.com/industry-news",
+    "color": "indigo",
+    "interval": 1800000,
+    "title": "Industry News"
+  },
+  "bikeretailer-industry": {
+    "name": "Bicycle Retailer",
+    "type": "realtime",
+    "desc": "BRAIN 北美自行车行业媒体",
+    "column": "industry",
+    "home": "https://www.bicycleretailer.com/industry-news",
+    "color": "indigo",
+    "interval": 1800000,
+    "title": "Industry News"
+  },
+  "bikeretailer-announcements": {
+    "name": "Bicycle Retailer",
+    "type": "realtime",
+    "desc": "BRAIN 北美自行车行业媒体",
+    "column": "industry",
+    "home": "https://www.bicycleretailer.com/announcements",
+    "color": "indigo",
+    "interval": 1800000,
+    "title": "Announcements"
+  },
+  "bikeretailer-opinion": {
+    "name": "Bicycle Retailer",
+    "type": "realtime",
+    "desc": "BRAIN 北美自行车行业媒体",
+    "column": "industry",
+    "home": "https://www.bicycleretailer.com/opinion-analysis",
+    "color": "indigo",
+    "interval": 1800000,
+    "title": "Opinion & Analysis"
+  },
+  "bikeretailer-products": {
+    "name": "Bicycle Retailer",
+    "type": "realtime",
+    "desc": "BRAIN 北美自行车行业媒体",
+    "column": "industry",
+    "home": "https://www.bicycleretailer.com/new-products",
+    "color": "indigo",
+    "interval": 1800000,
+    "title": "New Products"
+  },
+  "cyclingindustry": {
+    "redirect": "cyclingindustry-news",
+    "name": "CyclingIndustry.News",
+    "type": "realtime",
+    "desc": "英国自行车行业媒体",
+    "column": "industry",
+    "home": "https://cyclingindustry.news/niche/news-50-968/",
+    "color": "orange",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "cyclingindustry-news": {
+    "name": "CyclingIndustry.News",
+    "type": "realtime",
+    "desc": "英国自行车行业媒体",
+    "column": "industry",
+    "home": "https://cyclingindustry.news/niche/news-50-968/",
+    "color": "orange",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "cyclingindustry-investment": {
+    "name": "CyclingIndustry.News",
+    "type": "realtime",
+    "desc": "英国自行车行业媒体",
+    "column": "industry",
+    "home": "https://cyclingindustry.news/niche/investment-acquisitions/",
+    "color": "orange",
+    "interval": 1800000,
+    "title": "Investment & Acquisitions"
+  },
+  "ancma": {
+    "redirect": "ancma-news",
+    "name": "ANCMA",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://ancma.news/?jsf=jet-engine:grid1&tax=category:342",
+    "color": "red",
+    "interval": 1800000,
+    "title": "Association News"
+  },
+  "ancma-news": {
+    "name": "ANCMA",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://ancma.news/?jsf=jet-engine:grid1&tax=category:342",
+    "color": "red",
+    "interval": 1800000,
+    "title": "Association News"
+  },
+  "ancma-associates": {
+    "name": "ANCMA",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://ancma.news/category/news/notizie-dagli-associati/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "Associati News"
+  },
+  "ancma-statistics": {
+    "name": "ANCMA",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.ancma.it/statistiche/",
+    "color": "red",
+    "interval": 3600000,
+    "title": "Statistics"
+  },
+  "fvsr": {
+    "redirect": "fvsr-news",
+    "name": "ФВСР",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://fvsr.ru/press/news",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Новости"
+  },
+  "fvsr-news": {
+    "name": "ФВСР",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://fvsr.ru/press/news",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Новости"
+  },
+  "fvsr-highway": {
+    "name": "ФВСР",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://fvsr.ru/press/news?tag=highway",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Шоссе"
+  },
+  "fvsr-track": {
+    "name": "ФВСР",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://fvsr.ru/press/news?tag=track",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Трек"
+  },
+  "fvsr-documents": {
+    "name": "ФВСР",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://fvsr.ru/documents",
+    "color": "blue",
+    "interval": 3600000,
+    "title": "Документы"
+  },
+  "czechcycling": {
+    "redirect": "czechcycling-novinky",
+    "name": "Český svaz cyklistiky",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.czechcyclingfederation.com/category/novinky/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "Novinky"
+  },
+  "czechcycling-novinky": {
+    "name": "Český svaz cyklistiky",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.czechcyclingfederation.com/category/novinky/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "Novinky"
+  },
+  "czechcycling-documents": {
+    "name": "Český svaz cyklistiky",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.czechcyclingfederation.com/svaz/dokumenty/",
+    "color": "red",
+    "interval": 3600000,
+    "title": "Dokumenty"
+  },
+  "auscycling": {
+    "redirect": "auscycling-news",
+    "name": "AusCycling",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://auscycling.org.au/news",
+    "color": "green",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "auscycling-news": {
+    "name": "AusCycling",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://auscycling.org.au/news",
+    "color": "green",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "auscycling-policies": {
+    "name": "AusCycling",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://auscycling.org.au/about/policies",
+    "color": "green",
+    "interval": 3600000,
+    "title": "Policies"
+  },
+  "auscycling-annualreport": {
+    "name": "AusCycling",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://auscycling.org.au/about/annual-report",
+    "color": "green",
+    "interval": 3600000,
+    "title": "Annual Reports"
+  },
+  "auscycling-governance": {
+    "name": "AusCycling",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://auscycling.org.au/about/governance",
+    "color": "green",
+    "interval": 3600000,
+    "title": "Governance"
+  },
+  "auscycling-strategy": {
+    "name": "AusCycling",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://auscycling.org.au/about/strategy",
+    "color": "green",
+    "interval": 3600000,
+    "title": "Strategy"
+  },
+  "ffc": {
+    "redirect": "ffc-structures",
+    "name": "Fédération Française de Cyclisme",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://structures.ffc.fr/nos-actualites/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Structures News"
+  },
+  "ffc-structures": {
+    "name": "Fédération Française de Cyclisme",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://structures.ffc.fr/nos-actualites/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Structures News"
+  },
+  "ffc-velo": {
+    "name": "Fédération Française de Cyclisme",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://velo.ffc.fr/actualites/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "France à vélo"
+  },
+  "ffc-resources": {
+    "name": "Fédération Française de Cyclisme",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://ffc.fr/ressources/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Ressources"
+  },
+  "jbpi": {
+    "redirect": "jbpi-business",
+    "name": "自転車産業振興協会",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://jbpi.or.jp/business-list/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "各種事業最新情報"
+  },
+  "jbpi-business": {
+    "name": "自転車産業振興協会",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://jbpi.or.jp/business-list/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "各種事業最新情報"
+  },
+  "singaporecycling": {
+    "redirect": "singaporecycling-news",
+    "name": "Singapore Cycling Federation",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://singaporecycling.org.sg/blogs/news",
+    "color": "red",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "singaporecycling-news": {
+    "name": "Singapore Cycling Federation",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://singaporecycling.org.sg/blogs/news",
+    "color": "red",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "singaporecycling-policies": {
+    "name": "Singapore Cycling Federation",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://singaporecycling.org.sg/pages/event-policies-guidelines",
+    "color": "red",
+    "interval": 3600000,
+    "title": "Event Policies & Guidelines"
+  },
+  "cyclingcanada": {
+    "redirect": "cyclingcanada-general",
+    "name": "Cycling Canada",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://cyclingcanada.ca/sport/general/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "General News"
+  },
+  "cyclingcanada-general": {
+    "name": "Cycling Canada",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://cyclingcanada.ca/sport/general/",
+    "color": "red",
+    "interval": 1800000,
+    "title": "General News"
+  },
+  "cyclingcanada-rules": {
+    "name": "Cycling Canada",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://cyclingcanada.ca/get-involved/officials/rules-policies/",
+    "color": "red",
+    "interval": 3600000,
+    "title": "Rules & Policies"
+  },
+  "cyclingchile": {
+    "redirect": "cyclingchile-noticias",
+    "name": "Federación Deportiva Nacional de Ciclismo de Chile",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://fdnciclismochile.cl/blogs/noticias",
+    "color": "red",
+    "interval": 1800000,
+    "title": "Noticias"
+  },
+  "cyclingchile-noticias": {
+    "name": "Federación Deportiva Nacional de Ciclismo de Chile",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://fdnciclismochile.cl/blogs/noticias",
+    "color": "red",
+    "interval": 1800000,
+    "title": "Noticias"
+  },
+  "cyclingchile-documents": {
+    "name": "Federación Deportiva Nacional de Ciclismo de Chile",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://fdnciclismochile.cl/pages/documentos-1",
+    "color": "red",
+    "interval": 3600000,
+    "title": "Documentos"
+  },
+  "ldsf": {
+    "redirect": "ldsf-news",
+    "name": "Lietuvos dviračių sporto federacija",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://ldsf.lt/naujienos/",
+    "color": "green",
+    "interval": 1800000,
+    "title": "Naujienos"
+  },
+  "ldsf-news": {
+    "name": "Lietuvos dviračių sporto federacija",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://ldsf.lt/naujienos/",
+    "color": "green",
+    "interval": 1800000,
+    "title": "Naujienos"
+  },
+  "ldsf-reports": {
+    "name": "Lietuvos dviračių sporto federacija",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://ldsf.lt/dokumentai/ataskaitos/",
+    "color": "green",
+    "interval": 3600000,
+    "title": "Ataskaitos"
+  },
+  "uci": {
+    "redirect": "uci-news",
+    "name": "UCI",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.uci.org/news/all-news/6IQ886FTfWV8yd13Egt9v3",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "uci-news": {
+    "name": "UCI",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.uci.org/news/all-news/6IQ886FTfWV8yd13Egt9v3",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "uci-regulations": {
+    "name": "UCI",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.uci.org/regulations/3MyLDDrwJCJJ0BGGOFzOat",
+    "color": "blue",
+    "interval": 3600000,
+    "title": "Regulations"
+  },
+  "bikeeu": {
+    "redirect": "bikeeu-news",
+    "name": "Bike Europe",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.bike-eu.com/news",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "bikeeu-news": {
+    "name": "Bike Europe",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.bike-eu.com/news",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "bikeeu-product": {
+    "name": "Bike Europe",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.bike-eu.com/collecties/product",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Product Regulations"
+  },
+  "bikeeu-trade": {
+    "name": "Bike Europe",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://www.bike-eu.com/collecties/trade",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Trade Regulations"
+  },
+  "cyclingindustries": {
+    "redirect": "cyclingindustries-news",
+    "name": "European Cycling Industries",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://cyclingindustries.com/news/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "cyclingindustries-news": {
+    "name": "European Cycling Industries",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://cyclingindustries.com/news/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "News"
+  },
+  "cyclingindustries-market": {
+    "name": "European Cycling Industries",
+    "type": "realtime",
+    "column": "industry",
+    "home": "https://cyclingindustries.com/news/details/category/market-impact-and-intelligence/",
+    "color": "blue",
+    "interval": 1800000,
+    "title": "Market Impact & Intelligence"
+  },
   "csgf": {
     "redirect": "csgf-xhgg",
     "name": "中国体育用品业联合会",

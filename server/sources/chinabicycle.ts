@@ -124,16 +124,35 @@ function makeChinabicycleSourceDetail() {
 
 const js = makeChinabicycleSource("/news/index/30?cid=15")
 const bz = makeChinabicycleSource("/news/index/31?cid=16")
+const zcfg = makeChinabicycleSource("/news/index/41?cid=51")
+const xgb = makeChinabicycleSource("/news/index/47/?cid=58")
+const wh = makeChinabicycleSource("/news/index/33?cid=3")
+const tz = makeChinabicycleSource("/news/index/1?cid=12")
 
 const jsDetail = makeChinabicycleSourceDetail()
 const bzDetail = makeChinabicycleSourceDetail()
+const zcfgDetail = makeChinabicycleSourceDetail()
+const xgbDetail = makeChinabicycleSourceDetail()
+const whDetail = makeChinabicycleSourceDetail()
+const tzDetail = makeChinabicycleSourceDetail()
 
 export const details = defineSourceDetail({
   "chinabicycle-js": jsDetail,
   "chinabicycle-bz": bzDetail,
+  "chinabicycle-zcfg": zcfgDetail,
+  "chinabicycle-xgb": xgbDetail,
+  "chinabicycle-wh": whDetail,
+  "chinabicycle-tz": tzDetail,
 })
 
 export default defineSource({
   "chinabicycle-js": js,
   "chinabicycle-bz": bz,
+  "chinabicycle-zcfg": zcfg,
+  "chinabicycle-xgb": xgb,
+  "chinabicycle-wh": wh,
+  "chinabicycle-tz": tz,
+  "chinabicycle-imp": makeChinabicycleSource("/news/important?cid=2"),
+  "chinabicycle-zg": makeChinabicycleSource("/news/index/24?cid=18"),
+  "chinabicycle-dfz": makeChinabicycleSource("/news/index/25?cid=19"),
 })

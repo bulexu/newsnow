@@ -11,7 +11,7 @@ services:
   #   restart: unless-stopped
 
   newsnow:
-    image: crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/newsnow:v2.0.3
+    image: crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/newsnow:v2.0.4
     container_name: newsnow
     # depends_on:
     #   - cloakbrowser

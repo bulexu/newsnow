@@ -1,0 +1,33 @@
+allowBuilds:
+  '@swc/core': set this to true or false
+  better-sqlite3: set this to true or false
+  esbuild: set this to true or false
+  sharp: set this to true or false
+  simple-git-hooks: set this to true or false
+  unrs-resolver: set this to true or false
+  workerd: set this to true or false
+
+onlyBuiltDependencies:
+  - '@napi-rs/pinyin'
+  - '@parcel/watcher'
+  - '@swc/core'
+  - better-sqlite3
+  - esbuild
+  - sharp
+  - simple-git-hooks
+  - unrs-resolver
+  - workerd
+
+overrides:
+  cross-spawn: '>=7.0.6'
+  dayjs: 1.11.13
+  db0: ^0.3.4
+  nitropack: npm:nitro-go@0.0.3
+  picomatch: ^4.0.3
+  react: ^19.0.4
+  vite: ^7.3.1
+  vite-plugin-with-nitro>h3: npm:h3-nightly@1.15.4-20250730-094032-325a62b
+  nitro-go>h3: npm:h3-nightly@1.15.4-20250730-094032-325a62b
+
+patchedDependencies:
+  dayjs: patches/dayjs.patch

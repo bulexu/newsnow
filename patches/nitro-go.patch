@@ -1,0 +1,15 @@
+diff --git a/dist/rollup/index.mjs b/dist/rollup/index.mjs
+index b705224..da845b8 100644
+--- a/dist/rollup/index.mjs
++++ b/dist/rollup/index.mjs
+@@ -1252,7 +1252,9 @@ function publicAssets(nitro) {
+             etag,
+             mtime: stat.mtime.toJSON(),
+             size: stat.size,
+-            path: relative(nitro.options.output.serverDir, fullPath),
++            // #fix public assets path: the readAsset function is bundled into chunks/nitro/nitro.mjs,
++            // so the relative path must be computed from the chunks/nitro subdirectory.
++            path: relative(join(nitro.options.output.serverDir, "chunks/nitro"), fullPath),
+             data: nitro.options.serveStatic === "inline" ? assetData.toString("base64") : void 0
+           };
+         }

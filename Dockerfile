@@ -3,7 +3,7 @@ WORKDIR /usr/src
 RUN corepack enable
 RUN sed -i 's#https\?://dl-cdn.alpinelinux.org/alpine#https://mirrors.aliyun.com/alpine#g' /etc/apk/repositories \
 	&& apk add --no-cache python3 make g++
-RUN corepack prepare pnpm@10.34.5 --activate
+RUN corepack prepare pnpm@10.30.3 --activate
 RUN pnpm config set registry https://registry.npmmirror.com
 
 FROM base AS deps

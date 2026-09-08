@@ -1,20 +1,20 @@
 services:
-  cloakbrowser:
-    image: cloakhq/cloakbrowser:latest
-    container_name: cloakbrowser
-    command: cloakserve
-    environment:
-      - TZ=Asia/Shanghai
-      - CLOAKBROWSER_AUTO_UPDATE=false
-    ports:
-      - '9222:9222'
-    restart: unless-stopped
+  # cloakbrowser:
+  #   image: cloakhq/cloakbrowser:latest
+  #   container_name: cloakbrowser
+  #   command: cloakserve
+  #   environment:
+  #     - TZ=Asia/Shanghai
+  #     - CLOAKBROWSER_AUTO_UPDATE=false
+  #   ports:
+  #     - '9222:9222'
+  #   restart: unless-stopped
 
   newsnow:
-    image: crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/newsnow:latest
+    image: crpi-qp8hiqijfnilf93t.cn-hangzhou.personal.cr.aliyuncs.com/bulexu/newsnow:v2.0.3
     container_name: newsnow
-    depends_on:
-      - cloakbrowser
+    # depends_on:
+    #   - cloakbrowser
     ports:
       - '4444:4444'
     volumes:

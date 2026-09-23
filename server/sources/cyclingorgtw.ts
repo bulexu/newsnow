@@ -1,8 +1,9 @@
 import { load } from "cheerio"
 import { normalizeText } from "#/utils/banner"
+import { contentFromHtmlFragment } from "#/utils/industry-detail"
 
 // activities 分类 id=6751
-const API = "https://cycling.org.tw/wp-json/wp/v2/posts?categories=6751&per_page=30&_fields=id,date,link,title,excerpt"
+const API = "https://cycling.org.tw/wp-json/wp/v2/posts?categories=6751&per_page=30&_fields=id,date,link,title,excerpt,content"
 
 interface WordPressPost {
   id: number
@@ -10,6 +11,7 @@ interface WordPressPost {
   link: string
   title: { rendered: string }
   excerpt: { rendered: string }
+  content?: { rendered: string }
 }
 
 function textFromHtml(html?: string) {
@@ -23,6 +25,7 @@ export default defineSource(async () => {
     id: post.id,
     title: textFromHtml(post.title?.rendered),
     url: post.link,
+    content: contentFromHtmlFragment(post.content?.rendered, post.link),
     pubDate: new Date(post.date).getTime(),
     extra: {
       hover: textFromHtml(post.excerpt?.rendered) || undefined,

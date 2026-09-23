@@ -1,6 +1,7 @@
 import { load } from "cheerio"
 import type { NewsItem } from "@shared/types"
 import { normalizeText } from "#/utils/banner"
+import { contentFromHtmlFragment } from "#/utils/industry-detail"
 
 const STATISTICS_URL = "https://www.ancma.it/statistiche/"
 
@@ -10,6 +11,7 @@ interface WordPressPost {
   link: string
   title: { rendered: string }
   excerpt: { rendered: string }
+  content?: { rendered: string }
 }
 
 function textFromHtml(html?: string) {
@@ -19,12 +21,13 @@ function textFromHtml(html?: string) {
 // 342 = NEWS DALL'ASSOCIAZIONE, 346 = NOTIZIE DAGLI ASSOCIATI
 function makeAncmaNewsSource(categoryId: number) {
   return defineSource(async () => {
-    const api = `https://ancma.news/wp-json/wp/v2/posts?categories=${categoryId}&per_page=30&_fields=id,date,link,title,excerpt`
+    const api = `https://ancma.news/wp-json/wp/v2/posts?categories=${categoryId}&per_page=30&_fields=id,date,link,title,excerpt,content`
     const posts: WordPressPost[] = await myFetch(api)
     return posts.map(post => ({
       id: post.id,
       title: textFromHtml(post.title?.rendered),
       url: post.link,
+      content: contentFromHtmlFragment(post.content?.rendered, post.link),
       pubDate: new Date(post.date).getTime(),
       extra: {
         hover: textFromHtml(post.excerpt?.rendered) || undefined,

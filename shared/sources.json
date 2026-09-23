@@ -2,6 +2,7 @@
   "zhihu": {
     "name": "知乎",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://www.zhihu.com",
     "color": "blue",
@@ -11,6 +12,7 @@
     "title": "实时热搜",
     "name": "微博",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://weibo.com",
     "color": "red",
@@ -20,6 +22,7 @@
     "redirect": "wallstreetcn-quick",
     "name": "华尔街见闻",
     "type": "realtime",
+    "detail": false,
     "column": "finance",
     "home": "https://wallstreetcn.com/",
     "color": "blue",
@@ -29,6 +32,7 @@
   "wallstreetcn-quick": {
     "name": "华尔街见闻",
     "type": "realtime",
+    "detail": false,
     "column": "finance",
     "home": "https://wallstreetcn.com/",
     "color": "blue",
@@ -37,6 +41,7 @@
   },
   "wallstreetcn-news": {
     "name": "华尔街见闻",
+    "detail": false,
     "column": "finance",
     "home": "https://wallstreetcn.com/",
     "color": "blue",
@@ -46,6 +51,7 @@
   "wallstreetcn-hot": {
     "name": "华尔街见闻",
     "type": "hottest",
+    "detail": false,
     "column": "finance",
     "home": "https://wallstreetcn.com/",
     "color": "blue",
@@ -56,6 +62,7 @@
     "redirect": "36kr-quick",
     "name": "36氪",
     "type": "realtime",
+    "detail": false,
     "disable": "cf",
     "column": "tech",
     "home": "https://36kr.com",
@@ -66,6 +73,7 @@
   "36kr-quick": {
     "name": "36氪",
     "type": "realtime",
+    "detail": false,
     "disable": "cf",
     "column": "tech",
     "home": "https://36kr.com",
@@ -76,6 +84,7 @@
   "douyin": {
     "name": "抖音",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://www.douyin.com",
     "color": "gray",
@@ -85,6 +94,7 @@
     "title": "主干道热帖",
     "name": "虎扑",
     "type": "hottest",
+    "detail": false,
     "column": "sports",
     "home": "https://hupu.com",
     "color": "red",
@@ -94,6 +104,7 @@
     "title": "头条",
     "name": "懂球帝",
     "type": "realtime",
+    "detail": false,
     "column": "sports",
     "home": "https://www.dongqiudi.com",
     "color": "green",
@@ -102,6 +113,7 @@
   "aihot": {
     "name": "AIHOT",
     "type": "realtime",
+    "detail": false,
     "column": "tech",
     "home": "https://aihot.virxact.com/all",
     "color": "blue",
@@ -132,6 +144,7 @@
     "title": "热议",
     "name": "百度贴吧",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://tieba.baidu.com",
     "color": "blue",
@@ -140,6 +153,7 @@
   "toutiao": {
     "name": "今日头条",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://www.toutiao.com",
     "color": "red",
@@ -149,6 +163,7 @@
     "title": "热榜",
     "name": "澎湃新闻",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://www.thepaper.cn",
     "color": "gray",
@@ -156,6 +171,7 @@
   },
   "sputniknewscn": {
     "name": "卫星通讯社",
+    "detail": false,
     "column": "world",
     "home": "https://sputniknews.cn",
     "color": "orange",
@@ -163,6 +179,7 @@
   },
   "cankaoxiaoxi": {
     "name": "参考消息",
+    "detail": false,
     "column": "world",
     "home": "https://china.cankaoxiaoxi.com",
     "color": "red",
@@ -172,6 +189,7 @@
     "redirect": "cls-telegraph",
     "name": "财联社",
     "type": "realtime",
+    "detail": false,
     "column": "finance",
     "home": "https://www.cls.cn",
     "color": "red",
@@ -181,6 +199,7 @@
   "cls-telegraph": {
     "name": "财联社",
     "type": "realtime",
+    "detail": false,
     "column": "finance",
     "home": "https://www.cls.cn",
     "color": "red",
@@ -189,6 +208,7 @@
   },
   "cls-depth": {
     "name": "财联社",
+    "detail": false,
     "column": "finance",
     "home": "https://www.cls.cn",
     "color": "red",
@@ -198,6 +218,7 @@
   "cls-hot": {
     "name": "财联社",
     "type": "hottest",
+    "detail": false,
     "column": "finance",
     "home": "https://www.cls.cn",
     "color": "red",
@@ -208,6 +229,7 @@
     "redirect": "xueqiu-hotstock",
     "name": "雪球",
     "type": "hottest",
+    "detail": false,
     "column": "finance",
     "home": "https://xueqiu.com",
     "color": "blue",
@@ -217,6 +239,7 @@
   "xueqiu-hotstock": {
     "name": "雪球",
     "type": "hottest",
+    "detail": false,
     "column": "finance",
     "home": "https://xueqiu.com",
     "color": "blue",
@@ -227,6 +250,7 @@
     "title": "事件",
     "name": "格隆汇",
     "type": "realtime",
+    "detail": false,
     "column": "finance",
     "home": "https://www.gelonghui.com",
     "color": "blue",
@@ -236,6 +260,7 @@
     "redirect": "github-trending-today",
     "name": "Github",
     "type": "hottest",
+    "detail": false,
     "column": "tech",
     "home": "https://github.com/",
     "color": "gray",
@@ -245,6 +270,7 @@
   "github-trending-today": {
     "name": "Github",
     "type": "hottest",
+    "detail": false,
     "column": "tech",
     "home": "https://github.com/",
     "color": "gray",
@@ -255,6 +281,7 @@
     "redirect": "bilibili-hot-search",
     "name": "哔哩哔哩",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://www.bilibili.com",
     "color": "blue",
@@ -264,6 +291,7 @@
   "bilibili-hot-search": {
     "name": "哔哩哔哩",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://www.bilibili.com",
     "color": "blue",
@@ -273,6 +301,7 @@
   "bilibili-hot-video": {
     "name": "哔哩哔哩",
     "type": "hottest",
+    "detail": false,
     "disable": "cf",
     "column": "china",
     "home": "https://www.bilibili.com",
@@ -283,6 +312,7 @@
   "bilibili-ranking": {
     "name": "哔哩哔哩",
     "type": "hottest",
+    "detail": false,
     "disable": "cf",
     "column": "china",
     "home": "https://www.bilibili.com",
@@ -293,6 +323,7 @@
   "kuaishou": {
     "name": "快手",
     "type": "hottest",
+    "detail": false,
     "disable": "cf",
     "column": "china",
     "home": "https://www.kuaishou.com",
@@ -301,6 +332,7 @@
   },
   "kaopu": {
     "name": "靠谱新闻",
+    "detail": false,
     "desc": "不一定靠谱，多看多思考",
     "column": "world",
     "home": "https://kaopu.news/",
@@ -310,6 +342,7 @@
   "jin10": {
     "name": "金十数据",
     "type": "realtime",
+    "detail": false,
     "column": "finance",
     "home": "https://www.jin10.com",
     "color": "blue",
@@ -318,6 +351,7 @@
   "baidu": {
     "name": "百度热搜",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://www.baidu.com",
     "color": "blue",
@@ -326,6 +360,7 @@
   "sspai": {
     "name": "少数派",
     "type": "hottest",
+    "detail": false,
     "column": "tech",
     "home": "https://sspai.com",
     "color": "red",
@@ -334,6 +369,7 @@
   "juejin": {
     "name": "稀土掘金",
     "type": "hottest",
+    "detail": false,
     "column": "tech",
     "home": "https://juejin.cn",
     "color": "blue",
@@ -343,6 +379,7 @@
     "title": "热点资讯",
     "name": "凤凰网",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://www.ifeng.com",
     "color": "red",
@@ -352,6 +389,7 @@
     "redirect": "tencent-hot",
     "name": "腾讯新闻",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://news.qq.com/tag/aEWqxLtdgmQ=",
     "color": "blue",
@@ -361,6 +399,7 @@
   "tencent-hot": {
     "name": "腾讯新闻",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://news.qq.com/tag/aEWqxLtdgmQ=",
     "color": "blue",
@@ -371,6 +410,7 @@
     "title": "网络安全",
     "name": "Freebuf",
     "type": "hottest",
+    "detail": false,
     "column": "china",
     "home": "https://www.freebuf.com/",
     "color": "green",
@@ -736,6 +776,7 @@
     "redirect": "imxingzhe-news",
     "name": "行者",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.imxingzhe.com/newsv2/list",
     "color": "green",
@@ -745,6 +786,7 @@
   "imxingzhe-news": {
     "name": "行者",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.imxingzhe.com/newsv2/list",
     "color": "green",
@@ -1000,6 +1042,7 @@
     "title": "最新价格",
     "name": "WAHOO",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.wahoofitness.com/",
     "color": "blue",
@@ -1009,6 +1052,7 @@
     "title": "最新价格",
     "name": "Garmin",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.garmin.com/",
     "color": "blue",
@@ -1018,6 +1062,7 @@
     "title": "最新价格",
     "name": "Decathlon",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.decathlon.fr/",
     "color": "blue",
@@ -1027,6 +1072,7 @@
     "title": "最新价格",
     "name": "JetBlack",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.jetblackcycling.com/",
     "color": "blue",
@@ -1036,6 +1082,7 @@
     "redirect": "wahoo-banner",
     "name": "WAHOO",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.wahoofitness.com/",
     "color": "blue",
@@ -1045,6 +1092,7 @@
   "wahoo-banner": {
     "name": "WAHOO",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.wahoofitness.com/",
     "color": "blue",
@@ -1055,6 +1103,7 @@
     "redirect": "shimano-banner",
     "name": "shimano-EN",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://bike.shimano.com/en-NA/home.html",
     "color": "blue",
@@ -1064,6 +1113,7 @@
   "shimano-banner": {
     "name": "shimano-EN",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://bike.shimano.com/en-NA/home.html",
     "color": "blue",
@@ -1074,6 +1124,7 @@
     "redirect": "sram-shop",
     "name": "SRAM-EN",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://shop.sram.com/",
     "color": "blue",
@@ -1083,6 +1134,7 @@
   "sram-shop": {
     "name": "SRAM-EN",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://shop.sram.com/",
     "color": "blue",
@@ -1093,6 +1145,7 @@
     "redirect": "favero-shop",
     "name": "Favero-EN",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://cycling.favero.com/shop/",
     "color": "blue",
@@ -1102,6 +1155,7 @@
   "favero-shop": {
     "name": "Favero-EN",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://cycling.favero.com/shop/",
     "color": "blue",
@@ -1112,6 +1166,7 @@
     "redirect": "igpsport-USA-banner",
     "name": "迹驰",
     "type": "realtime",
+    "detail": false,
     "icon": "public/icons/igpsport.png",
     "column": "competition",
     "home": "https://www.igpsport.com/",
@@ -1122,6 +1177,7 @@
   "igpsport-USA-banner": {
     "name": "迹驰",
     "type": "realtime",
+    "detail": false,
     "icon": "public/icons/igpsport.png",
     "column": "competition",
     "home": "https://www.igpsport.com/",
@@ -1133,6 +1189,7 @@
     "redirect": "cycplus-banner",
     "name": "CYCPLUS",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.cycplus.com/",
     "color": "blue",
@@ -1142,6 +1199,7 @@
   "cycplus-banner": {
     "name": "CYCPLUS",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.cycplus.com/",
     "color": "blue",
@@ -1152,6 +1210,7 @@
     "redirect": "elite-banner",
     "name": "Elite",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.elite-it.com/en",
     "color": "blue",
@@ -1161,6 +1220,7 @@
   "elite-banner": {
     "name": "Elite",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.elite-it.com/en",
     "color": "blue",
@@ -1171,6 +1231,7 @@
     "redirect": "cybrei-banner",
     "name": "CYBREI",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.cybrei.com/",
     "color": "blue",
@@ -1180,6 +1241,7 @@
   "cybrei-banner": {
     "name": "CYBREI",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.cybrei.com/",
     "color": "blue",
@@ -1190,6 +1252,7 @@
     "redirect": "xcadey-banner",
     "name": "XCADEY",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.xcadey.com/",
     "color": "blue",
@@ -1199,6 +1262,7 @@
   "xcadey-banner": {
     "name": "XCADEY",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.xcadey.com/",
     "color": "blue",
@@ -1209,6 +1273,7 @@
     "redirect": "bryton-banner",
     "name": "Bryton",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://global.brytonsport.com/",
     "color": "blue",
@@ -1218,6 +1283,7 @@
   "bryton-banner": {
     "name": "Bryton",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://global.brytonsport.com/",
     "color": "blue",
@@ -1228,6 +1294,7 @@
     "redirect": "lezyne-banner",
     "name": "Lezyne",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://ride.lezyne.com/",
     "color": "blue",
@@ -1237,6 +1304,7 @@
   "lezyne-banner": {
     "name": "Lezyne",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://ride.lezyne.com/",
     "color": "blue",
@@ -1247,6 +1315,7 @@
     "redirect": "thinkrider-banner",
     "name": "ThinkRider",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.thinkrider.com/",
     "color": "blue",
@@ -1256,6 +1325,7 @@
   "thinkrider-banner": {
     "name": "ThinkRider",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.thinkrider.com/",
     "color": "blue",
@@ -1266,6 +1336,7 @@
     "redirect": "power2max-banner",
     "name": "Power2Max",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.power2max.com/en/",
     "color": "blue",
@@ -1275,6 +1346,7 @@
   "power2max-banner": {
     "name": "Power2Max",
     "type": "realtime",
+    "detail": false,
     "column": "competition",
     "home": "https://www.power2max.com/en/",
     "color": "blue",
@@ -1723,6 +1795,7 @@
     "title": "最新政策",
     "name": "国务院政策文件库",
     "type": "realtime",
+    "detail": false,
     "robots": "ignore",
     "column": "affair",
     "home": "https://sousuo.www.gov.cn/zcwjk/policyDocumentLibrary?q=&t=zhengcelibrary&orpro=",
@@ -1970,6 +2043,7 @@
     "redirect": "peopleforbikes-news",
     "name": "PeopleForBikes",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.peopleforbikes.org/news",
     "color": "blue",
@@ -1979,6 +2053,7 @@
   "peopleforbikes-news": {
     "name": "PeopleForBikes",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.peopleforbikes.org/news",
     "color": "blue",
@@ -1988,6 +2063,7 @@
   "peopleforbikes-business": {
     "name": "PeopleForBikes",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.peopleforbikes.org/topics/bike-business",
     "color": "blue",
@@ -1997,6 +2073,7 @@
   "peopleforbikes-research": {
     "name": "PeopleForBikes",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.peopleforbikes.org/research",
     "color": "blue",
@@ -2006,6 +2083,7 @@
   "federciclismo": {
     "name": "Federciclismo",
     "type": "realtime",
+    "detail": true,
     "desc": "意大利自行车联合会 FCI",
     "column": "industry",
     "home": "https://www.federciclismo.it/",
@@ -2015,6 +2093,7 @@
   "colombiaciclismo": {
     "name": "FECOCI",
     "type": "realtime",
+    "detail": true,
     "desc": "哥伦比亚自行车联合会",
     "column": "industry",
     "home": "https://federacioncolombianadeciclismo.com/",
@@ -2024,6 +2103,7 @@
   "ziv": {
     "name": "ZIV",
     "type": "realtime",
+    "detail": true,
     "desc": "德国两轮车工业协会",
     "column": "industry",
     "home": "https://www.ziv-zweirad.de/",
@@ -2033,6 +2113,7 @@
   "cyclingorgtw": {
     "name": "中华台北自由车协会",
     "type": "realtime",
+    "detail": true,
     "desc": "Chinese Taipei Cycling Association",
     "column": "industry",
     "home": "https://cycling.org.tw/",
@@ -2042,6 +2123,7 @@
   "conade": {
     "name": "CONADE",
     "type": "realtime",
+    "detail": true,
     "desc": "墨西哥国家体育委员会",
     "column": "industry",
     "home": "https://www.gob.mx/conade",
@@ -2051,6 +2133,7 @@
   "britishcycling": {
     "name": "British Cycling",
     "type": "realtime",
+    "detail": true,
     "desc": "英国自行车协会",
     "column": "industry",
     "home": "https://www.britishcycling.org.uk",
@@ -2060,6 +2143,7 @@
   "pzkol": {
     "name": "PZKol",
     "type": "realtime",
+    "detail": true,
     "desc": "波兰自行车协会",
     "column": "industry",
     "home": "https://www.pzkol.pl/",
@@ -2069,6 +2153,7 @@
   "mncf": {
     "name": "MNCF",
     "type": "realtime",
+    "detail": true,
     "desc": "马来西亚自行车联合会",
     "column": "industry",
     "home": "https://www.mncf.my/",
@@ -2078,6 +2163,7 @@
   "cbc": {
     "name": "CBC",
     "type": "realtime",
+    "detail": true,
     "desc": "巴西自行车联合会",
     "column": "industry",
     "home": "https://www.cbc.esp.br/",
@@ -2088,6 +2174,7 @@
     "redirect": "bikeretailer-industry",
     "name": "Bicycle Retailer",
     "type": "realtime",
+    "detail": true,
     "desc": "BRAIN 北美自行车行业媒体",
     "column": "industry",
     "home": "https://www.bicycleretailer.com/industry-news",
@@ -2098,6 +2185,7 @@
   "bikeretailer-industry": {
     "name": "Bicycle Retailer",
     "type": "realtime",
+    "detail": true,
     "desc": "BRAIN 北美自行车行业媒体",
     "column": "industry",
     "home": "https://www.bicycleretailer.com/industry-news",
@@ -2108,6 +2196,7 @@
   "bikeretailer-announcements": {
     "name": "Bicycle Retailer",
     "type": "realtime",
+    "detail": true,
     "desc": "BRAIN 北美自行车行业媒体",
     "column": "industry",
     "home": "https://www.bicycleretailer.com/announcements",
@@ -2118,6 +2207,7 @@
   "bikeretailer-opinion": {
     "name": "Bicycle Retailer",
     "type": "realtime",
+    "detail": true,
     "desc": "BRAIN 北美自行车行业媒体",
     "column": "industry",
     "home": "https://www.bicycleretailer.com/opinion-analysis",
@@ -2128,6 +2218,7 @@
   "bikeretailer-products": {
     "name": "Bicycle Retailer",
     "type": "realtime",
+    "detail": true,
     "desc": "BRAIN 北美自行车行业媒体",
     "column": "industry",
     "home": "https://www.bicycleretailer.com/new-products",
@@ -2139,6 +2230,7 @@
     "redirect": "cyclingindustry-news",
     "name": "CyclingIndustry.News",
     "type": "realtime",
+    "detail": true,
     "desc": "英国自行车行业媒体",
     "column": "industry",
     "home": "https://cyclingindustry.news/niche/news-50-968/",
@@ -2149,6 +2241,7 @@
   "cyclingindustry-news": {
     "name": "CyclingIndustry.News",
     "type": "realtime",
+    "detail": true,
     "desc": "英国自行车行业媒体",
     "column": "industry",
     "home": "https://cyclingindustry.news/niche/news-50-968/",
@@ -2159,6 +2252,7 @@
   "cyclingindustry-investment": {
     "name": "CyclingIndustry.News",
     "type": "realtime",
+    "detail": true,
     "desc": "英国自行车行业媒体",
     "column": "industry",
     "home": "https://cyclingindustry.news/niche/investment-acquisitions/",
@@ -2170,6 +2264,7 @@
     "redirect": "ancma-news",
     "name": "ANCMA",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://ancma.news/?jsf=jet-engine:grid1&tax=category:342",
     "color": "red",
@@ -2179,6 +2274,7 @@
   "ancma-news": {
     "name": "ANCMA",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://ancma.news/?jsf=jet-engine:grid1&tax=category:342",
     "color": "red",
@@ -2188,6 +2284,7 @@
   "ancma-associates": {
     "name": "ANCMA",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://ancma.news/category/news/notizie-dagli-associati/",
     "color": "red",
@@ -2197,6 +2294,7 @@
   "ancma-statistics": {
     "name": "ANCMA",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.ancma.it/statistiche/",
     "color": "red",
@@ -2207,6 +2305,7 @@
     "redirect": "fvsr-news",
     "name": "ФВСР",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://fvsr.ru/press/news",
     "color": "blue",
@@ -2216,6 +2315,7 @@
   "fvsr-news": {
     "name": "ФВСР",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://fvsr.ru/press/news",
     "color": "blue",
@@ -2225,6 +2325,7 @@
   "fvsr-highway": {
     "name": "ФВСР",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://fvsr.ru/press/news?tag=highway",
     "color": "blue",
@@ -2234,6 +2335,7 @@
   "fvsr-track": {
     "name": "ФВСР",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://fvsr.ru/press/news?tag=track",
     "color": "blue",
@@ -2243,6 +2345,7 @@
   "fvsr-documents": {
     "name": "ФВСР",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://fvsr.ru/documents",
     "color": "blue",
@@ -2253,6 +2356,7 @@
     "redirect": "czechcycling-novinky",
     "name": "Český svaz cyklistiky",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.czechcyclingfederation.com/category/novinky/",
     "color": "red",
@@ -2262,6 +2366,7 @@
   "czechcycling-novinky": {
     "name": "Český svaz cyklistiky",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.czechcyclingfederation.com/category/novinky/",
     "color": "red",
@@ -2271,6 +2376,7 @@
   "czechcycling-documents": {
     "name": "Český svaz cyklistiky",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.czechcyclingfederation.com/svaz/dokumenty/",
     "color": "red",
@@ -2281,6 +2387,7 @@
     "redirect": "auscycling-news",
     "name": "AusCycling",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://auscycling.org.au/news",
     "color": "green",
@@ -2290,6 +2397,7 @@
   "auscycling-news": {
     "name": "AusCycling",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://auscycling.org.au/news",
     "color": "green",
@@ -2299,6 +2407,7 @@
   "auscycling-policies": {
     "name": "AusCycling",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://auscycling.org.au/about/policies",
     "color": "green",
@@ -2308,6 +2417,7 @@
   "auscycling-annualreport": {
     "name": "AusCycling",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://auscycling.org.au/about/annual-report",
     "color": "green",
@@ -2317,6 +2427,7 @@
   "auscycling-governance": {
     "name": "AusCycling",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://auscycling.org.au/about/governance",
     "color": "green",
@@ -2326,6 +2437,7 @@
   "auscycling-strategy": {
     "name": "AusCycling",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://auscycling.org.au/about/strategy",
     "color": "green",
@@ -2336,6 +2448,7 @@
     "redirect": "ffc-structures",
     "name": "Fédération Française de Cyclisme",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://structures.ffc.fr/nos-actualites/",
     "color": "blue",
@@ -2345,6 +2458,7 @@
   "ffc-structures": {
     "name": "Fédération Française de Cyclisme",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://structures.ffc.fr/nos-actualites/",
     "color": "blue",
@@ -2354,6 +2468,7 @@
   "ffc-velo": {
     "name": "Fédération Française de Cyclisme",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://velo.ffc.fr/actualites/",
     "color": "blue",
@@ -2363,6 +2478,7 @@
   "ffc-resources": {
     "name": "Fédération Française de Cyclisme",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://ffc.fr/ressources/",
     "color": "blue",
@@ -2373,6 +2489,7 @@
     "redirect": "jbpi-business",
     "name": "自転車産業振興協会",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://jbpi.or.jp/business-list/",
     "color": "blue",
@@ -2382,6 +2499,7 @@
   "jbpi-business": {
     "name": "自転車産業振興協会",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://jbpi.or.jp/business-list/",
     "color": "blue",
@@ -2392,6 +2510,7 @@
     "redirect": "singaporecycling-news",
     "name": "Singapore Cycling Federation",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://singaporecycling.org.sg/blogs/news",
     "color": "red",
@@ -2401,6 +2520,7 @@
   "singaporecycling-news": {
     "name": "Singapore Cycling Federation",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://singaporecycling.org.sg/blogs/news",
     "color": "red",
@@ -2410,6 +2530,7 @@
   "singaporecycling-policies": {
     "name": "Singapore Cycling Federation",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://singaporecycling.org.sg/pages/event-policies-guidelines",
     "color": "red",
@@ -2420,6 +2541,7 @@
     "redirect": "cyclingcanada-general",
     "name": "Cycling Canada",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://cyclingcanada.ca/sport/general/",
     "color": "red",
@@ -2429,6 +2551,7 @@
   "cyclingcanada-general": {
     "name": "Cycling Canada",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://cyclingcanada.ca/sport/general/",
     "color": "red",
@@ -2438,6 +2561,7 @@
   "cyclingcanada-rules": {
     "name": "Cycling Canada",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://cyclingcanada.ca/get-involved/officials/rules-policies/",
     "color": "red",
@@ -2448,6 +2572,7 @@
     "redirect": "cyclingchile-noticias",
     "name": "Federación Deportiva Nacional de Ciclismo de Chile",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://fdnciclismochile.cl/blogs/noticias",
     "color": "red",
@@ -2457,6 +2582,7 @@
   "cyclingchile-noticias": {
     "name": "Federación Deportiva Nacional de Ciclismo de Chile",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://fdnciclismochile.cl/blogs/noticias",
     "color": "red",
@@ -2466,6 +2592,7 @@
   "cyclingchile-documents": {
     "name": "Federación Deportiva Nacional de Ciclismo de Chile",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://fdnciclismochile.cl/pages/documentos-1",
     "color": "red",
@@ -2476,6 +2603,7 @@
     "redirect": "ldsf-news",
     "name": "Lietuvos dviračių sporto federacija",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://ldsf.lt/naujienos/",
     "color": "green",
@@ -2485,6 +2613,7 @@
   "ldsf-news": {
     "name": "Lietuvos dviračių sporto federacija",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://ldsf.lt/naujienos/",
     "color": "green",
@@ -2494,6 +2623,7 @@
   "ldsf-reports": {
     "name": "Lietuvos dviračių sporto federacija",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://ldsf.lt/dokumentai/ataskaitos/",
     "color": "green",
@@ -2504,6 +2634,7 @@
     "redirect": "uci-news",
     "name": "UCI",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.uci.org/news/all-news/6IQ886FTfWV8yd13Egt9v3",
     "color": "blue",
@@ -2513,6 +2644,7 @@
   "uci-news": {
     "name": "UCI",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.uci.org/news/all-news/6IQ886FTfWV8yd13Egt9v3",
     "color": "blue",
@@ -2522,6 +2654,7 @@
   "uci-regulations": {
     "name": "UCI",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.uci.org/regulations/3MyLDDrwJCJJ0BGGOFzOat",
     "color": "blue",
@@ -2532,6 +2665,7 @@
     "redirect": "bikeeu-news",
     "name": "Bike Europe",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.bike-eu.com/news",
     "color": "blue",
@@ -2541,6 +2675,7 @@
   "bikeeu-news": {
     "name": "Bike Europe",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.bike-eu.com/news",
     "color": "blue",
@@ -2550,6 +2685,7 @@
   "bikeeu-product": {
     "name": "Bike Europe",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.bike-eu.com/collecties/product",
     "color": "blue",
@@ -2559,6 +2695,7 @@
   "bikeeu-trade": {
     "name": "Bike Europe",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://www.bike-eu.com/collecties/trade",
     "color": "blue",
@@ -2569,6 +2706,7 @@
     "redirect": "cyclingindustries-news",
     "name": "European Cycling Industries",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://cyclingindustries.com/news/",
     "color": "blue",
@@ -2578,6 +2716,7 @@
   "cyclingindustries-news": {
     "name": "European Cycling Industries",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://cyclingindustries.com/news/",
     "color": "blue",
@@ -2587,6 +2726,7 @@
   "cyclingindustries-market": {
     "name": "European Cycling Industries",
     "type": "realtime",
+    "detail": true,
     "column": "industry",
     "home": "https://cyclingindustries.com/news/details/category/market-impact-and-intelligence/",
     "color": "blue",

@@ -2120,7 +2120,7 @@ export function genSources() {
     const parent = {
       name: source.name,
       type: source.type,
-      detail: source.detail,
+      detail: source.detail ?? (source.column === "industry"),
       robots: source.robots,
       disable: source.disable,
       desc: source.desc,

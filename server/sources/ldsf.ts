@@ -1,6 +1,7 @@
 import { load } from "cheerio"
 import type { NewsItem } from "@shared/types"
 import { normalizeText } from "#/utils/banner"
+import { contentFromHtmlFragment } from "#/utils/industry-detail"
 
 const PAGE_URL = "https://ldsf.lt/dokumentai/ataskaitos/"
 
@@ -41,6 +42,7 @@ interface WordPressPost {
   link: string
   title: { rendered: string }
   excerpt: { rendered: string }
+  content?: { rendered: string }
 }
 
 function textFromHtml(html?: string) {
@@ -49,11 +51,12 @@ function textFromHtml(html?: string) {
 
 // Naujienos 新闻
 const news = defineSource(async () => {
-  const posts: WordPressPost[] = await myFetch("https://ldsf.lt/wp-json/wp/v2/posts?per_page=30&_fields=id,date,link,title,excerpt")
+  const posts: WordPressPost[] = await myFetch("https://ldsf.lt/wp-json/wp/v2/posts?per_page=30&_fields=id,date,link,title,excerpt,content")
   return posts.map(post => ({
     id: post.id,
     title: textFromHtml(post.title?.rendered),
     url: post.link,
+    content: contentFromHtmlFragment(post.content?.rendered, post.link),
     pubDate: new Date(post.date).getTime(),
     extra: {
       hover: textFromHtml(post.excerpt?.rendered) || undefined,

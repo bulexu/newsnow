@@ -3,6 +3,7 @@ import type { NewsItem } from "@shared/types"
 import { flareFetch } from "#/utils/flaresolverr"
 import { googleNewsFallback } from "#/utils/gnews"
 import { normalizeText } from "#/utils/banner"
+import { contentFromHtmlFragment } from "#/utils/industry-detail"
 
 const PAGE_URL = "https://ffc.fr/ressources/"
 
@@ -12,6 +13,19 @@ interface WordPressPost {
   link: string
   title: { rendered: string }
   excerpt: { rendered: string }
+  content?: { rendered: string }
+}
+
+interface WordPressResource {
+  id: number
+  date: string
+  link: string
+  title: { rendered: string }
+}
+
+interface WordPressMedia {
+  source_url: string
+  mime_type: string
 }
 
 function textFromHtml(html?: string) {
@@ -31,7 +45,7 @@ function extractPayload(content: string) {
 // 部分网络环境直连子站超时(疑似地域限制), 失败依次回退 Google News RSS / CloakBrowser
 function makeFfcNewsSource(baseUrl: string, gnewsSite: string) {
   return defineSource(async () => {
-    const api = `${baseUrl}/wp-json/wp/v2/posts?per_page=30&_fields=id,date,link,title,excerpt`
+    const api = `${baseUrl}/wp-json/wp/v2/posts?per_page=30&_fields=id,date,link,title,excerpt,content`
     let posts: WordPressPost[]
     try {
       posts = await myFetch(api)
@@ -52,6 +66,7 @@ function makeFfcNewsSource(baseUrl: string, gnewsSite: string) {
       id: post.id,
       title: textFromHtml(post.title?.rendered),
       url: post.link,
+      content: contentFromHtmlFragment(post.content?.rendered, post.link),
       pubDate: new Date(post.date).getTime(),
       extra: {
         hover: textFromHtml(post.excerpt?.rendered) || undefined,
@@ -61,6 +76,33 @@ function makeFfcNewsSource(baseUrl: string, gnewsSite: string) {
 }
 
 const resources = defineSource(async () => {
+  try {
+    const posts: WordPressResource[] = await myFetch("https://ffc.fr/wp-json/wp/v2/ressources?per_page=30&_fields=id,date,link,title")
+    if (posts.length) {
+      const items: NewsItem[] = []
+      let next = 0
+      await Promise.all(Array.from({ length: 4 }, async () => {
+        while (next < posts.length) {
+          const index = next++
+          const post = posts[index]
+          let media: WordPressMedia[] = []
+          try {
+            media = await myFetch(`https://ffc.fr/wp-json/wp/v2/media?parent=${post.id}&per_page=20&_fields=source_url,mime_type`)
+          } catch {}
+          const file = media.find(item => /\.(?:pdf|docx|xlsx)(?:\?|$)/i.test(item.source_url))
+          items[index] = {
+            id: post.id,
+            title: textFromHtml(post.title?.rendered),
+            url: file?.source_url || post.link,
+            pubDate: new Date(post.date).getTime(),
+            extra: { info: file?.mime_type || undefined },
+          }
+        }
+      }))
+      return items.filter(item => item.title && item.url)
+    }
+  } catch {}
+
   const html: string = await myFetch(PAGE_URL)
   const $ = load(html)
 

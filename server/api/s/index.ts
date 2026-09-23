@@ -44,7 +44,7 @@ export default defineEventHandler(async (event) => {
       if (!withDetail || !sources[id]?.detail || !items?.length) return items
       if (!items.some(item => !item.content?.trim())) return items
       try {
-        const result = await fetchSourceDetails(id)
+        const result = await fetchSourceDetails(id, true)
         if (result.success && result.items) return result.items
       } catch (err) {
         logger.error(`detail fetch immediate failed: ${id}`, err)

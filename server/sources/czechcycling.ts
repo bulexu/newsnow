@@ -1,6 +1,7 @@
 import { load } from "cheerio"
 import type { NewsItem } from "@shared/types"
 import { normalizeText } from "#/utils/banner"
+import { contentFromHtmlFragment } from "#/utils/industry-detail"
 
 const HOME_URL = "https://www.czechcyclingfederation.com/svaz/dokumenty/"
 const FETCH_URL = `${HOME_URL}?output=1`
@@ -40,6 +41,7 @@ interface WordPressPost {
   link: string
   title: { rendered: string }
   excerpt: { rendered: string }
+  content?: { rendered: string }
 }
 
 function textFromHtml(html?: string) {
@@ -48,11 +50,12 @@ function textFromHtml(html?: string) {
 
 // Novinky 新闻分类 id=2
 const novinky = defineSource(async () => {
-  const posts: WordPressPost[] = await myFetch("https://www.czechcyclingfederation.com/wp-json/wp/v2/posts?categories=2&per_page=30&_fields=id,date,link,title,excerpt")
+  const posts: WordPressPost[] = await myFetch("https://www.czechcyclingfederation.com/wp-json/wp/v2/posts?categories=2&per_page=30&_fields=id,date,link,title,excerpt,content")
   return posts.map(post => ({
     id: post.id,
     title: textFromHtml(post.title?.rendered),
     url: post.link,
+    content: contentFromHtmlFragment(post.content?.rendered, post.link),
     pubDate: new Date(post.date).getTime(),
     extra: {
       hover: textFromHtml(post.excerpt?.rendered) || undefined,

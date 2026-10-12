@@ -33,7 +33,7 @@ const reports = defineSource(async () => {
     })
   })
 
-  return items
+  return items.slice(0, 10)
 })
 
 interface WordPressPost {
